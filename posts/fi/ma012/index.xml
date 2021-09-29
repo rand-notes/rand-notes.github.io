@@ -1,0 +1,127 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>idk</title><link>http://localhost/posts/fi/ma012/</link><description>Recent content on idk</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="http://localhost/posts/fi/ma012/index.xml" rel="self" type="application/rss+xml"/><item><title>ma012 lec0</title><link>http://localhost/fi/ma012/0/</link><pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate><guid>http://localhost/fi/ma012/0/</guid><description>Descriptive statistics summarizes sample data via summarization techniques and indexes frequency tables, moments (mean, variance, skewness, kurtoisis) and quantiles (median, quartiles, interquartiles spans), contingency tables, correlation coefficients Frequency distribution i.e. frequency list/table is a list, table or graph that display the frequency of various outcomes in a sample
+Exploratory Data Analysis (EDA) analysis of sample data, usually via visualization methods frequency plots, boxplots, histograms, scatter plots, PCA Statistical Inference derives probability properties (arguments, distribution) of population based on analysis of sample data requires a model - establishing a assumptions about population and data sample point and interval parameter estimates (confidence intervals), testing statistics hypothesis, predictions, classifications, clustering Parametric methods model establish probability distribution or some set, parameters are being examined via these probability distributions most of classic methods like t-test, linear regression model, Multivariate regression Nonparametric methods or distribution-free statistical methods do not depend on having a normal distribution and can be used with skewed data or with categorical data (Spearman&amp;rsquo;s rho, Mann-Whitney, Wilcoxon Test)</description><content type="html"><![CDATA[<h1 id="descriptive-statistics">Descriptive statistics</h1>
+<ul>
+<li>summarizes sample data via summarization techniques and indexes</li>
+<li>frequency tables, moments (mean, variance, skewness, kurtoisis) and quantiles (median, quartiles, interquartiles spans), contingency tables, correlation coefficients</li>
+</ul>
+<h1 id="frequency-distribution-ie-frequency-listtable">Frequency distribution i.e. frequency list/table</h1>
+<p>is a list, table or graph that display the frequency of various outcomes in a sample</p>
+<h1 id="exploratory-data-analysis-eda">Exploratory Data Analysis (EDA)</h1>
+<ul>
+<li>analysis of sample data, usually via visualization methods</li>
+<li>frequency plots, boxplots, histograms, scatter plots, PCA</li>
+</ul>
+<h1 id="statistical-inference">Statistical Inference</h1>
+<ul>
+<li>derives probability properties (arguments, distribution) of population based on analysis of sample data</li>
+<li>requires a model - establishing a assumptions about population and data sample</li>
+<li>point and interval parameter estimates (confidence intervals), testing statistics hypothesis, predictions, classifications, clustering</li>
+</ul>
+<h1 id="parametric-methods">Parametric methods</h1>
+<ul>
+<li>model establish probability distribution or some set, parameters are being examined via these probability distributions</li>
+<li>most of classic methods like t-test, linear regression model, Multivariate regression</li>
+</ul>
+<h1 id="nonparametric-methods">Nonparametric methods</h1>
+<p>or distribution-free statistical methods do not depend on having a normal distribution and can be used with skewed data or with categorical data (Spearman&rsquo;s rho, Mann-Whitney, Wilcoxon Test)</p>
+<h1 id="semiparametric-methods">Semiparametric methods</h1>
+<ul>
+<li>combination of parametric and nonparametric mothods</li>
+<li>Cox model of proportional risks in survival analysis</li>
+</ul>
+<h1 id="nominal-data-categorical">Nominal data (categorical)</h1>
+<p>distinguishes different categories for qualitative variables;
+dummy code: gender, ethnic background
+R: factor</p>
+<h1 id="ordinal-data">Ordinal data</h1>
+<p>data exists in categories that are ordered but differences cannot be determined or they are meaningless. (Example: 1st, 2nd, 3rd)
+R: ordered factor</p>
+<h1 id="interval-data">Interval data</h1>
+<p>Differences between values can be found, but there is no absolute 0. (Temp. and Time),
+R: numeric</p>
+<h1 id="ratio-data">Ratio Data</h1>
+<p>data with an absolute 0. Ratios are meaningful. (Length, Width, Weight, Distance)</p>
+<h1 id="null-hypothesis-h0">Null Hypothesis (H0)</h1>
+<p>a statement that the performance of treatment groups is so similar that the groups must belong to the same population; a way of saying that the experimental manipulation had no important effect</p>
+<ul>
+<li>all level factors have same mean values</li>
+</ul>
+<h1 id="alternative-hypothesis-h1">Alternative hypothesis (H1)</h1>
+<p>The hypothesis that states there is a difference between two or more sets of data.</p>
+<ul>
+<li>at least one pair of level factors differ in mean value</li>
+</ul>
+<h1 id="significance-level-alpha">significance level (alpha)</h1>
+<p>The acceptable level of error selected by the researcher, usually set at 0.05;
+what we compare our p-value to</p>
+<h1 id="power-of-a-test">Power of a test</h1>
+<ul>
+<li>The probability of correctly detecting a false null hypothesis</li>
+<li>could be increased by increasing sample data size</li>
+</ul>
+<h1 id="classical-statistical-hypothesis-testing-according-to-critical-field">classical statistical hypothesis testing; according to critical field</h1>
+<ul>
+<li>establish H0 and H1</li>
+<li>establish model - i.e. statistics assumptions</li>
+<li>choose test and testing statistics T with known probability distribution (under the validity of H0)</li>
+<li>choose significance level (α) - usually 0.05</li>
+<li>compute observed values <em>t</em> of testing statistics <em>T</em></li>
+<li>establish critical region <em>W</em> according to <em>H1</em> and <em>t</em></li>
+<li>H0 is rejected, if $$t \in W$$</li>
+</ul>
+<h1 id="statistical-hypothesis-testing-via-p-value">statistical hypothesis testing; via p-value</h1>
+<ul>
+<li>compute p-value <em>p</em></li>
+<li>H0 is rejected, if $$p \lt \alpha$$</li>
+</ul>
+<h1 id="p-value">p-value</h1>
+<p>The probability level which forms basis for deciding if results are statistically significant (not due to chance).</p>
+<h1 id="t-test">t-test</h1>
+<p>a statistical test used to evaluate the size and significance of the difference between two means</p>
+<h1 id="multiple-testing">multiple testing</h1>
+<p>the more statistical tests we do, the more likely we are to make an erroneous inference (unless we adjust our significance threshold).</p>
+<h1 id="anova-analysis-of-variance">ANOVA (analysis of variance)</h1>
+<p>-differences among MEANS of continuous (numerical) variables
+-more flexible than t-tests&ndash;&gt;can analyze differences among MORE THAN 2 groups (even if diff sample sizes)</p>
+<h1 id="multiple-comparison-tests">multiple comparison tests</h1>
+<p>statistical tests used to make pairwise comparisons to find which means differ significantly from one another in a one-factor multilevel design</p>
+<ul>
+<li>Tukey or Scheffe method</li>
+</ul>
+<h1 id="tukeys-method">Tukey&rsquo;s method</h1>
+<p>it&rsquo;s preferred especially in case that all partial random selections have approximately same range</p>
+<h1 id="scheffe-method">Scheffe method</h1>
+<p>it&rsquo;s recommended especially in case that partial random selections have distinctly different ranges.</p>
+<h1 id="the-means--minimalni-nulovy-model">The means / minimalni (nulovy) model</h1>
+<p>$$Y_{i,j} = \mu + \epsilon_{i,j}$$</p>
+<ul>
+<li>\mu (micro, u) - grand mean of Y, same for all levels of factor A</li>
+<li>eps - stochaistic independent random variables with probability distribution N(0, \o^2)</li>
+</ul>
+<h1 id="the-effect-model--jednoducheho-trideni">The effect model / jednoducheho trideni</h1>
+<p>$$Y_{i,j} = \mu + \alpha + \epsilon_{i,j}$$</p>
+<ul>
+<li>alpha - effect of i-th level of factor A</li>
+</ul>
+<h1 id="gran-mean--spolecna-stredni-hodnota">Gran mean / spolecna stredni hodnota</h1>
+<p>$$M: \mu^{\wedge} = Y^{\wedge}$$</p>
+<h1 id="effect-i-th-category-in-model-m">effect i-th category in model M</h1>
+<p>$$\alpha^{\wedge}<em>{i} = Y^{-}</em>{i.} - Y^{-}_{..}$$</p>
+<h1 id="mean-value-of-i-th-category-in-model-m">mean value of i-th category in model M</h1>
+<p>$$\mu^{\wedge}<em>{i} = \mu^{\wedge} + \alpha^{\wedge}</em>{i} = Y^{-}_{i.}$$</p>
+<h1 id="common-part-of-mean-value-in-submodel-m_0">common part of mean value in submodel M_0</h1>
+<p>$$\mu^{\wedge} = Y^{-}$$</p>
+<h1 id="square-sums-describing-variability">Square sums describing variability</h1>
+<ul>
+<li>Total sum of squares , SS / celkovy soucet ctvercu</li>
+<li>Between-groups SS / skupinovy soucet ctvercu</li>
+<li>Within-groups/error/residual SS / rezidualni soucet ctvercu</li>
+</ul>
+<h1 id="parameters-estimates-in-models">Parameters estimates in models</h1>
+<ul>
+<li>Gran mean / spolecna stredni hodnota</li>
+<li>effect i-th category in model M</li>
+<li>mean value of i-th category in model M</li>
+<li>common part of mean value in submodel M_0</li>
+</ul>
+]]></content></item></channel></rss>

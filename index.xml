@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>idk</title><link>http://localhost/</link><description>Recent content on idk</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 26 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost/index.xml" rel="self" type="application/rss+xml"/><item><title>IV111 lec 03</title><link>http://localhost/iv111/0/</link><pubDate>Sun, 26 Sep 2021 00:00:00 +0000</pubDate><guid>http://localhost/iv111/0/</guid><description>Expectation of Random Variables Often we need a shorter description than PMF or CDF - single number, or a few number. First such characteristic describing a random variable is the expectation, also known as the mean value Expectation of a random varialbe X is defined as:
+$$E(X) = \sum_{x\in lm(X)} x \cdot P(X = x)$$
+provided the sum is absolutely convergent. In case the sum is convergent, but not absoutely convergent, we say that no finite expectation exists.</description></item><item><title>ai 0</title><link>http://localhost/iv126/0/</link><pubDate>Thu, 02 Sep 2021 00:00:00 +0000</pubDate><guid>http://localhost/iv126/0/</guid><description>Environments Fully Observable vs Partially Observable If an agent&amp;rsquo;s sensors give it access to the complete state of the environment at each point in time, then we say that he task environment is fully observable. If the agents has no sensors at all then the environment is unobservable
+Single-Agent vs Multi-Agent Environments For example, an agent solving a crossword puzzle by itself is clearly in a single-agent enviroment, whereas an agent playing chess is in a two-agent enviroment.</description></item><item><title>cpp</title><link>http://localhost/posts/cpp/2021-01-01-cpp/</link><pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate><guid>http://localhost/posts/cpp/2021-01-01-cpp/</guid><description/></item><item><title>DL0</title><link>http://localhost/dl0/</link><pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate><guid>http://localhost/dl0/</guid><description>TOC Underflow
+Overflow
+Softmax
+Problems Condition number
+Gradient-Based Optimization objective function; criterio; cost function; loss function; Gradient Descent; critical points; stationary points; local minumum; local maximum; Saddle points; global minimum; partial derivatives; gradient; directional derivative; method of steepest descent; gradient descent; Chain rule; Steepest descent proposes a new point; learning rate; line search; hill climbing; Jacobian matrix; second derivative; Hessian matrix; Jacobian; Hessian; second derivative test; Newton&amp;rsquo;s method; first-order optimization algorithms; second-order optimization algorithms; Lipschitz continous; Lipschitz constant; convex optimization;</description></item><item><title>DL1</title><link>http://localhost/dl1/</link><pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate><guid>http://localhost/dl1/</guid><description>TOC
+self-information nats; bits; shannons;
+Shannon entropy
+KL Divergence
+CrossEntropy
+Factorization
+Structured Probabilistic Model
+Directed
+Undirected The graph are just representation, any probability distribution can be described by both graphs. Graphs are not property of distributions;
+Self-information we rate information value much higher if information is less likely and independent.</description></item><item><title>DL2</title><link>http://localhost/dl2/</link><pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate><guid>http://localhost/dl2/</guid><description>TOC Learning algorithms
+The Task, T
+Classification
+Classification with missing inputs
+Regression
+Transcription
+Machine translation
+Structured output
+Anomaly detection
+Synthesis and sampling
+Imputation of missing values
+Denoising
+Density estimation or probability mass function estimation
+The Performance Measure, P accuracy; error rate;</description></item><item><title>ma012 lec0</title><link>http://localhost/fi/ma012/0/</link><pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate><guid>http://localhost/fi/ma012/0/</guid><description>Descriptive statistics summarizes sample data via summarization techniques and indexes frequency tables, moments (mean, variance, skewness, kurtoisis) and quantiles (median, quartiles, interquartiles spans), contingency tables, correlation coefficients Frequency distribution i.e. frequency list/table is a list, table or graph that display the frequency of various outcomes in a sample
+Exploratory Data Analysis (EDA) analysis of sample data, usually via visualization methods frequency plots, boxplots, histograms, scatter plots, PCA Statistical Inference derives probability properties (arguments, distribution) of population based on analysis of sample data requires a model - establishing a assumptions about population and data sample point and interval parameter estimates (confidence intervals), testing statistics hypothesis, predictions, classifications, clustering Parametric methods model establish probability distribution or some set, parameters are being examined via these probability distributions most of classic methods like t-test, linear regression model, Multivariate regression Nonparametric methods or distribution-free statistical methods do not depend on having a normal distribution and can be used with skewed data or with categorical data (Spearman&amp;rsquo;s rho, Mann-Whitney, Wilcoxon Test)</description></item><item><title/><link>http://localhost/posts/fi/iv126/ai1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/posts/fi/iv126/ai1/</guid><description/></item></channel></rss>
