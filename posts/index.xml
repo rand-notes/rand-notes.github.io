@@ -1,4 +1,310 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on idk</title><link>http://localhost/posts/</link><description>Recent content in Posts on idk</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 26 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>IV111 lec 03</title><link>http://localhost/iv111/0/</link><pubDate>Sun, 26 Sep 2021 00:00:00 +0000</pubDate><guid>http://localhost/iv111/0/</guid><description>Expectation of Random Variables Often we need a shorter description than PMF or CDF - single number, or a few number. First such characteristic describing a random variable is the expectation, also known as the mean value Expectation of a random varialbe X is defined as:
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on idk</title><link>https://rand-notes.github.io/posts/</link><description>Recent content in Posts on idk</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 30 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rand-notes.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Confidence Intervals</title><link>https://rand-notes.github.io/posts/fi/ma012/confidence-intervals/</link><pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate><guid>https://rand-notes.github.io/posts/fi/ma012/confidence-intervals/</guid><description>Statistical Inference is the process of drawing conclusions about populations or scientific truths from data
+There are two types of statistical inferences; estimation and statistical (hypothesis) tests
+Estimation Use information from the sample to estimate (or predict) the parameter of interest.
+For instance, using the result of a poll about the president&amp;rsquo;s current approval rating to estimate (or predict) his or her true current approval rating nationwide.
+Point Estimates</description><content type="html"><![CDATA[<h1 id="statistical-inference">Statistical Inference</h1>
+<p>is the process of drawing conclusions about populations or scientific truths from data</p>
+<p>There are two types of statistical inferences; estimation and statistical (hypothesis) tests</p>
+<h2 id="estimation">Estimation</h2>
+<blockquote>
+<p>Use information from the sample to estimate (or predict) the parameter of interest.</p>
+<p>For instance, using the result of a poll about the president&rsquo;s current approval rating to estimate (or predict) his or her true current approval rating nationwide.</p>
+</blockquote>
+<p><strong>Point Estimates</strong></p>
+<p>An estimate for a parameter that is one numerical value. An example of a point estimate is the sample mean or the sample proportion.</p>
+<p><strong>Interval Estimates</strong></p>
+<p>Interval estimates give an interval as the estimate for a parameter. This is a new concept which is the focus of this lesson. Such intervals are built around point estimates which us why understatning
+point estimates is important to understaning interval estimates.</p>
+<p><strong>Confidence Interval</strong></p>
+<p>An interval of values computed from sample data that is likely to cover the true parameter of interest.</p>
+<h2 id="properties-of-good-estimator">Properties of Good Estimator</h2>
+<ul>
+<li>The center of the sampling distribution for the estimate is the same as that of the population. When this property is true, the estimate is said to be unbiased. The most often-used measure of the center
+is the mean.</li>
+<li>The estimate has the smallest standard error when compare to other estimators. For example, in the normal distribution, the mean and median are essentially the same. However, the standard error of the
+median is about 1.25 times that of the standard error of the mean. We know the standard error of the mean is \( \frac{\sigma}{\sqrt{n}} \). This is why the mean is a better estimator than the
+median when the data is normal (or approximately normal).</li>
+</ul>
+<blockquote>
+<p>We use estimated standard error because, typically, population is not known.</p>
+</blockquote>
+<h2 id="general-format-of-a-confidence-interval">General Format of a Confidence Interval</h2>
+<p>In putting the two properties above together, the center of our interval should be the point estimate for the parameter of interest. With the estimated standard error of the point estimate, we can
+include a measure of confidence to our estimate by forming a margin of error.</p>
+<p>e.g. survey where 44% of respondens approved President’s reaction has +-3.5% margin of error. We known that interval would be from 40.5% to 47.5%</p>
+<blockquote>
+<p><strong>General Form of a confidence interval</strong>:<br>
+sample statistic +- margin of error</p>
+</blockquote>
+<p>The margin of error will consist of two pieces. One is the standard error of the sample statistic. The other is some multiplier, , of this standard error, based on how confident we want to be in our
+estimate. This multiplier will come from the same distribution as the sampling distribution of the point estimate; for example, as we will see with the sample proportion this multiplier will come from
+the standard normal distribution.</p>
+<blockquote>
+<p><strong>General form of the margin of error</strong><br>
+Margin of error = \( M \times S^{\wedge}E(estimate) \)</p>
+</blockquote>
+<p>the multiplier M depends on our level of confidence</p>
+<h2 id="interpretation-of-a-confidence-interval">Interpretation of a Confidence Interval</h2>
+<p>The interpretation of a confidence interval has the basic template of: &ldquo;We are &lsquo;some level of percent confident&rsquo; that the &lsquo;population of interest&rsquo; is from &lsquo;lower bound to upper bound&rsquo;. The phrases in
+single quotes are replaced with the specific language of the proble. We will discuss more about the interpretation of a confidence interval after we provide a few more examples.</p>
+<p>Most confidence levels use ranges from 90% confidence to 99% confidence, with 95% being the most widely used. In fact, when you read a report that includes a margin of error, you can usually assume this
+has a 95% confidence attached to it unless otherwise stated.</p>
+<h2 id="inference-for-the-popluation-proportion">Inference for the Popluation Proportion</h2>
+<h3 id="point-estimate-for-the-population-proportion">Point Estimate for the Population Proportion</h3>
+<blockquote>
+<p>Point Estimate of the Population Proportion</p>
+<p>\( \hat{p} = \# \) of successes in the sample of size n</p>
+</blockquote>
+<h3 id="confidence-interval-for-the-population-proportion">Confidence Interval for the Population Proportion</h3>
+<p>Recall that: if np and n(1 - p) are greater than five, then \(\hat{p}\) is approximately normal with mean, p, standard error \( \sqrt{\frac{p(1-p)}{n}} \)</p>
+<p>Under these conditions, the sampling ditribution of the sample proportion, pm is approximately Normal. The multiplier used in the confidence interval will come from the Standard Normal distribution.</p>
+<h3 id="construct-and-interpret-the-ci">Construct and Interpret the CI</h3>
+<p>Constructing a CI (Confidence Interval) is done in 3 steps.</p>
+<h4 id="check-conditions">Check Conditions</h4>
+<p>Before doing the actual computations of the interval or test, it&rsquo;s important to check whether these conditions are met, otherwise the calculations and conclusions may not be correct.</p>
+<blockquote>
+<p>The conditions we need for inderence on a mean are random, normal, independent</p>
+</blockquote>
+<h5 id="random-condition">Random Condition</h5>
+<blockquote>
+<p>A random sample or randomized experiment should be used to obtain the data.</p>
+</blockquote>
+<p>Random samples give us unbiased data from a population. When we don&rsquo;t use random selection, the resulting data usually has some form of bias, so using it to infer something about the population can be
+risky.</p>
+<p>More specifically, sample means are unbiased estimators of their population mean. For example, suppose we have a bag of ping pong balls individually numbered from  to 30, so the population mean
+of the bag is 15. We could take random samples of balls from the bag and calculate the mean from each sample. Some samples would have a mean higher than 15 and some would be lower. But on
+average, the mean of each sample will equal 15. We write this property as \( \mu_{\overline{x}} = \mu \)  which holds true as long as we are taking random samples.</p>
+<h5 id="normal-condition">Normal Condition</h5>
+<blockquote>
+<p>The sampling distribution \( \overline{x} \) (the sample mean) need to be approximately normal. This is true if our parent population is normal or if our sample is reasonably large (n &gt;= 30).</p>
+</blockquote>
+<p>The sampling distribution of \( \overline{x} \) (a sample mean) is approximately normal in a few different cases. The shape of the sampling distribution of \( \overline{x} \) mostly dependes on the
+shape of the parent population and the sample size n.</p>
+<p><strong>case 1: parent population is normally distributed</strong></p>
+<p>If the parent population is normally distributed, then the sampling distribution of \( \overline{x} \) is approximately normal regardless of sample size. So if we know that the parent population is normally distributed, we pass this condition even if the sample size is small. In practice, however, we usually don&rsquo;t know if the parent population is normally distributed.</p>
+<p><strong>case 2: Not normal or unknown parent population; sample size is large (n &gt; 30)</strong></p>
+<p>The sampling distribution of \( \overline{x} \) is approximately normal as long as the sample size is reasonably large. Because of the CLT, when n &gt; 30, we can treat the sampling distribution \(
+\overline{x} \) as approximately normal.</p>
+<p>There are a few rare cases where the parent population has such an unusual shape that the sampling distribution of the sample mean \( \overline{x} \) isn&rsquo;t quite normal for sample sizes near 30. These
+cases are rate, so in practice, we are usually safe to assume approximately normality in the sampling distribution when n &gt;= 30.</p>
+<p><strong>case 3: Not normal or unknown parent population; sample size is small (n &lt; 30)</strong></p>
+<p>As long as the parent population doesn&rsquo;t have outliers or strong skew, even smaller samples will produce a sampling distribution of \( \overline{x} \) that is approximately normal. In
+practice, we can&rsquo;t usually see the shape of the parent population, but we can try to infer shape based on the distribution of data in the sample. If the data in the sample shows skew or outliers, we
+should doubt that the parent is approximately normal, and so the sampling distribution of \( \overline{x} \) may not be normal either. But if the sample data are roughly symmetric and don&rsquo;t show
+outliers or strong skew, we can assume that the sampling distribution of \( \overline{x} \) will be approximately normal.</p>
+<p>The big idea is that we need to graph our sample data when \( n\lt 30 \), is less than, 30 and then make a decision about the normal condition based on the appearance of the sample data.</p>
+<h5 id="independent-condition">Independent Condition</h5>
+<blockquote>
+<p>Individual observations need to be independent. If sampling without replacement, our sample size shouldn&rsquo;t be more than 10% of the population.</p>
+</blockquote>
+<p>To use formula for stadard deviation of \( \overline{x} \), we need individual observations to be independent. In an experiment, good design usually takes care of independence between subjects
+(control, different treatments, randomization).</p>
+<p>In an observational study that involves sampling without replacement, individual observations aren&rsquo;t technically independent since removing each observation changes the population. However the 10%
+condition says that if we sample 1-% or less of the population, we can treat individual observations as independent since removing each observation doesn&rsquo;t change the population all that much as we
+sample. For instance, if our sample size is n = 30, there should to be at least N = 300 members in the population for the sample to meet independence condition.</p>
+<p>Assuming independence between observations allows us to use this formula for standard deviation of \( \overline{x} \) when we&rsquo;re making confidence intervals or doing significance tests:</p>
+<p>$$ \mu_{\overline{x}} = \frac{\mu}{\sqrt{n}} $$</p>
+<p>We usually don&rsquo;t know the population standard deviation \( \mu \), so we substitute the sample standard deviation \(s_x\) as an estimate for \(\mu\). When we do this, we call it the <strong>standard
+error</strong> of \(\overline{x}\) to distinguish it from the standard deviation.</p>
+<p>So our formula for standard error of \(\overline{x}\) is:</p>
+<p>$$\mu_{\overline{x}} \approx \frac{s_x}{\sqrt{n}}$$</p>
+<h4 id="construct-the-general-formm">Construct The General Formm</h4>
+<p>The general form of the condifence interval is point estimate \( \pm M \times \hat{SE}(estimate) \). The point estimate is the sample proportion \( \hat{p} \), and the estimated standard error is
+\(  \hat{SE}(\hat{p}) = \sqrt{\frac{\hat{p}(1-\hat{p})}{n} } \)</p>
+<p>\( 1 - \alpha 100% \) confidence interval for the population proportion, p</p>
+<p>$$ \hat{p} \pm z_{\alpha/2} \sqrt{\frac{\hat{p}(1 - \hat{p})}{n}} $$</p>
+<p>where z_{\alpha/2} represent a z-value with \( \alpha / 2 \) area to the right of it.</p>
+<p>General notes about the confidence interval&hellip;
+- The \( \pm \) in the formula above means &ldquo;plus or minus&rdquo;. It&rsquo;s shorthand way of writing \( ( \hat{p} - &hellip;, \hat{p} + &hellip; ) \)
+- It&rsquo;s centered at the point estimate \( \hat{p} \)
+- The width of the interval is determined by the margin of error.
+- You must determine the multiplier</p>
+<h4 id="interpret-the-confidence-interval">Interpret the Confidence Interval</h4>
+<p>We can say we are \( (1 - \alpha)100% \) confident that the population proportion is in interval \( \hat{p} \pm z_{\alpha/2} \sqrt{\frac{\hat{p}(1 - \hat{p})}{n}} \)</p>
+<h2 id="how-to-find-the-multiplier-using-the-standard-normal-distribution">How to find the multiplier using the Standard Normal Distribution</h2>
+<p>\( z_{\alpha} \) is the z-value having a tail area of \( \alpha \) to its right. With some calculation, one can use the Standard Normal Cumulative Probability Table to find the value.</p>
+<h2 id="interpreting-the-ci">Interpreting the CI</h2>
+<p>In the graph below, we show 10 replications (for each replication, we sample 30 students and ask them whether they are Democrats) and compute an 80% Confidence Interval each time. We are lucky in this
+set of 10 replications and get exactly 8 out of 10 intervals that contain the parameter. Due to the small number of replications (only 10), it is quite possible that we get 9 out of 10 or 7 out of 10
+that contain the true parameter. On the other hand, if we try it 10,000 (a large number of) times, the percentage that contains the true proportions will be very close to 80%.</p>
+
+    <img src="/images/confidence_interval.png"  alt="confidence interval"  class="left"  />
+
+
+<p>If we repeatedly draw random samples of size n from the population where the proportion of success in the population is p and calculate the confidence interval each time, we would expect that \(100(1 -
+\alpha)%\) of the intervals would contain the true parameter, p.</p>
+<h2 id="sample-size-computation-for-the-population-proportion-confidence-interval">Sample Size Computation for the Population Proportion Confidence Interval</h2>
+<p>An important part of obtaining desired results is to get a large enough sample size. We can use what we know about the margin of error and the desired level of confidence to determine an appropriate
+sample size.</p>
+<p>Recall that the margin of error, E, is half of the width of the confidence interval. Therefore for a one sample proportion,</p>
+<p>$$
+E = z_{\alpha/2} \sqrt{\frac{\hat{p}(1 - \hat{p})}{n}}
+$$</p>
+<p><strong>Precision</strong> - The wider the interval, the poorer the precision. Note that the higher the confidence level, the wider the width (or equivalently, half width) of the interval and thus the poorer the
+precision.</p>
+<h2 id="statisticalhypothesis-tests">Statistical/Hypothesis Tests</h2>
+<blockquote>
+<p>Use information from the sample to determine whether a certain statement about the parameter of interest is true.</p>
+<p>For instance, suppose a news station claims that the President’s current approval rating is more than 75%. We want to determine whether that statement is supported by the poll data.</p>
+</blockquote>
+]]></content></item><item><title>ma012 lec0</title><link>https://rand-notes.github.io/fi/ma012/0/</link><pubDate>Tue, 28 Sep 2021 00:00:00 +0000</pubDate><guid>https://rand-notes.github.io/fi/ma012/0/</guid><description>A bell curve is a graph depicting the normal distribution
+p-value A p-value is a measure of the probability that an observed difference could have occurred just by random chance. p-values are numbers in interval (0, 1) and commonly used threshold is 0.05. The lower the p-value, the greater the statistical significance of the observed difference. While a small p-value helps us decide if one group differs from another, it does not tell us how different they are.</description><content type="html"><![CDATA[<blockquote>
+<p>A bell curve is a graph depicting the normal distribution</p>
+</blockquote>
+<h1 id="p-value">p-value</h1>
+<p>A p-value is a measure of the probability that an observed difference could have occurred just
+by random chance. p-values are numbers in interval (0, 1) and commonly used threshold is 0.05.
+The lower the p-value, the greater the statistical significance of the observed difference.
+While a small p-value helps us decide if one group differs from another, it does not tell us how
+different they are.</p>
+<p>e.g.<br>
+two groups (A: 73, B:125) and (A: 71, B: 127) results in p-value P=0.9. This means that the
+difference is too small for us to be confident about it.</p>
+<hr>
+<p>two groups (A: 60, B:138) and (A: 84, B: 114) - (30% vs 42%) results in p-value P=0.01, thus we
+can say that these groups differs.</p>
+<p>However it might be just an coincidence, if we get a small p-value when there is no difference,
+it&rsquo;s called a <strong>False Positive</strong></p>
+<hr>
+<p>If we need to be really sure the results are correct, we use smaller threshold. e.g. using a
+threshold 0.00001 means that we would get a False Positive only once every 100 000 experiments.</p>
+<h1 id="central-limit-theorem">Central Limit Theorem</h1>
+<p>The central limit theorem (CLT) states that the distribution of sample means approximates a normal distribution as the sample size gets larger, regardless of the population&rsquo;s distribution.</p>
+<h1 id="population-distribution">Population Distribution</h1>
+<p>The population is the whole set of values, we are interested in.</p>
+<h1 id="sample-distribution">Sample Distribution</h1>
+<p>The sample is a subset of the population, and the set of values you actually use in your
+estimation.</p>
+<h1 id="sampling-distribution">Sampling Distribution</h1>
+<p>Researchers often use a sample to draw inferences about the population that sample is from. To
+do that, they make use of a probability distribution that is very important in the world of
+statistics: the sampling distribution.</p>
+<h1 id="descriptive-statistics">Descriptive statistics</h1>
+<ul>
+<li>summarizes sample data via summarization techniques and indexes</li>
+<li>frequency tables, moments (mean, variance, skewness, kurtoisis) and quantiles (median, quartiles, interquartiles spans), contingency tables, correlation coefficients</li>
+</ul>
+<h1 id="frequency-distribution-ie-frequency-listtable">Frequency distribution i.e. frequency list/table</h1>
+<p>is a list, table or graph that display the frequency of various outcomes in a sample</p>
+<h1 id="exploratory-data-analysis-eda">Exploratory Data Analysis (EDA)</h1>
+<ul>
+<li>analysis of sample data, usually via visualization methods</li>
+<li>frequency plots, boxplots, histograms, scatter plots, PCA</li>
+</ul>
+<h1 id="statistical-inference">Statistical Inference</h1>
+<ul>
+<li>derives probability properties (arguments, distribution) of population based on analysis of sample data</li>
+<li>requires a model - establishing a assumptions about population and data sample</li>
+<li>point and interval parameter estimates (confidence intervals), testing statistics hypothesis, predictions, classifications, clustering</li>
+</ul>
+<h1 id="parametric-methods">Parametric methods</h1>
+<ul>
+<li>model establish probability distribution or some set, parameters are being examined via these probability distributions</li>
+<li>most of classic methods like t-test, linear regression model, Multivariate regression</li>
+</ul>
+<h1 id="nonparametric-methods">Nonparametric methods</h1>
+<p>or distribution-free statistical methods do not depend on having a normal distribution and can be used with skewed data or with categorical data (Spearman&rsquo;s rho, Mann-Whitney, Wilcoxon Test)</p>
+<h1 id="semiparametric-methods">Semiparametric methods</h1>
+<ul>
+<li>combination of parametric and nonparametric mothods</li>
+<li>Cox model of proportional risks in survival analysis</li>
+</ul>
+<h1 id="nominal-data-categorical">Nominal data (categorical)</h1>
+<p>distinguishes different categories for qualitative variables;
+dummy code: gender, ethnic background
+R: factor</p>
+<h1 id="ordinal-data">Ordinal data</h1>
+<p>data exists in categories that are ordered but differences cannot be determined or they are meaningless. (Example: 1st, 2nd, 3rd)
+R: ordered factor</p>
+<h1 id="interval-data">Interval data</h1>
+<p>Differences between values can be found, but there is no absolute 0. (Temp. and Time),
+R: numeric</p>
+<h1 id="ratio-data">Ratio Data</h1>
+<p>data with an absolute 0. Ratios are meaningful. (Length, Width, Weight, Distance)</p>
+<h1 id="null-hypothesis-h0">Null Hypothesis (H0)</h1>
+<p>a statement that the performance of treatment groups is so similar that the groups must belong to the same population; a way of saying that the experimental manipulation had no important effect</p>
+<ul>
+<li>all level factors have same mean values</li>
+</ul>
+<h1 id="alternative-hypothesis-h1">Alternative hypothesis (H1)</h1>
+<p>The hypothesis that states there is a difference between two or more sets of data.</p>
+<ul>
+<li>at least one pair of level factors differ in mean value</li>
+</ul>
+<h1 id="significance-level-alpha">significance level (alpha)</h1>
+<p>The acceptable level of error selected by the researcher, usually set at 0.05;
+what we compare our p-value to</p>
+<h1 id="power-of-a-test">Power of a test</h1>
+<ul>
+<li>The probability of correctly detecting a false null hypothesis</li>
+<li>could be increased by increasing sample data size</li>
+</ul>
+<h1 id="classical-statistical-hypothesis-testing-according-to-critical-field">classical statistical hypothesis testing; according to critical field</h1>
+<ul>
+<li>establish H0 and H1</li>
+<li>establish model - i.e. statistics assumptions</li>
+<li>choose test and testing statistics T with known probability distribution (under the validity of H0)</li>
+<li>choose significance level (α) - usually 0.05</li>
+<li>compute observed values <em>t</em> of testing statistics <em>T</em></li>
+<li>establish critical region <em>W</em> according to <em>H1</em> and <em>t</em></li>
+<li>H0 is rejected, if $$t \in W$$</li>
+</ul>
+<h1 id="statistical-hypothesis-testing-via-p-value">statistical hypothesis testing; via p-value</h1>
+<ul>
+<li>compute p-value <em>p</em></li>
+<li>H0 is rejected, if $$p \lt \alpha$$</li>
+</ul>
+<h1 id="p-value-1">p-value</h1>
+<p>The probability level which forms basis for deciding if results are statistically significant (not due to chance).</p>
+<h1 id="t-test">t-test</h1>
+<p>a statistical test used to evaluate the size and significance of the difference between two means</p>
+<h1 id="multiple-testing">multiple testing</h1>
+<p>the more statistical tests we do, the more likely we are to make an erroneous inference (unless we adjust our significance threshold).</p>
+<h1 id="anova-analysis-of-variance">ANOVA (analysis of variance)</h1>
+<p>-differences among MEANS of continuous (numerical) variables
+-more flexible than t-tests&ndash;&gt;can analyze differences among MORE THAN 2 groups (even if diff sample sizes)</p>
+<h1 id="multiple-comparison-tests">multiple comparison tests</h1>
+<p>statistical tests used to make pairwise comparisons to find which means differ significantly from one another in a one-factor multilevel design</p>
+<ul>
+<li>Tukey or Scheffe method</li>
+</ul>
+<h1 id="tukeys-method">Tukey&rsquo;s method</h1>
+<p>it&rsquo;s preferred especially in case that all partial random selections have approximately same range</p>
+<h1 id="scheffe-method">Scheffe method</h1>
+<p>it&rsquo;s recommended especially in case that partial random selections have distinctly different ranges.</p>
+<h1 id="the-means--minimalni-nulovy-model">The means / minimalni (nulovy) model</h1>
+<p>$$Y_{i,j} = \mu + \epsilon_{i,j}$$</p>
+<ul>
+<li>\mu (micro, u) - grand mean of Y, same for all levels of factor A</li>
+<li>eps - stochaistic independent random variables with probability distribution N(0, \o^2)</li>
+</ul>
+<h1 id="the-effect-model--jednoducheho-trideni">The effect model / jednoducheho trideni</h1>
+<p>$$Y_{i,j} = \mu + \alpha + \epsilon_{i,j}$$</p>
+<ul>
+<li>alpha - effect of i-th level of factor A</li>
+</ul>
+<h1 id="grand-mean--spolecna-stredni-hodnota">Grand mean / spolecna stredni hodnota</h1>
+<p>$$M: \mu^{\wedge} = Y^{\wedge}$$</p>
+<h1 id="effect-i-th-category-in-model-m">effect i-th category in model M</h1>
+<p>$$\alpha_{i}^{\wedge} = \overline{Y}_{i.} \overline{Y}_{..}$$</p>
+<h1 id="mean-value-of-i-th-category-in-model-m">mean value of i-th category in model M</h1>
+<p>$$\mu_{i}^{\wedge} = \mu^{\wedge} + \alpha^{\wedge}_{i} = \overline{Y}_{i.}$$</p>
+<h1 id="common-part-of-mean-value-in-submodel-m_0">common part of mean value in submodel M_0</h1>
+<p>$$\mu^{\wedge} = \overline{Y}$$</p>
+<h1 id="square-sums-describing-variability">Square sums describing variability</h1>
+<ul>
+<li>Total sum of squares , SS / celkovy soucet ctvercu</li>
+<li>Between-groups SS / skupinovy soucet ctvercu</li>
+<li>Within-groups/error/residual SS / rezidualni soucet ctvercu</li>
+</ul>
+<h1 id="parameters-estimates-in-models">Parameters estimates in models</h1>
+<ul>
+<li>Gran mean / spolecna stredni hodnota</li>
+<li>effect i-th category in model M</li>
+<li>mean value of i-th category in model M</li>
+<li>common part of mean value in submodel M_0</li>
+</ul>
+]]></content></item><item><title>IV111 lec 03</title><link>https://rand-notes.github.io/iv111/0/</link><pubDate>Sun, 26 Sep 2021 00:00:00 +0000</pubDate><guid>https://rand-notes.github.io/iv111/0/</guid><description>Expectation of Random Variables Often we need a shorter description than PMF or CDF - single number, or a few number. First such characteristic describing a random variable is the expectation, also known as the mean value Expectation of a random varialbe X is defined as:
 $$E(X) = \sum_{x\in lm(X)} x \cdot P(X = x)$$
 provided the sum is absolutely convergent. In case the sum is convergent, but not absoutely convergent, we say that no finite expectation exists.</description><content type="html"><![CDATA[<h1 id="expectation-of-random-variables">Expectation of Random Variables</h1>
 <ul>
@@ -180,7 +486,7 @@ $$</p>
 E(X) \geq E(Y_y) = tP(X \geq t)
 $$</p>
 <p>what is the Markov Inequality</p>
-]]></content></item><item><title>ai 0</title><link>http://localhost/iv126/0/</link><pubDate>Thu, 02 Sep 2021 00:00:00 +0000</pubDate><guid>http://localhost/iv126/0/</guid><description>Environments Fully Observable vs Partially Observable If an agent&amp;rsquo;s sensors give it access to the complete state of the environment at each point in time, then we say that he task environment is fully observable. If the agents has no sensors at all then the environment is unobservable
+]]></content></item><item><title>ai 0</title><link>https://rand-notes.github.io/iv126/0/</link><pubDate>Thu, 02 Sep 2021 00:00:00 +0000</pubDate><guid>https://rand-notes.github.io/iv126/0/</guid><description>Environments Fully Observable vs Partially Observable If an agent&amp;rsquo;s sensors give it access to the complete state of the environment at each point in time, then we say that he task environment is fully observable. If the agents has no sensors at all then the environment is unobservable
 Single-Agent vs Multi-Agent Environments For example, an agent solving a crossword puzzle by itself is clearly in a single-agent enviroment, whereas an agent playing chess is in a two-agent enviroment.</description><content type="html"><![CDATA[<h1 id="environments">Environments</h1>
 <h2 id="fully-observable-vs-partially-observable">Fully Observable vs Partially Observable</h2>
 <p>If an agent&rsquo;s sensors give it access to the complete state of the environment at each point in time, then we say that he task environment is fully observable. If the agents has no sensors at all then the
@@ -288,7 +594,7 @@ act to achieve their goals, and utility-based agents try to maximize their own e
     <img src="/images/agents.png"  alt="Agents"  class="center"  />
 
 
-]]></content></item><item><title>cpp</title><link>http://localhost/posts/cpp/2021-01-01-cpp/</link><pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate><guid>http://localhost/posts/cpp/2021-01-01-cpp/</guid><description/><content type="html"></content></item><item><title>DL0</title><link>http://localhost/dl0/</link><pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate><guid>http://localhost/dl0/</guid><description>TOC Underflow
+]]></content></item><item><title>cpp</title><link>https://rand-notes.github.io/posts/cpp/2021-01-01-cpp/</link><pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate><guid>https://rand-notes.github.io/posts/cpp/2021-01-01-cpp/</guid><description/><content type="html"></content></item><item><title>DL0</title><link>https://rand-notes.github.io/dl0/</link><pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate><guid>https://rand-notes.github.io/dl0/</guid><description>TOC Underflow
 Overflow
 Softmax
 Problems Condition number
@@ -453,7 +759,7 @@ point to be optimal. The conditions are:</p>
 <li>All constraints on both x and the KKT multipliers are satisfied</li>
 <li>The inequality constrains exhibit &ldquo;complementary slackness&rdquo;: <code>\alpha ⊙ h(x) = 0</code></li>
 </ul>
-]]></content></item><item><title>DL1</title><link>http://localhost/dl1/</link><pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate><guid>http://localhost/dl1/</guid><description>TOC
+]]></content></item><item><title>DL1</title><link>https://rand-notes.github.io/dl1/</link><pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate><guid>https://rand-notes.github.io/dl1/</guid><description>TOC
 self-information nats; bits; shannons;
 Shannon entropy
 KL Divergence
@@ -539,7 +845,7 @@ non-negative, but there is no constint that the factor must sum or integrate to 
 constant Z, defined to be the sum or integral over all states of the prodcut of the o fcuntions in order to obtain a normalized probability distribution:</p>
 <p><code>p(x) = 1/Z * pi(o_i * (C_i))</code></p>
 <p><strong>The graph are just representation, any probability distribution can be described by both graphs. Graphs are not property of distributions</strong></p>
-]]></content></item><item><title>DL2</title><link>http://localhost/dl2/</link><pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate><guid>http://localhost/dl2/</guid><description>TOC Learning algorithms
+]]></content></item><item><title>DL2</title><link>https://rand-notes.github.io/dl2/</link><pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate><guid>https://rand-notes.github.io/dl2/</guid><description>TOC Learning algorithms
 The Task, T
 Classification
 Classification with missing inputs
@@ -1232,4 +1538,35 @@ addresses in terms of address numbers along these 1-D roads, not in terms of coo
     <img src="/images/manifold.png"  alt="manifold"  class="center"  />
 
 
-]]></content></item><item><title/><link>http://localhost/posts/fi/iv126/ai1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>http://localhost/posts/fi/iv126/ai1/</guid><description/><content type="html"></content></item></channel></rss>
+]]></content></item><item><title/><link>https://rand-notes.github.io/posts/fi/iv126/ai1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rand-notes.github.io/posts/fi/iv126/ai1/</guid><description/><content type="html"></content></item><item><title/><link>https://rand-notes.github.io/posts/fi/ma012/ma012-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rand-notes.github.io/posts/fi/ma012/ma012-1/</guid><description>z method t test f distribution
+Mnohonasobne porovnavani Tukeyho Scheffeho metoda Bartlettuv test
+dvojne trideni hypotezy ve dvojnem trideni
+linearni modely ANOVA Znam ́enkov ́y test (sign test) Parovy znamenkovy test Jednovyberovy Wilconxonuv test (signed rank test) Dvouv ́ybˇerov ́y Wilcoxon ̊uv test (rank-sum test) Postup testovani ve dvojnem trideni Mnohonasobne porovnavani Dvojne trideni s interakcemi
+Testovani v modelu s interakcemi Interpretace indexu determinace R-squared
+F test Index determinace
+Scheffeho metoda Kruskal-Wallisuv Test</description><content type="html"><![CDATA[<p>z method
+t test
+f distribution</p>
+<p>Mnohonasobne porovnavani
+Tukeyho
+Scheffeho metoda
+Bartlettuv test</p>
+<p>dvojne trideni
+hypotezy ve dvojnem trideni</p>
+<p>linearni modely
+ANOVA
+Znam ́enkov ́y test (sign test)
+Parovy znamenkovy test
+Jednovyberovy Wilconxonuv test (signed rank test)
+Dvouv ́ybˇerov ́y Wilcoxon ̊uv test (rank-sum test)
+Postup testovani ve dvojnem trideni
+Mnohonasobne porovnavani
+Dvojne trideni s interakcemi</p>
+<p>Testovani v modelu s interakcemi
+Interpretace indexu determinace R-squared</p>
+<p>F test
+Index determinace</p>
+<p>Scheffeho metoda
+Kruskal-Wallisuv Test</p>
+<h1 id="multiple-comparsion-test">Multiple Comparsion Test</h1>
+]]></content></item></channel></rss>
