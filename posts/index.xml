@@ -1,4 +1,197 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on idk</title><link>https://rand-notes.github.io/posts/</link><description>Recent content in Posts on idk</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 30 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rand-notes.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Confidence Intervals</title><link>https://rand-notes.github.io/posts/fi/ma012/confidence-intervals/</link><pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate><guid>https://rand-notes.github.io/posts/fi/ma012/confidence-intervals/</guid><description>Statistical Inference is the process of drawing conclusions about populations or scientific truths from data
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on idk</title><link>https://rand-notes.github.io/posts/</link><description>Recent content in Posts on idk</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 02 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rand-notes.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>ma012 1</title><link>https://rand-notes.github.io/ma012/1/</link><pubDate>Sat, 02 Oct 2021 00:00:00 +0000</pubDate><guid>https://rand-notes.github.io/ma012/1/</guid><description>z method
+f distribution
+t test
+F test
+Mnohonasobne porovnavani
+Tukeyho
+Scheffeho metoda
+Bartlettuv test
+Kruskal-Wallisuv Test
+Jednovyberovy Wilconxonuv test (signed rank test) Dvouv ́ybˇerov ́y Wilcoxon ̊uv test (rank-sum test)
+dvojne trideni hypotezy ve dvojnem trideni
+linearni modely Znam ́enkov ́y test (sign test) Parovy znamenkovy test ANOVA Postup testovani ve dvojnem trideni Dvojne trideni s interakcemi</description><content type="html"><![CDATA[<ul>
+<li>
+<p>z method</p>
+</li>
+<li>
+<p>f distribution</p>
+</li>
+<li>
+<p>t test</p>
+</li>
+<li>
+<p>F test</p>
+</li>
+<li>
+<p>Mnohonasobne porovnavani</p>
+</li>
+<li>
+<p>Tukeyho</p>
+</li>
+<li>
+<p>Scheffeho metoda</p>
+</li>
+<li>
+<p>Bartlettuv test</p>
+</li>
+<li>
+<p>Kruskal-Wallisuv Test</p>
+</li>
+<li>
+<p>Jednovyberovy Wilconxonuv test (signed rank test)
+Dvouv ́ybˇerov ́y Wilcoxon ̊uv test (rank-sum test)</p>
+</li>
+</ul>
+<hr>
+<p>dvojne trideni
+hypotezy ve dvojnem trideni</p>
+<p>linearni modely
+Znam ́enkov ́y test (sign test)
+Parovy znamenkovy test
+ANOVA
+Postup testovani ve dvojnem trideni
+Dvojne trideni s interakcemi</p>
+<p>Testovani v modelu s interakcemi
+Interpretace indexu determinace R-squared</p>
+<p>Index determinace</p>
+<h1 id="error-vs-residual">Error vs Residual</h1>
+<blockquote>
+<p>Error (or disturbance) is theis the deviation of the observed value from the (unobservable) true value of quantity of interest</p>
+</blockquote>
+<blockquote>
+<p>Residual is the difference between the observed value and the estimated value of the quantity of interest</p>
+</blockquote>
+<p>Residual = observed value - predicted value: \(e = y - \hat{y}\)</p>
+<p>The distinction is most important in regression analysis, where the concepts are sometimes called the <strong>regression errors</strong> and <strong>regression residuals</strong> and were they lead to the concept of studentized
+residuals.</p>
+<h1 id="degrees-of-freedom">Degrees of freedom</h1>
+<blockquote>
+<p>Degrees of freedom is the number of values in the final calculation of a statistic that are free to vary</p>
+</blockquote>
+<h1 id="z-test">Z-test</h1>
+<blockquote>
+<p>A z-test is a statistical test used to determine whether two population means are different when the variances are known and the sample size is large1.</p>
+</blockquote>
+<p>The test statistic is assumed to have a normal distribution, and nuisance parameters such as standard deviation should be known in order for an accurate z-test to be performed.</p>
+<ul>
+<li>is a hypothesis test in which the z-statistic follows a normal distribution</li>
+<li>A <strong>z-statistic</strong>, or <strong>z-score</strong>, is a number representing the result from the z-test</li>
+<li>are closely related to t-tests, but t-tests are best performed when an experiment has a small sample size.</li>
+<li>assume the standard deviation is known, while t-tests assume it is unknown.</li>
+</ul>
+<h1 id="t-distribution">t-distribution</h1>
+<p><em>or Student&rsquo;s t-distribution</em></p>
+<blockquote>
+<p>is any continuous probability distribution that arise when astimating the mean of a <strong>normally distributed</strong> population in situations where the sample size is small and the population&rsquo;s standard
+deviation is unknown.</p>
+</blockquote>
+<h1 id="t-test">t-test</h1>
+<p><em>or student&rsquo;s t-test</em></p>
+<blockquote>
+<p>is any statistical hypothesis test in which the test statistic follows a Student&rsquo;s t-dristribution under the null hypothesis.</p>
+</blockquote>
+<p>Used to determine wheter the means of two groups are equal to each other. The assumption for the test is that both groups are sampled from normal distributions with equal variances. The null hypothesis
+is that the two means are equal, and the alternative is that they are not. It is known that under the null hypothesis, we can calculate a t-statistic that will follow a t-distribution with \( n1 + n2 -
+2 \) degrees of freedom.</p>
+<p>There is also a widely used modification of the t-test, known as <strong>Welch&rsquo;s t-test</strong> that adjusts the number of degrees of freedom when the variances are thought not to be equal to each other.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R">x <span style="color:#f92672">=</span> <span style="color:#a6e22e">rnorm</span>(<span style="color:#ae81ff">10</span>)
+y <span style="color:#f92672">=</span> <span style="color:#a6e22e">rnorm</span>(<span style="color:#ae81ff">10</span>)
+<span style="color:#a6e22e">t.test</span>(x, y)
+
+<span style="color:#75715e"># 	Welch Two Sample t-test</span>
+<span style="color:#75715e"># </span>
+<span style="color:#75715e"># data:  x and y</span>
+<span style="color:#75715e"># t = -1.6264, df = 16.666, p-value = 0.1226</span>
+<span style="color:#75715e"># alternative hypothesis: true difference in means is not equal to 0</span>
+<span style="color:#75715e"># 95 percent confidence interval:</span>
+<span style="color:#75715e">#  -1.4494854  0.1886137</span>
+<span style="color:#75715e"># sample estimates:</span>
+<span style="color:#75715e">#   mean of x   mean of y </span>
+<span style="color:#75715e"># 0.007872345 0.638308171</span>
+</code></pre></div><h1 id="f-distribution">F-distribution</h1>
+<p><em>or F-ratio also known as Snedecor&rsquo;s F distribution or the Fisher–Snedecor distribution</em></p>
+<blockquote>
+<p>is a continuous probability distribution that arises frequently as the null distribution of a test statistic, most notably in the ANOVA and other F-tests.</p>
+</blockquote>
+<p>The F-distribution with \(d_1\) and \(d_2\) degrees of freedom is the distribution of:</p>
+<p>$$X = \frac{S_1/d_1}{S_2/d_2}$$</p>
+<p>where \(S_1\) and \(S_2\) are independent random variables with chi-square distributions respective degrees of freedom \(d_1\) and \(d_2\)</p>
+<h1 id="f-test">F-test</h1>
+<blockquote>
+<p>is any statistical test in which the test statistic has an F-distribution under the null hypothesis.</p>
+</blockquote>
+<p>It is most often used when comparing statistical models that have been fitted to a data set, in order to identify the model that best fits the population from which the data were sampled. Exact &ldquo;F-tests&rdquo;
+mainly arise when the models have been fitted to the data using least squares.</p>
+<p>The test statistic can be obtained by computing the ration of the two variances \( S_A^2 \) and \( S_B^2 \)</p>
+<p>$$F = \frac{S_A^2}{S_B^2}$$</p>
+<p>The degrees of freedom are \( n_A - a \) (for the numerator) and \( n_B -1 \) (for the denominator)</p>
+<h1 id="chi-square-distribution">Chi-square distribution</h1>
+<p><em>also chi-square or \( \chi^2 \)-distribution</em></p>
+<blockquote>
+<p>with k degrees of freedom is the distribution of a sum of the squares of k independent standard normal random variables.</p>
+</blockquote>
+<p>if \(Z_1, &hellip;, Z_k \) are independent, standard normal random variables, then sum of their squares:</p>
+<p>$$Q=\sum^k_{i=1} Z_i^2$$</p>
+<p>is distributed according to the chi-squared distribution with k degrees of freedom. This is usually denoted as:</p>
+<p>$$Q \sim \chi^2 (k) \text{ or } Q \sim \chi^2_k $$</p>
+<p>The chi-squared distribution has one parameter: a positive integer k that specifies the number of degrees of freedom (the number of random variables being summed, Zi s)</p>
+<h1 id="multiple-comparisons-problem">Multiple Comparisons Problem</h1>
+<p><em>or multiple comparisons, multiplicity or multiple testing problem</em></p>
+<blockquote>
+<p>occurs when one considers a set of statistical inferences simultaneously or inders a subset of parameters selected based on the observed values.</p>
+</blockquote>
+<h2 id="tukeys-range-test">Tukey&rsquo;s Range Test</h2>
+<p><em>or Tukey&rsquo;s test, Tukey method &hellip;</em></p>
+<blockquote>
+<p>is a single-step multiple comparsion procedure and statistical test. It can be used to find means that are significantly different from each other.</p>
+</blockquote>
+<p>Tukey&rsquo;s test is based on a formula very similar to that of the t-test. In fact, Tukey&rsquo;s test is essentially a t-test, except that it corrects for family-wise error rate.</p>
+<p>The formula for Tukey&rsquo;s test is:</p>
+<p>$$q_s = \frac{Y_A - Y_B}{SE}$$</p>
+<p>where Y_A is the larger of the two means being compared, Y_B is the smaller, and SE is the standard error of the sum of the means.</p>
+<h2 id="scheffés-method">Scheffé&rsquo;s method</h2>
+<blockquote>
+<p>is a method for adjusting significance levels in a linear regression analysis to account for multiple comparsions.</p>
+</blockquote>
+<p>It is particularly useful in ANOVA and in constructing simultaneous confidence bands for regressions involving basis functions.</p>
+<h1 id="bartletts-test">Bartlett&rsquo;s test</h1>
+<blockquote>
+<p>is used to test homoscedasticity, that is, if multiple samples are from populations with equal variances.</p>
+</blockquote>
+<p>Some statistical tests, such as the ANOVA assume that variances are equal across groups or samples, which can be verified with Bartlett&rsquo;s test.</p>
+<h1 id="levenes-test">Levene&rsquo;s test</h1>
+<blockquote>
+<p>is an inferential statistic used to asses the equality of variances for a variable calculated for two or more groups.</p>
+</blockquote>
+<h1 id="sign-test">Sign Test</h1>
+<blockquote>
+<p>is a statistical method to test for consistent differences between pairs of observations</p>
+</blockquote>
+<h1 id="wilcoxon-signed-rank-test">Wilcoxon signed-rank test</h1>
+<p><em>Jednovýběrový Wilcoxonův párový test</em></p>
+<blockquote>
+<p>is a non-parametric statistical hypothesis test used either to test the location of a set of samples or to compare the locations of two populations using a set of matched samples.</p>
+</blockquote>
+<h1 id="mannwhitney-u-test">Mann–Whitney U test</h1>
+<p><em>Dvouvýběrový Wilcoxonův párový test or Wilcoxon rank-sum test</em></p>
+<blockquote>
+<p>is a non=parametric test of the null hypothesis that, for randomly selected values X and Y from two populations, the probability of X being greater than Y is equal to the probability of Y being greater
+than X.</p>
+</blockquote>
+<h1 id="kruskalwallis-test">Kruskal–Wallis test</h1>
+<p><em>or Kruskal–Wallis one-way analysis of variance or one-way ANOVA on ranks</em></p>
+<blockquote>
+<p>is a non-parametric method for testing whether samples originate from the same distribution.</p>
+<p>The parametric equivalent of the Kruskal–Wallis test is the ANOVA</p>
+</blockquote>
+<p>It used for comparing two or more independent samples of equal or different sample sizes. It exteds the <em>Mann-Whitney U test</em>, which is used for comparing only two groups.</p>
+<h1 id="kolmogorovsmirnov-test">Kolmogorov–Smirnov test</h1>
+<p><em>or KS test</em></p>
+<blockquote>
+<p>is a nonparametric test of the equality of continuous, one dimensional probability distributions</p>
+</blockquote>
+<p>It can be used to compare a sample with a reference probability distribution (one-sample KS) or to comapre two-samples (two-sample KS).</p>
+]]></content></item><item><title>Confidence Intervals</title><link>https://rand-notes.github.io/fi/ma012/conf-intervals/</link><pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate><guid>https://rand-notes.github.io/fi/ma012/conf-intervals/</guid><description>Statistical Inference is the process of drawing conclusions about populations or scientific truths from data
 There are two types of statistical inferences; estimation and statistical (hypothesis) tests
 Estimation Use information from the sample to estimate (or predict) the parameter of interest.
 For instance, using the result of a poll about the president&amp;rsquo;s current approval rating to estimate (or predict) his or her true current approval rating nationwide.
@@ -332,23 +525,23 @@ $$p_X(x) = P(X = 0) = p$$</p>
 <p>$$E(X) = 0 \cdot (1 - p) + 1 \cdot p = p$$</p>
 <h2 id="indicator-random-variable">Indicator Random Variable</h2>
 <p>Indicator random variable of an event A.</p>
-<p>the indicator of an event A is the random variable I_A defined by:</p>
+<p>the indicator of an event A is the random variable \(I_A\) defined by:</p>
 <p>\( I_A(s) = 1\) if \(s \in A \)</p>
 <p>and</p>
-<p>\( I_A(s) = 0\)if \(s \notin A\)</p>
+<p>\( I_A(s) = 0\) if \(s \notin A\)</p>
 <p>The probability distribution is:</p>
 <p>$$p_{I_A}(0) = P(\overline{A}) = 1 - P(A)$$
-$$p_{I_A}(1) = P(A)</p>
+$$p_{I_A}(1) = P(A)$$</p>
 <p>the distribution function reads</p>
 <p>$$
 F_{I_A}(x) =
 \begin{cases}
-\displaylines{0 \hskip 1em \text{for} x \lt 0 \\ P(\overline{A}) \hskip 1em \text{for} 0 \leq x \geq 1) \\ 1 \hskip 1em \text{for} x \geq 1}
+\displaylines{0 \hskip 1em \text{for } x \lt 0 \\ P(\overline{A}) \hskip 1em \text{for } 0 \leq x \geq 1) \\ 1 \hskip 1em \text{for } x \geq 1}
 \end{cases}
 $$</p>
 <p>It is a Bernoulli distribution, and so \( E(I_A) = P(A) \)</p>
 <h2 id="constant-random-variable">Constant Random Variable</h2>
-<p>For \(c \in \mathbb{R}\) the function defined for all \(s \in S \text{ by } X(s) = c\)</p>
+<p>For \(c \in \mathbb{R}\) the function defined for all \(s \in S \) by \(X(s) = c\)</p>
 <p>The probability distribution of this variable is:</p>
 <p>$$
 p_X(x) =
@@ -397,13 +590,15 @@ $$</p>
 </ul>
 </blockquote>
 <h3 id="sums-of-distributions">Sums of Distributions</h3>
-<p>Bernoulli + Bernoulli = Binomial
-Binomial + Binomial = Binomial
-Geometric + Geometric = Negative Binomial
-Negative Binomial + Negative Binomial = Negative Binomial
-Poisson + Poisson = Poisson
-Exponential + Exponential = Erlang
-Erlang + Erlang = Erlang</p>
+<ul>
+<li>Bernoulli + Bernoulli = Binomial</li>
+<li>Binomial + Binomial = Binomial</li>
+<li>Geometric + Geometric = Negative Binomial</li>
+<li>Negative Binomial + Negative Binomial = Negative Binomial</li>
+<li>Poisson + Poisson = Poisson</li>
+<li>Exponential + Exponential = Erlang</li>
+<li>Erlang + Erlang = Erlang</li>
+</ul>
 <h2 id="negative-binomial-distribution">Negative Binomial Distribution</h2>
 <p>Negative binomial distribution has two parameters p and r and expresses the number of Bernoulli trials to the r th success. Hence, it is a convolution of r geometric distributions.</p>
 <p>The probability function
@@ -444,10 +639,10 @@ $$</p>
 <p>Using the derivation of conditional probability of two events, we can derive conditional probability of (a pair of) random variables.</p>
 <h2 id="definition">Definition</h2>
 <p>The conditional probability distribution of random variable X given random variable Y (where \( p_{X ,Y} (x , y) \) is their joint distribution) is</p>
-<p>p_{X|Y}(x|y) = P(X = x|Y = y) = \frac{P(X = x,Y = y)}{P(Y = y)} = \frac{p_{X, Y}(x, y)}{p_Y(y)}</p>
+<p>$$p_{X|Y}(x|y) = P(X = x|Y = y) = \frac{P(X = x,Y = y)}{P(Y = y)} = \frac{p_{X, Y}(x, y)}{p_Y(y)}$$</p>
 <p>provided the marginal probability \( p_Y(y) \neq 0 \)</p>
 <hr>
-<p>We may consider Y|(X = x) to be a new random variable that is given by the conditional probability distribution \( p_{Y|X} \). therefore, we can define its mean.</p>
+<p>We may consider \( Y|(X = x) \) to be a new random variable that is given by the conditional probability distribution \( p_{Y|X} \). therefore, we can define its mean.</p>
 <h2 id="definition-1">Definition</h2>
 <p>The <strong>conditional expectation</strong> of Y given X = x is defined</p>
 <p>$$
@@ -464,7 +659,7 @@ $$</p>
 <p>It is important to derive as much information as possible even from a partial description of random variable. The mean value already gives more information than one might expect, as captured by Markov
 inequality.</p>
 <h2 id="theorem-markov-inequality">Theorem (Markov inequality)</h2>
-<p>Let X be a nonnegative random variable with finite mean value E (X ). Then for all t &gt;0 it holds that</p>
+<p>Let X be a nonnegative random variable with finite mean value E(X). Then for all t &gt;0 it holds that</p>
 <p>$$
 P(X \geq t) \leq \frac{E(X)}{t}
 $$</p>
@@ -1538,35 +1733,4 @@ addresses in terms of address numbers along these 1-D roads, not in terms of coo
     <img src="/images/manifold.png"  alt="manifold"  class="center"  />
 
 
-]]></content></item><item><title/><link>https://rand-notes.github.io/posts/fi/iv126/ai1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rand-notes.github.io/posts/fi/iv126/ai1/</guid><description/><content type="html"></content></item><item><title/><link>https://rand-notes.github.io/posts/fi/ma012/ma012-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rand-notes.github.io/posts/fi/ma012/ma012-1/</guid><description>z method t test f distribution
-Mnohonasobne porovnavani Tukeyho Scheffeho metoda Bartlettuv test
-dvojne trideni hypotezy ve dvojnem trideni
-linearni modely ANOVA Znam ́enkov ́y test (sign test) Parovy znamenkovy test Jednovyberovy Wilconxonuv test (signed rank test) Dvouv ́ybˇerov ́y Wilcoxon ̊uv test (rank-sum test) Postup testovani ve dvojnem trideni Mnohonasobne porovnavani Dvojne trideni s interakcemi
-Testovani v modelu s interakcemi Interpretace indexu determinace R-squared
-F test Index determinace
-Scheffeho metoda Kruskal-Wallisuv Test</description><content type="html"><![CDATA[<p>z method
-t test
-f distribution</p>
-<p>Mnohonasobne porovnavani
-Tukeyho
-Scheffeho metoda
-Bartlettuv test</p>
-<p>dvojne trideni
-hypotezy ve dvojnem trideni</p>
-<p>linearni modely
-ANOVA
-Znam ́enkov ́y test (sign test)
-Parovy znamenkovy test
-Jednovyberovy Wilconxonuv test (signed rank test)
-Dvouv ́ybˇerov ́y Wilcoxon ̊uv test (rank-sum test)
-Postup testovani ve dvojnem trideni
-Mnohonasobne porovnavani
-Dvojne trideni s interakcemi</p>
-<p>Testovani v modelu s interakcemi
-Interpretace indexu determinace R-squared</p>
-<p>F test
-Index determinace</p>
-<p>Scheffeho metoda
-Kruskal-Wallisuv Test</p>
-<h1 id="multiple-comparsion-test">Multiple Comparsion Test</h1>
-]]></content></item></channel></rss>
+]]></content></item><item><title/><link>https://rand-notes.github.io/posts/fi/iv126/ai1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rand-notes.github.io/posts/fi/iv126/ai1/</guid><description>Christofides Algorithm</description><content type="html">&lt;p>Christofides Algorithm&lt;/p></content></item></channel></rss>

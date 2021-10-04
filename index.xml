@@ -1,4 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>idk</title><link>https://rand-notes.github.io/</link><description>Recent content on idk</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 30 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rand-notes.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Confidence Intervals</title><link>https://rand-notes.github.io/posts/fi/ma012/confidence-intervals/</link><pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate><guid>https://rand-notes.github.io/posts/fi/ma012/confidence-intervals/</guid><description>Statistical Inference is the process of drawing conclusions about populations or scientific truths from data
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>idk</title><link>https://rand-notes.github.io/</link><description>Recent content on idk</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 02 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rand-notes.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>ma012 1</title><link>https://rand-notes.github.io/ma012/1/</link><pubDate>Sat, 02 Oct 2021 00:00:00 +0000</pubDate><guid>https://rand-notes.github.io/ma012/1/</guid><description>z method
+f distribution
+t test
+F test
+Mnohonasobne porovnavani
+Tukeyho
+Scheffeho metoda
+Bartlettuv test
+Kruskal-Wallisuv Test
+Jednovyberovy Wilconxonuv test (signed rank test) Dvouv ́ybˇerov ́y Wilcoxon ̊uv test (rank-sum test)
+dvojne trideni hypotezy ve dvojnem trideni
+linearni modely Znam ́enkov ́y test (sign test) Parovy znamenkovy test ANOVA Postup testovani ve dvojnem trideni Dvojne trideni s interakcemi</description></item><item><title>Confidence Intervals</title><link>https://rand-notes.github.io/fi/ma012/conf-intervals/</link><pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate><guid>https://rand-notes.github.io/fi/ma012/conf-intervals/</guid><description>Statistical Inference is the process of drawing conclusions about populations or scientific truths from data
 There are two types of statistical inferences; estimation and statistical (hypothesis) tests
 Estimation Use information from the sample to estimate (or predict) the parameter of interest.
 For instance, using the result of a poll about the president&amp;rsquo;s current approval rating to estimate (or predict) his or her true current approval rating nationwide.
@@ -32,10 +43,4 @@ Synthesis and sampling
 Imputation of missing values
 Denoising
 Density estimation or probability mass function estimation
-The Performance Measure, P accuracy; error rate;</description></item><item><title/><link>https://rand-notes.github.io/posts/fi/iv126/ai1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rand-notes.github.io/posts/fi/iv126/ai1/</guid><description/></item><item><title/><link>https://rand-notes.github.io/posts/fi/ma012/ma012-1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rand-notes.github.io/posts/fi/ma012/ma012-1/</guid><description>z method t test f distribution
-Mnohonasobne porovnavani Tukeyho Scheffeho metoda Bartlettuv test
-dvojne trideni hypotezy ve dvojnem trideni
-linearni modely ANOVA Znam ́enkov ́y test (sign test) Parovy znamenkovy test Jednovyberovy Wilconxonuv test (signed rank test) Dvouv ́ybˇerov ́y Wilcoxon ̊uv test (rank-sum test) Postup testovani ve dvojnem trideni Mnohonasobne porovnavani Dvojne trideni s interakcemi
-Testovani v modelu s interakcemi Interpretace indexu determinace R-squared
-F test Index determinace
-Scheffeho metoda Kruskal-Wallisuv Test</description></item></channel></rss>
+The Performance Measure, P accuracy; error rate;</description></item><item><title/><link>https://rand-notes.github.io/posts/fi/iv126/ai1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rand-notes.github.io/posts/fi/iv126/ai1/</guid><description>Christofides Algorithm</description></item><item><title/><link>https://rand-notes.github.io/topics/asd/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rand-notes.github.io/topics/asd/</guid><description>asd</description></item></channel></rss>
