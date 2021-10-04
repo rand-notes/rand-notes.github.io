@@ -49,25 +49,25 @@ $$E(X) = 0 \cdot (1 - p) + 1 \cdot p = p$$
 
 Indicator random variable of an event A.
 
-the indicator of an event A is the random variable I_A defined by:
+the indicator of an event A is the random variable \\(I_A\\) defined by:
 
 \\( I_A(s) = 1\\) if \\(s \in A \\)
 
 and
 
-\\( I_A(s) = 0\\)if \\(s \notin A\\)
+\\( I_A(s) = 0\\) if \\(s \notin A\\)
 
 The probability distribution is:
 
 $$p_{I_A}(0) = P(\overline{A}) = 1 - P(A)$$
-$$p_{I_A}(1) = P(A)
+$$p_{I_A}(1) = P(A)$$
 
 the distribution function reads
 
 $$
 F_{I_A}(x) = 
 \begin{cases}
-\displaylines{0 \hskip 1em \text{for} x \lt 0 \\\ P(\overline{A}) \hskip 1em \text{for} 0 \leq x \geq 1) \\\ 1 \hskip 1em \text{for} x \geq 1}
+\displaylines{0 \hskip 1em \text{for } x \lt 0 \\\ P(\overline{A}) \hskip 1em \text{for } 0 \leq x \geq 1) \\\ 1 \hskip 1em \text{for } x \geq 1}
 \end{cases}
 $$
 
@@ -77,7 +77,7 @@ It is a Bernoulli distribution, and so \\( E(I_A) = P(A) \\)
 ## Constant Random Variable
 
 
-For \\(c \in \mathbb{R}\\) the function defined for all \\(s \in S \text{ by } X(s) = c\\)
+For \\(c \in \mathbb{R}\\) the function defined for all \\(s \in S \\) by \\(X(s) = c\\)
 
 The probability distribution of this variable is:
 
@@ -158,13 +158,13 @@ $$ p_Z(t) = p_{X+Y}(t) = \sum^t_{x=0} p_X(x) p_Y(t-x)$$
 
 ### Sums of Distributions
 
-Bernoulli + Bernoulli = Binomial
-Binomial + Binomial = Binomial
-Geometric + Geometric = Negative Binomial
-Negative Binomial + Negative Binomial = Negative Binomial
-Poisson + Poisson = Poisson
-Exponential + Exponential = Erlang
-Erlang + Erlang = Erlang
+- Bernoulli + Bernoulli = Binomial
+- Binomial + Binomial = Binomial
+- Geometric + Geometric = Negative Binomial
+- Negative Binomial + Negative Binomial = Negative Binomial
+- Poisson + Poisson = Poisson
+- Exponential + Exponential = Erlang
+- Erlang + Erlang = Erlang
 
 ## Negative Binomial Distribution
 
@@ -237,13 +237,13 @@ Using the derivation of conditional probability of two events, we can derive con
 The conditional probability distribution of random variable X given random variable Y (where \\( p_{X ,Y} (x , y) \\) is their joint distribution) is
 
 
-p_{X|Y}(x|y) = P(X = x|Y = y) = \frac{P(X = x,Y = y)}{P(Y = y)} = \frac{p_{X, Y}(x, y)}{p_Y(y)}
+$$p_{X|Y}(x|y) = P(X = x|Y = y) = \frac{P(X = x,Y = y)}{P(Y = y)} = \frac{p_{X, Y}(x, y)}{p_Y(y)}$$
 
 provided the marginal probability \\( p_Y(y) \neq 0 \\)
 
 ---
 
-We may consider Y|(X = x) to be a new random variable that is given by the conditional probability distribution \\( p_{Y|X} \\). therefore, we can define its mean.
+We may consider \\( Y|(X = x) \\) to be a new random variable that is given by the conditional probability distribution \\( p_{Y|X} \\). therefore, we can define its mean.
 
 ## Definition
 
@@ -273,7 +273,7 @@ inequality.
 
 ## Theorem (Markov inequality)
 
-Let X be a nonnegative random variable with finite mean value E (X ). Then for all t >0 it holds that
+Let X be a nonnegative random variable with finite mean value E(X). Then for all t >0 it holds that
 
 $$
 P(X \geq t) \leq \frac{E(X)}{t}

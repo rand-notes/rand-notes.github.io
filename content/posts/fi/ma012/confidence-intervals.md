@@ -1,6 +1,7 @@
 ---
 date: 2021-09-30
 title: Confidence Intervals
+url: fi/ma012/conf-intervals
 ---
 
 
