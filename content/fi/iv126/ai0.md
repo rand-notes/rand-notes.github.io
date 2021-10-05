@@ -1,7 +1,7 @@
 ---
 date: 2021-09-02
 title: ai 0
-url: iv126/0
+url: fi/iv126/0
 ---
 
 # Environments

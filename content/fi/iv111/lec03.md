@@ -1,7 +1,8 @@
 ---
 date: 2021-09-26
-url: iv111/0
+url: fi/iv111/3
 title: IV111 lec 03
+math: true
 ---
 
 # Expectation of Random Variables
@@ -212,6 +213,14 @@ $$
 E(\sum^n_{i=1}c_i X_i) = \sum^n_{i=1} c_i E(X_i)
 $$
 
+
+## Jensen's inequality
+
+Let X be a random variable. If f is a convex function, the
+
+$$E[f(x)] \geq f(E(X))$$
+
+
 ## Expectation of Independent Random Variables
 
 ### Theorem
@@ -310,28 +319,82 @@ $$
 what is the Markov Inequality
 
 
+## Example
+
+ex. Bound the probability of obtaining more than 75 heads in a sequence of 100 fair coin flips.
+
+Let \\(X1, X_2, ..., X_100 \\) be random variables expressing
+
+$$
+\begin{cases}
+\displaylines{1 \hskip 1em \text{if the i-th coin flip is head} \\\0 \hskip 6em otherwise}
+\end{cases}
+$$
+
+Hence \\(X = \sum^100_{i=1} X_i \\) be the number of heads in 100 coin flips. Note that \\( E(X_i) = 1/2 \\) and \\( E(X) = 100/2 = 50\\)
+
+Using the Markov inequality, we get
+$$
+P(X \geq 75) \leq \frac{E(X)}{75} = \frac{50}{75} = \frac{2}{3}
+$$
 
 
 
+# Moments
+
+## Definition
+
+> The k-th moment of a random variable X is defined as \\( E(X^k) \\)
+
+Note that for k = 1 we get the expectation of X.
+
+## Theorem
+
+If X and Y are random variables with matching corresponding moments of all orders, i.e. \\( \forall k E(X^k) = E(Y^k) \\), then X and Y have the same distributions.
+
+Usually we center the expected value to 0 - we use moments of \\( \phi(X) = X - E(X) \\)
+
+\\( \phi \\) denotes normal distribution
+
+i.e. we defined the k-th **central moment** of X as
+
+$$\mu_k = E([X - E(X)]^k)$$
 
 
+# Variance
 
+The second central moment is known as the variance of X and defined as
 
+$$
+\mu_2 = E([X - E(X)]^2)
+$$
 
+The variance is usually denoted as Var(X) or \\( \mu^2_X \\)
+The square root of Var(X) is known as the **standard deviation** \\( \mu_x \\)
 
+---
+variance - rozptyl  
+standard deviation - smerodatna odchylka
 
+---
 
+Let Var(X) be the variance of the random variable X. Then \\( Var(X) = E(X^2) - [E(X)]^2 \\)
 
+Proof:
+$$
+\displaylines{
+Var(X) = E([X - E(X)]^2) = \\\ = E(X^2 - 2XE(X) + [E(X)]^2) = \\\ = E(X^2) - E[2XE(X)] + [E(X)]^2 = \\\ = E(X^2) - 2[E(X)]^2 + [E(X)]^2 = \\\ = E(X^2) - [E(X)]^2
+}
+$$
 
+---
 
+Let X be a random variable and a and b real numbers. Then
 
+$$
+Var(aX + b) = a^2 Var(X)
+$$
 
-
-
-
-
-
-
-
+/todo proof
 
 
