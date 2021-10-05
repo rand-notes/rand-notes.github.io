@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dls on idk</title><link>https://rand-notes.github.io/dl/</link><description>Recent content in Dls on idk</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 01 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rand-notes.github.io/dl/index.xml" rel="self" type="application/rss+xml"/><item><title>DL0</title><link>https://rand-notes.github.io/dl0/</link><pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate><guid>https://rand-notes.github.io/dl0/</guid><description>TOC Underflow
+Overflow
+Softmax
+Problems Condition number
+Gradient-Based Optimization objective function; criterio; cost function; loss function; Gradient Descent; critical points; stationary points; local minumum; local maximum; Saddle points; global minimum; partial derivatives; gradient; directional derivative; method of steepest descent; gradient descent; Chain rule; Steepest descent proposes a new point; learning rate; line search; hill climbing; Jacobian matrix; second derivative; Hessian matrix; Jacobian; Hessian; second derivative test; Newton&amp;rsquo;s method; first-order optimization algorithms; second-order optimization algorithms; Lipschitz continous; Lipschitz constant; convex optimization;</description></item><item><title>DL1</title><link>https://rand-notes.github.io/dl1/</link><pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate><guid>https://rand-notes.github.io/dl1/</guid><description>TOC
+self-information nats; bits; shannons;
+Shannon entropy
+KL Divergence
+CrossEntropy
+Factorization
+Structured Probabilistic Model
+Directed
+Undirected The graph are just representation, any probability distribution can be described by both graphs. Graphs are not property of distributions;
+Self-information we rate information value much higher if information is less likely and independent.</description></item><item><title>DL2</title><link>https://rand-notes.github.io/dl2/</link><pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate><guid>https://rand-notes.github.io/dl2/</guid><description>TOC Learning algorithms
+The Task, T
+Classification
+Classification with missing inputs
+Regression
+Transcription
+Machine translation
+Structured output
+Anomaly detection
+Synthesis and sampling
+Imputation of missing values
+Denoising
+Density estimation or probability mass function estimation
+The Performance Measure, P accuracy; error rate;</description></item></channel></rss>

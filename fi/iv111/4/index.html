@@ -1,0 +1,172 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=author content>
+<meta name=description content="Covariance $$ E([X - E(X)][Y - E(Y)]) = \sum_{i, j} p_{x_i, y_j} [x_i - E(X)][y_j - E(Y)] $$
+is called the covariance of X and Y and denoted Cov(X, Y)
+Covariance measures linear dependence between two random variables. It is positive if the variables are correlated, and negative when anticorrelated.
+e.g. when Y = aX, using E(Y) = aE(x) we have Cov(X, Y) = aVar(X)
+we define the correlation coefficient \rho(X, Y) as the normalized covariance, i.">
+<meta name=keywords content>
+<meta name=robots content="noodp">
+<meta name=theme-color content>
+<link rel=canonical href=https://rand-notes.github.io/fi/iv111/4/>
+<title>
+lec 04 :: idk
+</title>
+<link href=https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css rel=stylesheet type=text/css>
+<link rel=stylesheet href=/main.7209ab6422eb371a6b685a56274cc88eff3db604665c3bdb698389c0585d4211.css>
+<meta itemprop=name content="lec 04">
+<meta itemprop=description content="Covariance $$ E([X - E(X)][Y - E(Y)]) = \sum_{i, j} p_{x_i, y_j} [x_i - E(X)][y_j - E(Y)] $$
+is called the covariance of X and Y and denoted Cov(X, Y)
+Covariance measures linear dependence between two random variables. It is positive if the variables are correlated, and negative when anticorrelated.
+e.g. when Y = aX, using E(Y) = aE(x) we have Cov(X, Y) = aVar(X)
+we define the correlation coefficient \rho(X, Y) as the normalized covariance, i."><meta itemprop=datePublished content="2021-10-04T00:00:00+00:00">
+<meta itemprop=dateModified content="2021-10-04T00:00:00+00:00">
+<meta itemprop=wordCount content="556"><meta itemprop=image content="https://rand-notes.github.io">
+<meta itemprop=keywords content>
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://rand-notes.github.io">
+<meta name=twitter:title content="lec 04">
+<meta name=twitter:description content="Covariance $$ E([X - E(X)][Y - E(Y)]) = \sum_{i, j} p_{x_i, y_j} [x_i - E(X)][y_j - E(Y)] $$
+is called the covariance of X and Y and denoted Cov(X, Y)
+Covariance measures linear dependence between two random variables. It is positive if the variables are correlated, and negative when anticorrelated.
+e.g. when Y = aX, using E(Y) = aE(x) we have Cov(X, Y) = aVar(X)
+we define the correlation coefficient \rho(X, Y) as the normalized covariance, i.">
+<meta property="og:title" content="lec 04">
+<meta property="og:description" content="Covariance $$ E([X - E(X)][Y - E(Y)]) = \sum_{i, j} p_{x_i, y_j} [x_i - E(X)][y_j - E(Y)] $$
+is called the covariance of X and Y and denoted Cov(X, Y)
+Covariance measures linear dependence between two random variables. It is positive if the variables are correlated, and negative when anticorrelated.
+e.g. when Y = aX, using E(Y) = aE(x) we have Cov(X, Y) = aVar(X)
+we define the correlation coefficient \rho(X, Y) as the normalized covariance, i.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://rand-notes.github.io/fi/iv111/4/"><meta property="og:image" content="https://rand-notes.github.io"><meta property="article:section" content="fi">
+<meta property="article:published_time" content="2021-10-04T00:00:00+00:00">
+<meta property="article:modified_time" content="2021-10-04T00:00:00+00:00"><meta property="og:site_name" content="idk">
+<meta property="article:published_time" content="2021-10-04 00:00:00 +0000 UTC">
+</head>
+<body>
+<div class=container>
+<header class=header>
+<span class=header__inner>
+<a href=/ style=text-decoration:none>
+<div class=logo>
+title
+</div>
+</a>
+<span class=header__right>
+<nav class=menu>
+<ul class=menu__inner><li><a href=/posts>notes</a></li>
+</ul>
+</nav>
+<span class=menu-trigger><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+</span>
+<span class="theme-toggle not-selectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 41c10.4934.0 19-8.5066 19-19C41 11.5066 32.4934 3 22 3 11.5066 3 3 11.5066 3 22s8.5066 19 19 19zM7 22C7 13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22z"/></svg></span>
+</span>
+</span>
+</header>
+<div class=content>
+<main class=post>
+<div class=post-info>
+</p>
+</div>
+<article>
+<h2 class=post-title><a href=https://rand-notes.github.io/fi/iv111/4/>lec 04</a></h2>
+<div class=post-content>
+<img src=/images/distrib_summ.png alt="distributions summary" class=center>
+<h1 id=covariance>Covariance</h1>
+<p>$$ E([X - E(X)][Y - E(Y)]) = \sum_{i, j} p_{x_i, y_j} [x_i - E(X)][y_j - E(Y)] $$</p>
+<p>is called the covariance of X and Y and denoted Cov(X, Y)</p>
+<p>Covariance measures <strong>linear dependence</strong> between two random variables. It is positive if the variables are correlated, and negative when anticorrelated.</p>
+<p>e.g. when Y = aX, using E(Y) = aE(x) we have Cov(X, Y) = aVar(X)</p>
+<p>we define the correlation coefficient \rho(X, Y) as the normalized covariance, i.e.</p>
+<p>$$
+\rho(X, Y) = \frac{Cov(X, Y)}{\sqrt{Var(X)Var(Y)}}
+$$</p>
+<p>For any two random variables X and Y it holds that</p>
+<p>$$
+0 \leq (Cov(X, Y))^2 \leq Var(X)Var(Y)
+$$</p>
+<p>i.e. \( -1 \leq \rho(X, Y) \leq 1 \)</p>
+<hr>
+<p>Let X and Y be random variables. The the covariance is</p>
+<p>$$
+Cov(X, Y) = E(XY) - E(X)E(Y)
+$$</p>
+<p>Cov(X, Y) = E([X - E(X)][Y - E(Y)]) = &mldr; = E(XY) - E(X)E(Y)</p>
+<p>Corollary:</p>
+<p><strong>For independent random variables X and Y, it holds that Cov(X, Y) = 0</strong></p>
+<p>It may happen that X is completely dependent on Y and yet the covariance is 0.</p>
+<p>Hence,</p>
+<p>X and Y independent \( \nRightarrow Cov(X, Y) \)<br>
+X and Y independent \( \nLeftarrow Cov(X, Y) \)</p>
+<h1 id=variance-of-independent-variables>Variance of Independent Variables</h1>
+<p>If X and Y are independent random variables, then</p>
+<p>Var(X + Y) = Var(X) + Var(Y)</p>
+<hr>
+<p>If X and Y are not independent random variables, we obtain</p>
+<p>Var(X + Y) = Var(X) + Var(Y) + 2Cov(X, Y)</p>
+<p>/todo example</p>
+<h1 id=conditional-probability>Conditional probability</h1>
+<p>Using the derivation of conditional probability of two events, we can derive conditional probability of a pair of random variables</p>
+<p>The conditional probability distribution of random variable Y given random variable X (their joint distribution is \( p_{X, Y} \) is</p>
+<p>$$
+p_{Y|X} (y|x) = P(Y=y|X=x) = \frac{P(Y=y, X=x)}{P(X=x)} = \frac{p_{X, Y} (x,y)}{p_X(x)}
+$$</p>
+<p>provided the marginal probability p_X(x) != 0</p>
+<h1 id=conditional-expectation>Conditional expectation</h1>
+<p>We may consider Y|(X=x) to be a new random variable that is given by the conditional probability distribution \( p_{Y|X} \). Therefore, we can define its mean and moments</p>
+<p>The conditional expectation of Y given X = x is defined
+$$
+E(Y|X=x) = \sum_y yP(Y=y|X=x) = \sum_y yp_{Y|X} (y|x)
+$$</p>
+<p>Analogously, the <strong>conditional variance</strong> can be defined as:</p>
+<p>$$
+Var(Y|X=x) = E(Y^2|X=x) - [E(Y|X=x)]^2
+$$</p>
+<hr>
+<p>We can derive the expectation of Y from the conditional expectation.</p>
+<h2 id=theorem-of-total-expectation>Theorem of total expectation</h2>
+<p>Let X and Y be random variables, then</p>
+<p>$$E(Y) = \sum_x E(Y|X=x) p_X (x)$$</p>
+<h2 id=theorem-of-total-moments>Theorem of total moments</h2>
+<p>Let X and Y be random varibles, then</p>
+<p>$$E(Y^k) = \sum_x E(Y^k|X=x)p_X (x)$$</p>
+<h1 id=chebyshev-inequality>Chebyshev Inequality</h1>
+<p>In case we know both mean value and variance of a random variable, we can use much more accurate estimation</p>
+<h2 id=theorem>Theorem</h2>
+<p>Let X be a random variable with finite variance. Then</p>
+<p>$$
+P[|X-E(X)|\geq t] \leq \frac{Var(X)}{t^2}, t \geq 0
+$$</p>
+<p>or, alternatively, substituting \( t = k\sigma_k = k\sqrt{Var(X)} \)</p>
+<p>$$
+P[|X-E(X)|\geq k\sigma_x] \leq \frac{1}{k^2}, t \geq 0
+$$</p>
+<p>or, alternatively, substituting \( X' = X - E(X) \)</p>
+<p>$$
+P[|X'|\geq t] \leq \frac{E(X'^2)}{t^2}, t \geq 0
+$$</p>
+<h2 id=proof>Proof</h2>
+<p>We apply the Markov inequality to the nonnegative vriable [X - E(X)]^2 and we replace t by t^2 to get</p>
+<p>$$
+P[(X - E(X))^2 \geq t^2] \leq \frac{E([X - E(X)]^2)}{t^2} = \frac{Var(X)}{t^2}
+$$</p>
+<p>We obtain the Chebyshev inequality using the fact that the events \( [(X - E(X))^2 \geq t^2 ] = [|X - E(X)| \geq t] \) are the same</p>
+</div>
+</article>
+<hr>
+<div class=post-info>
+</div>
+</main>
+</div>
+<footer class=footer>
+</footer>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type=text/javascript id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js></script>
+</div>
+<script type=text/javascript src=/bundle.min.b2a4161afad463d91113a005f8f24a5efff27a6cc48754e9e93adc7bccb8a876a153a953c0b12653f3b5910e41e620da731f8184f2973058100d159c09fa8346.js integrity="sha512-sqQWGvrUY9kRE6AF+PJKXv/yemzEh1Tp6Trce8y4qHahU6lTwLEmU/O1kQ5B5iDacx+BhPKXMFgQDRWcCfqDRg=="></script>
+</body>
+</html>
