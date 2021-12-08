@@ -1,0 +1,220 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=author content>
+<meta name=description content="Grafová reprezentace CSP  Reprezentace podmínek  intenzionální (matematická/logická formule) extenzionální (výčet k-tic kompatibilních hodnot, 0-1 matice)   Graf: vrcholy, hrany (hrana spojuje dva vrcholy) Hypergraf: vrcholy, hrany (hrana spojuje množinu vrcholů) Reprezentace CSP pomocí hypergrafu podmínek: vrchol = proměnná, hyperhrana = podmínka  Hypergraf Hypergraf je pojem z teorie grafů. Jedná se o zobecnění pojmu graf. Rozdíl je v tom, že hrany hypergrafu (hyperhrany) mohou spojovat libovolný počet vrcholů, zatímco u grafu spojují hrany vždy dva vrcholy.">
+<meta name=keywords content>
+<meta name=robots content="noodp">
+<meta name=theme-color content>
+<link rel=canonical href=https://rand-notes.github.io/fi/pa163/2/>
+<title>
+PA163 lec 2 :: idk
+</title>
+<link href=https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css rel=stylesheet type=text/css>
+<link rel=stylesheet href=/main.7209ab6422eb371a6b685a56274cc88eff3db604665c3bdb698389c0585d4211.css>
+<meta itemprop=name content="PA163 lec 2">
+<meta itemprop=description content="Grafová reprezentace CSP  Reprezentace podmínek  intenzionální (matematická/logická formule) extenzionální (výčet k-tic kompatibilních hodnot, 0-1 matice)   Graf: vrcholy, hrany (hrana spojuje dva vrcholy) Hypergraf: vrcholy, hrany (hrana spojuje množinu vrcholů) Reprezentace CSP pomocí hypergrafu podmínek: vrchol = proměnná, hyperhrana = podmínka  Hypergraf Hypergraf je pojem z teorie grafů. Jedná se o zobecnění pojmu graf. Rozdíl je v tom, že hrany hypergrafu (hyperhrany) mohou spojovat libovolný počet vrcholů, zatímco u grafu spojují hrany vždy dva vrcholy.">
+<meta itemprop=wordCount content="894"><meta itemprop=image content="https://rand-notes.github.io">
+<meta itemprop=keywords content>
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://rand-notes.github.io">
+<meta name=twitter:title content="PA163 lec 2">
+<meta name=twitter:description content="Grafová reprezentace CSP  Reprezentace podmínek  intenzionální (matematická/logická formule) extenzionální (výčet k-tic kompatibilních hodnot, 0-1 matice)   Graf: vrcholy, hrany (hrana spojuje dva vrcholy) Hypergraf: vrcholy, hrany (hrana spojuje množinu vrcholů) Reprezentace CSP pomocí hypergrafu podmínek: vrchol = proměnná, hyperhrana = podmínka  Hypergraf Hypergraf je pojem z teorie grafů. Jedná se o zobecnění pojmu graf. Rozdíl je v tom, že hrany hypergrafu (hyperhrany) mohou spojovat libovolný počet vrcholů, zatímco u grafu spojují hrany vždy dva vrcholy.">
+<meta property="og:title" content="PA163 lec 2">
+<meta property="og:description" content="Grafová reprezentace CSP  Reprezentace podmínek  intenzionální (matematická/logická formule) extenzionální (výčet k-tic kompatibilních hodnot, 0-1 matice)   Graf: vrcholy, hrany (hrana spojuje dva vrcholy) Hypergraf: vrcholy, hrany (hrana spojuje množinu vrcholů) Reprezentace CSP pomocí hypergrafu podmínek: vrchol = proměnná, hyperhrana = podmínka  Hypergraf Hypergraf je pojem z teorie grafů. Jedná se o zobecnění pojmu graf. Rozdíl je v tom, že hrany hypergrafu (hyperhrany) mohou spojovat libovolný počet vrcholů, zatímco u grafu spojují hrany vždy dva vrcholy.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://rand-notes.github.io/fi/pa163/2/"><meta property="og:image" content="https://rand-notes.github.io"><meta property="article:section" content="fi">
+<meta property="og:site_name" content="idk">
+</head>
+<body>
+<div class=container>
+<header class=header>
+<span class=header__inner>
+<a href=/ style=text-decoration:none>
+<div class=logo>
+title
+</div>
+</a>
+<span class=header__right>
+<nav class=menu>
+<ul class=menu__inner><li><a href=/posts>notes</a></li>
+</ul>
+</nav>
+<span class=menu-trigger><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+</span>
+<span class="theme-toggle not-selectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 41c10.4934.0 19-8.5066 19-19C41 11.5066 32.4934 3 22 3 11.5066 3 3 11.5066 3 22s8.5066 19 19 19zM7 22C7 13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22z"/></svg></span>
+</span>
+</span>
+</header>
+<div class=content>
+<main class=post>
+<div class=post-info>
+</p>
+</div>
+<article>
+<h2 class=post-title><a href=https://rand-notes.github.io/fi/pa163/2/>PA163 lec 2</a></h2>
+<div class=post-content>
+<h1 id=grafová-reprezentace-csp>Grafová reprezentace CSP</h1>
+<ul>
+<li>Reprezentace podmínek
+<ul>
+<li>intenzionální (matematická/logická formule)</li>
+<li>extenzionální (výčet k-tic kompatibilních hodnot, 0-1 matice)</li>
+</ul>
+</li>
+<li>Graf: vrcholy, hrany (hrana spojuje dva vrcholy)</li>
+<li>Hypergraf: vrcholy, hrany (hrana spojuje množinu vrcholů)</li>
+<li>Reprezentace CSP pomocí hypergrafu podmínek: vrchol = proměnná, hyperhrana = podmínka</li>
+</ul>
+<img src=/images/pa163/graph-repr-csp.png class=center>
+<h1 id=hypergraf>Hypergraf</h1>
+<p>Hypergraf je pojem z teorie grafů. Jedná se o zobecnění pojmu graf. Rozdíl je v tom, že hrany hypergrafu (hyperhrany) mohou spojovat libovolný počet vrcholů, zatímco u grafu spojují hrany vždy dva vrcholy.</p>
+<h1 id=binární-csp>Binární CSP</h1>
+<ul>
+<li>CSP, ve kterém jsou pouze binární podmínky</li>
+<li>unární podmínky zakódovány do domény proměnné</li>
+<li>CSP lze transformovat na binární CSP</li>
+</ul>
+<h2 id=graf-podmínek-pro-binární-csp>Graf podmínek pro binární CSP</h2>
+<p>není nutné uvažovat hypergraf, stačí graf (podmínka spojuje pouze dva vrcholy)</p>
+<h2 id=ekvivalence-csp>Ekvivalence CSP</h2>
+<p>dva CSP problémy jsou ekvivalentní, pokud mají stejnou množinu řešení</p>
+<h2 id=rozšířená-ekvivalence-csp>Rozšířená ekvivalence CSP</h2>
+<ul>
+<li>řešení problémů lze mezi sebou „syntakticky” převést</li>
+<li>např.: obecný CSP převedeme na binární CSP a porovnáme tyto binární CSP</li>
+</ul>
+<h1 id=duální-problém>Duální problém</h1>
+<ul>
+<li>původním omezením odpovídají nové duální proměnné</li>
+<li>proměnné: k-ární podmínku c_i převedeme na duální proměnnou v_i s doménou obsahující konzistentní k-tice</li>
+<li>omezení: pro každou dvojici podmínek ci a cj sdílející proměnné zavedeme binární podmínku Rij mezi vi a vj omezující duální proměnné na k-tice, ve kterých mají sdílené proměnné stejnou hodnotu</li>
+</ul>
+<p>Do V_i si umistim k-tice ktery splnuji podminku C_i (napr. ve V_1 se musi vyskytovat pouze jedna 1 aby suma vysla 1). Hranou R_11 mezi V_1 a V_2 pak rikam, ze kdyz se x_1 necemu rovna ve V_1 pak se tomu
+musi rovnat i ve V_2.</p>
+<img src=/images/pa163/dual-repr.png class=center>
+<h1 id=použití-binarizace>Použití binarizace</h1>
+<h2 id=konstrukce-duálního-problému>Konstrukce duálního problému</h2>
+<ul>
+<li>jedna z možných metod binarizace</li>
+</ul>
+<h2 id=jedna-z-možných-metod-binarizace>jedna z možných metod binarizace</h2>
+<ul>
+<li>získáváme unifikovaný tvar CSP problému</li>
+<li>řada algoritmů navržena pro binární CSP</li>
+<li>pro výukové účely je vysvětlení na binárních CSP vhodné
+<ul>
+<li>algoritmy jsou přehlednější a jednodušší na pochopení</li>
+<li>verze pro nebinární podmínky je často přímým rozšířením obecné verze</li>
+<li>a tyto algoritmy jsou i aplikovatelné s pomocí binarizace na obecné CSP</li>
+</ul>
+</li>
+</ul>
+<h2 id=nevýhoda>Nevýhoda</h2>
+<ul>
+<li>značné zvětšení velikosti problému</li>
+</ul>
+<h2 id=nebinární-podmínky>Nebinární podmínky</h2>
+<ul>
+<li>složitější propagační algoritmy</li>
+<li>lze využít jejich sémantiky pro lepší propagaci</li>
+</ul>
+<h1 id=hranová-konzistence>Hranová konzistence</h1>
+<h2 id=propagace-omezení-připomenutí>Propagace omezení (připomenutí)</h2>
+<h3 id=algoritmy-pro-propagaci-omezení-konzistenční-algoritmy>Algoritmy pro propagaci omezení (konzistenční algoritmy)</h3>
+<ul>
+<li>umožňují odstranit nekonzistentní hodnoty z domén proměnných</li>
+<li>zjednodušují problém</li>
+<li>udržují ekvivalenci mezi původním a zjednodušeným problémem</li>
+</ul>
+<h1 id=vrcholová-konzistence>Vrcholová konzistence</h1>
+<h2 id=vrcholová-konzistence-node-consistency-nc>Vrcholová konzistence (node consistency) NC</h2>
+<ul>
+<li>unární podmínky převedeme do domén proměnných</li>
+</ul>
+<p>Vrchol reprezentující Vi je vrcholově konzistentní:</p>
+<ul>
+<li>každá hodnota z aktuální domény proměnné V_i splňuje všechny unární podmínky s proměnnou V_i</li>
+</ul>
+<p>CSP problém je vrcholově konzistentní:</p>
+<ul>
+<li>každý jeho vrchol je vrcholově konzistentní</li>
+</ul>
+<p><strong>Příklad</strong>: V s domenou {1,2,3,4,5} a omezenim V \leq 3 -> vrcholova konzistence omezi domenu na {1, 2, 3} a omezeni muze byt zahozeno.</p>
+<h1 id=hranová-konzistence-arc-consistency-ac>Hranová konzistence (Arc Consistency AC)</h1>
+<p>Pouze pro binární CSP (až její rozšíření jsou pro nebinární CSP)</p>
+<ul>
+<li>podmínka odpovídá hraně v grafu podmínek</li>
+<li>více podmínek na jedné hraně převedeme do jedné podmínky</li>
+</ul>
+<p>Hrana (Vi, Vj) je hranově konzistentní, právě když pro každou hodnotu x z aktuální domény Di existuje hodnota y v Dj tak, že ohodnocení [Vi = x,Vj = y] splňuje všechny binární podmínky nad Vi ,Vj .</p>
+<p>Hranová konzistence je směrová:</p>
+<ul>
+<li>konzistence hrany (Vi ,Vj ) nezaručuje konzistenci hrany (Vj, Vi)</li>
+</ul>
+<img src=/images/pa163/arc-consistency.png class=center>
+<p>CSP problém je hranově konzistentní, právě když jsou všechny jeho hrany (v obou směrech) hranově konzistentní.</p>
+<h1 id=algoritmus-revize-hrany>Algoritmus revize hrany</h1>
+<ul>
+<li>Jak udělat hranu (Vi, Vj) hranově konzistentní?</li>
+</ul>
+<p>Z domény Di vyřadím takové hodnoty x, které nejsou konzistentní s aktuální doménou D_j (pro x neexistuje žádná hodnota y v D_j tak, aby ohodnocení V_i = x a V_j = y splňovalo všechny binární podmínky
+mezi V_i a V_j).</p>
+<p>Složitost O(k2) (k maximální velikost domény) <code>&lt;-</code> dva cykly: x ∈ Di a y ∈ Dj</p>
+<h1 id=algoritmus-ac-1>Algoritmus AC-1</h1>
+<p>Jak udělat CSP hranově konzistentní?</p>
+<p>Provedeme revizi každé hrany</p>
+<img src=/images/pa163/arc-consistency.png class=center>
+<ul>
+<li>Revize hrany zmenší doménu ⇒ již zrevidované hrany opět nekonzistentní</li>
+<li>Revize hrany opakujeme, dokud dochází ke zmenšení nějaké domény</li>
+<li>Složitost O(enk^3) &ndash; k maximální velikost domény, e počet hran, n počet proměnných</li>
+</ul>
+<h2 id=neefektivita-ac-1>Neefektivita AC-1</h2>
+<p>I když zmenšíme jedinou doménu, provádí se revize všech hran. Tyto hrany ale revizí nemusí být vůbec zasaženy. Tyto hrany ale revizí nemusí být vůbec zasaženy</p>
+<img src=/images/pa163/inefficiency-ac-1.png class=center>
+<h1 id=algoritmus-ac-3>Algoritmus AC-3</h1>
+<p>Opakování revizí můžeme dělat pomocí fronty. stačí jediná fronta hran, které je potřeba (znova) zrevidovat. přidáváme tam jen hrany, jejichž konzistence mohla být narušena zmenšením domény.
+Technika AC-3 je dnes asi nejpoužívánější, ale stále není optimální.</p>
+<h2 id=podpora-hodnoty>Podpora hodnoty</h2>
+<p>AC-3: při každé revizi hrany testujeme množství dvojic hodnot na konzistenci vzhledem k podmínce. Tyto testy znova opakujeme při každé další revizi hrany.</p>
+<img src=/images/pa163/support.png class=center>
+<h1 id=je-hranová-konzistence-dostatečná-úplná>Je hranová konzistence dostatečná (úplná)?</h1>
+<p>Použitím AC odstraníme mnoho nekompatibilních hodnot.</p>
+<ul>
+<li>dostaneme potom řešení problému? NE</li>
+<li>víme alespoň zda řešení existuje? NE</li>
+</ul>
+<p>napr. X,Y ,Z \in {1,2}, X != Y, Y != Z, X != Z</p>
+<p>hranove konzistentni ale nema zadne reseni</p>
+<h1 id=konzistence-po-cestě-pc-path-consistency->Konzistence po cestě (PC path consistency )</h1>
+<p>pr. X, Y, Z \in {1,2}, X != Y, Y != Z, X != Z</p>
+<p>Jak posílit konzistenci? Budeme se zabývat několika podmínkami najednou.</p>
+<p>Cesta (V0,V1,&mldr;,Vm ) je konzistentní právě tehdy, když pro každou dvojici hodnot x \in D0 a y \in Dm splňující binární podmínky na hraně V0, Vm existuje ohodnocení proměnných V1,&mldr;Vm−1 takové, že
+všechny binární podmínky mezi sousedy Vj ,Vj +1 jsou splněny.</p>
+<p>CSP je konzistentní po cestě, právě když jsou všechny cesty konzistentní.</p>
+<p>Definice PC nezaručuje, že jsou splněny všechny podmínky nad vrcholy cesty, zabývá se pouze podmínkami mezi sousedy.</p>
+<img src=/images/pa163/path-consistency.png class=center>
+<h2 id=pc-a-cesty-délky-2>PC a cesty délky 2</h2>
+<p>Zjišťování konzistence všech cest není efektivní</p>
+<p>Stačí ověřit konzistenci cest délky 2.</p>
+<p>Věta: CSP je PC právě tehdy, když každá cesta délky 2 je PC.</p>
+<h1 id=vztah-pc-a-ac>Vztah PC a AC</h1>
+<img src=/images/pa163/ac-pc.png class=center>
+</div>
+</article>
+<hr>
+<div class=post-info>
+</div>
+</main>
+</div>
+<footer class=footer>
+</footer>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type=text/javascript id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js></script>
+</div>
+<script type=text/javascript src=/bundle.min.b2a4161afad463d91113a005f8f24a5efff27a6cc48754e9e93adc7bccb8a876a153a953c0b12653f3b5910e41e620da731f8184f2973058100d159c09fa8346.js integrity="sha512-sqQWGvrUY9kRE6AF+PJKXv/yemzEh1Tp6Trce8y4qHahU6lTwLEmU/O1kQ5B5iDacx+BhPKXMFgQDRWcCfqDRg=="></script>
+</body>
+</html>

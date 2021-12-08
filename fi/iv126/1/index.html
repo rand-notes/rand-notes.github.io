@@ -4,7 +4,9 @@
 <meta http-equiv=x-ua-compatible content="ie=edge">
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
 <meta name=author content>
-<meta name=description content="Christofides Algorithm">
+<meta name=description content="Approximate Methods is usually understood to give an approximate solution, with some kind of guarantee of performace. i.e. it solves TSP, and the total cost is never off by more than a factor of 2.
+Exploration (Diversification)  Terms Diversification and Intensification are being used mostly in conjunction with population-based optimization techniques
+ consists of probing a much larger portion of the search space with the hope of finding other promising solutions that are yet to be refined.">
 <meta name=keywords content>
 <meta name=robots content="noodp">
 <meta name=theme-color content>
@@ -15,18 +17,27 @@ lec 1 :: idk
 <link href=https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css rel=stylesheet type=text/css>
 <link rel=stylesheet href=/main.7209ab6422eb371a6b685a56274cc88eff3db604665c3bdb698389c0585d4211.css>
 <meta itemprop=name content="lec 1">
-<meta itemprop=description content="Christofides Algorithm">
-<meta itemprop=wordCount content="2"><meta itemprop=image content="https://rand-notes.github.io">
+<meta itemprop=description content="Approximate Methods is usually understood to give an approximate solution, with some kind of guarantee of performace. i.e. it solves TSP, and the total cost is never off by more than a factor of 2.
+Exploration (Diversification)  Terms Diversification and Intensification are being used mostly in conjunction with population-based optimization techniques
+ consists of probing a much larger portion of the search space with the hope of finding other promising solutions that are yet to be refined."><meta itemprop=datePublished content="2021-10-05T00:00:00+00:00">
+<meta itemprop=dateModified content="2021-10-05T00:00:00+00:00">
+<meta itemprop=wordCount content="1330"><meta itemprop=image content="https://rand-notes.github.io">
 <meta itemprop=keywords content>
 <meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://rand-notes.github.io">
 <meta name=twitter:title content="lec 1">
-<meta name=twitter:description content="Christofides Algorithm">
+<meta name=twitter:description content="Approximate Methods is usually understood to give an approximate solution, with some kind of guarantee of performace. i.e. it solves TSP, and the total cost is never off by more than a factor of 2.
+Exploration (Diversification)  Terms Diversification and Intensification are being used mostly in conjunction with population-based optimization techniques
+ consists of probing a much larger portion of the search space with the hope of finding other promising solutions that are yet to be refined.">
 <meta property="og:title" content="lec 1">
-<meta property="og:description" content="Christofides Algorithm">
+<meta property="og:description" content="Approximate Methods is usually understood to give an approximate solution, with some kind of guarantee of performace. i.e. it solves TSP, and the total cost is never off by more than a factor of 2.
+Exploration (Diversification)  Terms Diversification and Intensification are being used mostly in conjunction with population-based optimization techniques
+ consists of probing a much larger portion of the search space with the hope of finding other promising solutions that are yet to be refined.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://rand-notes.github.io/fi/iv126/1/"><meta property="og:image" content="https://rand-notes.github.io"><meta property="article:section" content="fi">
-<meta property="og:site_name" content="idk">
+<meta property="article:published_time" content="2021-10-05T00:00:00+00:00">
+<meta property="article:modified_time" content="2021-10-05T00:00:00+00:00"><meta property="og:site_name" content="idk">
+<meta property="article:published_time" content="2021-10-05 00:00:00 +0000 UTC">
 </head>
 <body>
 <div class=container>
@@ -56,7 +67,130 @@ title
 <article>
 <h2 class=post-title><a href=https://rand-notes.github.io/fi/iv126/1/>lec 1</a></h2>
 <div class=post-content>
-<p>Christofides Algorithm</p>
+<img src=/images/iv126/optimization-methods.png alt=optimization-methods class=center>
+<h1 id=approximate-methods>Approximate Methods</h1>
+<p>is usually understood to give an approximate solution, with some kind of <strong>guarantee of performace</strong>. i.e. it solves TSP, and the total cost is never off by more than a factor of 2.</p>
+<h2 id=exploration-diversification>Exploration (Diversification)</h2>
+<blockquote>
+<p>Terms Diversification and Intensification are being used mostly in conjunction with population-based optimization techniques</p>
+</blockquote>
+<p>consists of probing a much larger portion of the search space with the hope of finding other promising solutions that are yet to be refined. This operation amounts then to diversifying the search in
+order to avoid getting trapped in a local optimum. By doing so, we would be doing, de facto, a global search.</p>
+<h2 id=exploitation-intensification>Exploitation (Intensification)</h2>
+<p>consists of probing a limited (but promising) region of the search space with the hope of improving a promising solution S that we already have at hand. This operation amounts then to intensifying
+(refining) the search in the vicinity of S. By doing so, we would be doing, de facto, a local search..</p>
+<h2 id=heuristic-algorithms>Heuristic Algorithms</h2>
+<p>is essentially a hunch. Heuristic algorithms is the case that we notice a event but doesn&rsquo;t have any proof. As is solving the traveling salesman problem by starting at a random vertex and going to the
+nearest not yet visited each step. It is a plausible idea, that should not give a too bad solution. In this case, it can be shown that it won&rsquo;t always give a good solution.</p>
+<h3 id=metaheuristics>Metaheuristics</h3>
+<p>is a higher-level procedure or heuristic designed to find, generate, or select a heuristic (partial search algorithm) that may provide a sufficiently good solution to an optimization problem, especially
+with incomplete or imperfect information or limited computation capacity.</p>
+<h4 id=metaheuristics-classification>Metaheuristics Classification</h4>
+<img src=/images/iv126/metaheuristics.png class=left>
+<h5 id=local-search-vs-global-search>Local Search vs Global Search</h5>
+<p>One type of search strategy is an improvement on simple local search algorithms. A well known local search algorithm is the hill climbing method which is used to find local optimums. However, hill
+climbing does not guarantee finding global optimum solutions.</p>
+<p>Many metaheuristic ideas were proposed to improve local search heuristic in order to find better solutions. Such metaheuristics include simulated annealing, tabu search, iterated local search, variable
+neighborhood search, and GRASP. These metaheuristics can both be classified as local search-based or global search metaheuristics.</p>
+<p>Other global search metaheuristic that are not local search-based are usually population-based metaheuristics. Such metaheuristics include ant colony optimization, evolutionary computation, particle
+swarm optimization, genetic algorithm, and rider optimization algorithm.</p>
+<h5 id=single-solution-vs-population-based>Single-solution vs Population-based</h5>
+<p>Single solution approaches focus on modifying and improving a single candidate solution; single solution metaheuristics include simulated annealing, iterated local search, variable neighborhood search,
+and guided local search.</p>
+<p>Population-based approaches maintain and improve multiple candidate solutions, often using population characteristics to guide the search; population based metaheuristics include evolutionary
+computation, genetic algorithms, and particle swarm optimization.</p>
+<p>Another category of metaheuristics is Swarm intelligence which is a collective behavior of decentralized, self-organized agents in a population or swarm. Ant colony optimization, particle swarm
+optimization, social cognitive optimization are examples of this category.</p>
+<h5 id=hybridization-and-memetic-algorithms>Hybridization and Memetic Algorithms</h5>
+<p>A hybrid metaheuristic is one that combines a metaheuristic with other optimization approaches, such as algorithms from mathematical programming, constraint programming, and machine learning. Both
+components of a hybrid metaheuristic may run concurrently and exchange information to guide the search.</p>
+<p>On the other hand, Memetic algorithms represent the synergy of evolutionary or any population-based approach with separate individual learning or local improvement procedures for problem search. An
+example of memetic algorithm is the use of a local search algorithm instead of a basic mutation operator in evolutionary algorithms.</p>
+<h5 id=parallel-metaheuristics>Parallel Metaheuristics</h5>
+<p>A parallel metaheuristic is one that uses the techniques of parallel programming to run multiple metaheuristic searches in parallel; these may range from simple distributed schemes to concurrent search
+runs that interact to improve the overall solution.</p>
+<h5 id=nature-inspired-and-metaphor-based-metaheuristics>Nature-inspired and Metaphor-based Metaheuristics</h5>
+<p>A very active area of research is the design of nature-inspired metaheuristics. Many recent metaheuristics, especially evolutionary computation-based algorithms, are inspired by natural systems. Nature
+acts as a source of concepts, mechanisms and principles for designing of artificial computing systems to deal with complex computational problems. Such metaheuristics include simulated annealing,
+evolutionary algorithms, ant colony optimization and particle swarm optimization.</p>
+<h3 id=main-concepts-for-metaheuristics>Main Concepts for Metaheuristics</h3>
+<h4 id=representation>Representation</h4>
+<p>Representation have big impact on effectiveness and efficiency of any metaheuristic. A representation must have the following characteristics:</p>
+<ul>
+<li><strong>Completeness</strong>: All solutions associated with the problem must be represented.</li>
+<li><strong>Connexity</strong>: very important in designing any search algorithm. A search path must exist between any two solutions of the search space. Any solution of the search space, especially the global optimum
+solution, can be attained.</li>
+<li><strong>Efficiency</strong>: The representation must be easy to manipulate by the search operators. The time and space complexities of the operators dealing with the representation must be reduced.</li>
+</ul>
+<img src=/images/iv126/representation.png alt=optimization-methods class=center>
+<p><strong>Linear Representations</strong></p>
+<ul>
+<li>strings of chars given alphabet</li>
+<li>binary encoding, discrete encoding, permutation, vector of real numbers</li>
+</ul>
+<p><strong>Non-Linear Representation</strong></p>
+<ul>
+<li>often based on graph structures, especially used trees</li>
+</ul>
+<p><strong>Binary Encoding</strong><br>
+The binary encoding consists in associating a binary value for each decision variable. A solution will be encoded by a vector of binary varibles.</p>
+<p><strong>Discrete Encoding</strong><br>
+Generalization of binary encoding. Solution is represented as vector of discrete values i.e. variables have values from alphabet. Used for problems where variables acquire values from finite domain e.g.
+combinatorics problems or assignment problem.</p>
+<p><strong>Assignment Problem</strong><br>
+we have given set of n tasks, which have to be assigned to m agents so we maximaze overall gain. Task can be assigned to any agent. Solution represents a vector s with size n, where \( s_i \)
+represents agent assigned to task i. \(s_i = j \) if agent j is assigned to task i.</p>
+<p><strong>Permutation Problems</strong></p>
+<p>Every problem element must be only once in representation. e.g. sequencing, routing, planning</p>
+<p><strong>Representation of Permutations</strong></p>
+<p>e.g. TSP (n cities, that TS must go through), solution represents cities permutation denoting order of visited cities.</p>
+<h4 id=objective-function>Objective Function</h4>
+<p>The objective funcction f formulates the goal to achieve. It associates with each solution of the search space a real value that describes the quality of solution, \(f: S \rightarrow \mathbb{R} \).
+Also some decoding function d may be applied, \( d: R \rightarrow S \), to generate a solution that can be evaluated by the function f.</p>
+<p><strong>Self-Sufficient Objective Function</strong></p>
+<p>For some optimization problems, the definition of the objective funtion is straightforward. It specifies the originally formulated objective function.
+Self-Sufficient function is e.g. TSP - \( min \sum dist(x, y) \), example of non-sufficient could be SAT (T/F)</p>
+<p><strong>Guided Objective Function</strong></p>
+<p>For other probles, the definition of the objective funtion is a difficult task and constitutes a crucial quiestion. The objective function has to be transformed for a better convergence of the
+metaheuristic. The new objective function will guide the search in more efficient manner.</p>
+<p><strong>Relative and Competitive Objective Functions</strong></p>
+<p>Used if function can&rsquo;t assign absolute value to all solutions.</p>
+<p>e.g. game theory, strategy <code>A, B, C : A &lt; B, B &lt; C, C &lt; A</code></p>
+<p><strong>Meta-Modeling</strong></p>
+<p>at extremely computationally difficult objective functions is designed approximate model with a approximate objective functions.</p>
+<h4 id=constrain-handling>Constrain Handling</h4>
+<p><strong>Reject Strategies</strong></p>
+<p>we keep only consistent solutions.</p>
+<p><strong>Penalizing Strategies</strong></p>
+<p>Origin objective function is extended by a penalty function that will penalize inconsistent solutions. Depends on weights of nonsatisfied constraints. Penalty is order of magnitude higher that value of
+objective function.</p>
+<p><strong>Repairing Strategies</strong></p>
+<p>Repairing inconsistent solutions by applying repairing strategies over generated inconsistent assignments, which will be repaired and it continue with another inconsistent solution.</p>
+<h4 id=parameter-tuning>Parameter Tuning</h4>
+<img src=/images/iv126/parameters-init.png alt=optimization-methods class=center>
+<p><strong>Offline initialization</strong></p>
+<p>We set parameters and start the algorithm.</p>
+<ul>
+<li>setting one parameter after another (nonoptimal)</li>
+<li><strong>Design of Experiments</strong> - k factors/parameters with n possible values: n^k experiments</li>
+<li>statistical inferences, ML, &mldr;</li>
+</ul>
+<p><strong>Online initialization</strong></p>
+<p>parallel algorithm restart with different parameters</p>
+<h3 id=problem-specific-heuristics>Problem-specific heuristics</h3>
+<p>Heuristics is approximate solution to given problem. Meanwhile metaheuristics doesn&rsquo;t solve any specific problem, heuristics are tailored to some problem.</p>
+<h2 id=initial-solutions>Initial Solutions</h2>
+<ul>
+<li>quality vs computational time</li>
+<li>using better initial solution not always leads to better local optima</li>
+<li>Generating consistent random solutions might be difficult for highly constraint problems</li>
+</ul>
+<p>Main strategies:</p>
+<ul>
+<li>random solution</li>
+<li>heuristic solution (i.e. by greedy algorithm)</li>
+<li>partially or fully initialized by user</li>
+</ul>
 </div>
 </article>
 <hr>

@@ -1,0 +1,272 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=author content>
+<meta name=description content="Population-based Metaheuristics  Genetic Algorithms Evolution Strategies Genetic Programming Ant Colony Optimization Particle Swarm Optimization Bee Colony Artificial Immune Systems Estimation of Distribution Algorithms  general algo:
+t = 0 while not end_condition: generate_popul(P_t) # generate new population P_t+1 = choose_new_popul() t += 1 Basic division:
+Algorithms using evolution
+Solution in population is choosed and reproduced with operators (mutation and crossovering).
+e.g. genetics algorithms, evolution strategies
+Algorithms using memory (blackboard)">
+<meta name=keywords content>
+<meta name=robots content="noodp">
+<meta name=theme-color content>
+<link rel=canonical href=https://rand-notes.github.io/fi/iv126/3/>
+<title>
+lec 03 :: idk
+</title>
+<link href=https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css rel=stylesheet type=text/css>
+<link rel=stylesheet href=/main.7209ab6422eb371a6b685a56274cc88eff3db604665c3bdb698389c0585d4211.css>
+<meta itemprop=name content="lec 03">
+<meta itemprop=description content="Population-based Metaheuristics  Genetic Algorithms Evolution Strategies Genetic Programming Ant Colony Optimization Particle Swarm Optimization Bee Colony Artificial Immune Systems Estimation of Distribution Algorithms  general algo:
+t = 0 while not end_condition: generate_popul(P_t) # generate new population P_t+1 = choose_new_popul() t += 1 Basic division:
+Algorithms using evolution
+Solution in population is choosed and reproduced with operators (mutation and crossovering).
+e.g. genetics algorithms, evolution strategies
+Algorithms using memory (blackboard)"><meta itemprop=datePublished content="2021-10-14T00:00:00+00:00">
+<meta itemprop=dateModified content="2021-10-14T00:00:00+00:00">
+<meta itemprop=wordCount content="1098"><meta itemprop=image content="https://rand-notes.github.io">
+<meta itemprop=keywords content>
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://rand-notes.github.io">
+<meta name=twitter:title content="lec 03">
+<meta name=twitter:description content="Population-based Metaheuristics  Genetic Algorithms Evolution Strategies Genetic Programming Ant Colony Optimization Particle Swarm Optimization Bee Colony Artificial Immune Systems Estimation of Distribution Algorithms  general algo:
+t = 0 while not end_condition: generate_popul(P_t) # generate new population P_t+1 = choose_new_popul() t += 1 Basic division:
+Algorithms using evolution
+Solution in population is choosed and reproduced with operators (mutation and crossovering).
+e.g. genetics algorithms, evolution strategies
+Algorithms using memory (blackboard)">
+<meta property="og:title" content="lec 03">
+<meta property="og:description" content="Population-based Metaheuristics  Genetic Algorithms Evolution Strategies Genetic Programming Ant Colony Optimization Particle Swarm Optimization Bee Colony Artificial Immune Systems Estimation of Distribution Algorithms  general algo:
+t = 0 while not end_condition: generate_popul(P_t) # generate new population P_t+1 = choose_new_popul() t += 1 Basic division:
+Algorithms using evolution
+Solution in population is choosed and reproduced with operators (mutation and crossovering).
+e.g. genetics algorithms, evolution strategies
+Algorithms using memory (blackboard)">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://rand-notes.github.io/fi/iv126/3/"><meta property="og:image" content="https://rand-notes.github.io"><meta property="article:section" content="fi">
+<meta property="article:published_time" content="2021-10-14T00:00:00+00:00">
+<meta property="article:modified_time" content="2021-10-14T00:00:00+00:00"><meta property="og:site_name" content="idk">
+<meta property="article:published_time" content="2021-10-14 00:00:00 +0000 UTC">
+</head>
+<body>
+<div class=container>
+<header class=header>
+<span class=header__inner>
+<a href=/ style=text-decoration:none>
+<div class=logo>
+title
+</div>
+</a>
+<span class=header__right>
+<nav class=menu>
+<ul class=menu__inner><li><a href=/posts>notes</a></li>
+</ul>
+</nav>
+<span class=menu-trigger><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+</span>
+<span class="theme-toggle not-selectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 41c10.4934.0 19-8.5066 19-19C41 11.5066 32.4934 3 22 3 11.5066 3 3 11.5066 3 22s8.5066 19 19 19zM7 22C7 13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22z"/></svg></span>
+</span>
+</span>
+</header>
+<div class=content>
+<main class=post>
+<div class=post-info>
+</p>
+</div>
+<article>
+<h2 class=post-title><a href=https://rand-notes.github.io/fi/iv126/3/>lec 03</a></h2>
+<div class=post-content>
+<h1 id=population-based-metaheuristics>Population-based Metaheuristics</h1>
+<ul>
+<li>Genetic Algorithms</li>
+<li>Evolution Strategies</li>
+<li>Genetic Programming</li>
+<li>Ant Colony Optimization</li>
+<li>Particle Swarm Optimization</li>
+<li>Bee Colony</li>
+<li>Artificial Immune Systems</li>
+<li>Estimation of Distribution Algorithms</li>
+</ul>
+<p>general algo:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>t <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
+<span style=color:#66d9ef>while</span> <span style=color:#f92672>not</span> end_condition:
+ generate_popul(P_t) <span style=color:#75715e># generate new population</span>
+ P_t<span style=color:#f92672>+</span><span style=color:#ae81ff>1</span> <span style=color:#f92672>=</span> choose_new_popul()
+ t <span style=color:#f92672>+=</span> <span style=color:#ae81ff>1</span>
+</code></pre></div><p>Basic division:</p>
+<p><strong>Algorithms using evolution</strong><br>
+Solution in population is choosed and reproduced with operators (mutation and crossovering).</p>
+<p>e.g. genetics algorithms, evolution strategies</p>
+<p><strong>Algorithms using memory (blackboard)</strong><br>
+solution in population is participating on construction of memory which is used to create new individuals.</p>
+<p>e.g. pheromone matrix (ACO), probability learning model (EDA)</p>
+<h1 id=generating-initial-population>Generating Initial Population</h1>
+<p><strong>Random generating</strong></p>
+<p><strong>Sequential Diversification</strong>
+Solution is gradually generating with maximum difference</p>
+<p>e.g. <strong>Simple Sequential Inhibition (SSI)</strong> process - every next solution generating so distance from all previous solutions will be at least \( \delta \); computationally intensive</p>
+<p><strong>Paralel Diversification</strong></p>
+<p>Solutions generating independently in parallel with the effort to achieve maximum difference of the solution in the population. Might be more difficult than solving the origin problem.</p>
+<p><strong>Heuristic Initialization</strong></p>
+<p>individual solutions generated by arbitrary heuristic algorithms (e.g. local search); danger of small difference in population solutions.</p>
+<h1 id=ending-conditions>Ending Conditions</h1>
+<h2 id=static-procedure>Static Procedure</h2>
+<p>End of searching is known ahead. e.g. fixed number of iterations; CPU resource limit; max number of evaluation of the objective function.</p>
+<h2 id=adaptive-procedure>Adaptive Procedure</h2>
+<p>End of searching is not known ahead. e.g. fixed number of iterations without improving; computing enough qualite solution; small difference between population solutions.</p>
+<h1 id=common-concepts-of-evolution-algorithms>Common Concepts of Evolution Algorithms</h1>
+<h2 id=representation>Representation</h2>
+<p><strong>population</strong> - set of solutions(~20 to 100)<br>
+<strong>chromosome/individual</strong> - encodedd solution<br>
+<strong>gen</strong> - decision variable in within solution<br>
+<strong>alleles</strong> - alely - possible values of the decision variable</p>
+<h2 id=fitness>Fitness</h2>
+<p>used term for objective function</p>
+<h2 id=selection-strategies>Selection Strategies</h2>
+<p>Selection Strategies of parents for creating new population</p>
+<h2 id=reproduction-strategies>Reproduction Strategies</h2>
+<p>crossovers and mutations: operations to create new individuals</p>
+<h2 id=replacement-strategies>Replacement Strategies</h2>
+<p>selection of individuals to a new population</p>
+<h1 id=genetic-algorithms>Genetic Algorithms</h1>
+<ul>
+<li>First representation was binary, now extended by another.</li>
+<li>Typically used cross operator over two solutions.</li>
+<li>For improved diversification is used mutation</li>
+<li>Fixed probability of mutation p_m and cross p_c</li>
+<li>Replacement is usually generational: parents are systematically replaced by childs.</li>
+</ul>
+<h1 id=evolution-strategies>Evolution Strategies</h1>
+<ul>
+<li>Often used for continuos optimalizations, real valued vectors</li>
+<li>Cross used rarely</li>
+<li>Typically replacement by best individuals (elitism)</li>
+</ul>
+<p>\( (1 + 1) \) ES - basic version, 1 parent replaced by 1 offspring<br>
+\( (\mu + \lambda) \) ES - repeat \( \lambda \) times (random selection of parent, generate offspring), sort \( \mu \) parents a \( \lambda \) offsprings and replace by the best<br>
+\( (1 + 1) \) ES - for a new population it is selected only among \( \lambda \) offspring</p>
+<h1 id=roulette-wheel-selection>Roulette Wheel Selection</h1>
+<ul>
+<li>Most used selection strategy.</li>
+<li>\(f_i\) suitability of the individual i in the population</li>
+<li>probability of selection individual is given by \( p_i = f_i / \sum^n_{j=1}(f_j) \)</li>
+</ul>
+<p>Analogy: Roulette Wheel with parts for every individual in population. Size of roulette wheel part for individual is equal to \( p_i \)</p>
+<p>Problems: too big effort to choose quality individuals -> premature convergence</p>
+<h1 id=stochaistic-universal-sampling>Stochaistic Universal Sampling</h1>
+<ul>
+<li>Improved Roulette Wheel Selection</li>
+<li>Probabilistic universal sampling</li>
+<li>Roulette wheel has \( \mu \) universally placed pointers</li>
+<li>One turn of wheel choose \( \mu \) individuals.</li>
+</ul>
+<img src=/images/iv126/roulette.png alt=roulette class=center>
+<h1 id=tournament-selection>Tournament Selection</h1>
+<ul>
+<li>random selection of k individuals</li>
+<li>tournament: out of these k individuals is chosen only one.</li>
+<li>to choose \mu individuals, we applied tournament \mu times.</li>
+</ul>
+<h1 id=rank-based-selection>Rank-based Selection</h1>
+<ul>
+<li>for every individuals is computed rank, which is used to choosing individuals.</li>
+<li>rank can e.g. scaling lineary with dependence on the effort to select the best individual.</li>
+<li>rank can be used to compute probability and applied same as roulette wheel.</li>
+</ul>
+<h1 id=mutation>Mutation</h1>
+<p>operator of mutation change individuals in population and cause its small change.
+Probability of gene mutation \( p_m \in [0.001, 0.01] \)
+e.g. initialization p_m to 1/k where k is number of genes (decision variables), i.e. in average 1 mutated variable.</p>
+<h2 id=mutation-in-binary-representation>Mutation in Binary Representation</h2>
+<p>Flip values in binary variable</p>
+<h2 id=mutation-in-discrete-representation>Mutation in Discrete Representation</h2>
+<p>Replacement element value by another in aplhabet</p>
+<h2 id=mutation-in-permutation>Mutation in Permutation</h2>
+<p>Insert, Replacement, Inversion of values.</p>
+<p>e.g. with permutaiton neighborhood for planning problems.</p>
+<h1 id=crossovering>Crossovering</h1>
+<p>Binary (sometimes n-ary) operator
+Goal is to inherit properties of parents by offspring.
+Probability of crossovering parents \( p_c \in [0, 1] \) usually \( p_c \in [0.45, 0.95] \)</p>
+<h2 id=linear-representation>Linear Representation</h2>
+<h3 id=1-point-crossover>1-point crossover</h3>
+<p>according to selected position k in offsprings are swapped values of two parents.</p>
+<img src=/images/iv126/1pointcrossover.png alt=crossover class=center>
+<h3 id=2-point-and-n-point-crossover>2-point (and n-point) crossover</h3>
+<p>it&rsquo;s selected n positions and performed swapping positions.</p>
+<img src=/images/iv126/2pointcrossover.png alt=crossover class=center>
+<h3 id=uniform-crossover>Uniform Crossover</h3>
+<p>Individuals combined regardless on size of segments. Every gene of offspring is randomly selected from parent. Every parent contribute to offspring uniformly.</p>
+<img src=/images/iv126/uniformcrossover.png alt=crossover class=center>
+<h2 id=permutation-representation>Permutation Representation</h2>
+<p>Crossovering is more difficult, individuals cannot be easily combined, because every allele (value) must be in individual only once. There are used various forms of mapping.</p>
+<h3 id=order-crossover-ox>Order Crossover, OX</h3>
+<p>Two random points of crossover. Then values from parent 1 are copied on same positions in offspring. Then we are start from second point and we copy elements from parent 2 that wasn&rsquo;t selected from
+parent 1.</p>
+<img src=/images/iv126/ordercrossover.png alt=crossover class=center>
+<p>/todo example</p>
+<h1 id=strategy-replacement>Strategy Replacement</h1>
+<p>We choose next population between parents and offsprings.</p>
+<h2 id=extreme-replacement-strategy>Extreme Replacement Strategy</h2>
+<p>not very often used.</p>
+<p><strong>Generational Replacement</strong></p>
+<p>Offsprings replace systematically whole population of parents. We lose also the best individuals.</p>
+<p><strong>Steady-state Replacement</strong></p>
+<p>Only one offspring will be generated, which replace e.g. the words individual in population.</p>
+<p><strong>Replacement of Fixed Number of Individuals</strong></p>
+<p>There are choosed \( \lambda \) individuals for replacement at size of population \( \mu \)</p>
+<p>\(1 \lt \lambda \lt \mu \)</p>
+<p><strong>Elitistic model</strong></p>
+<p>Best from both parents and offsprings are choosed. May be too quick convergence.</p>
+<h1 id=swarm-intelligence>Swarm Intelligence</h1>
+<p>Algorithms inspired by group behaviour of species such as ants, bees, termites, birds etc.
+Origin in the social behavior of these species in search of food.</p>
+<p>Common Characteristics of these algorithms:</p>
+<ul>
+<li>Individuals are simpler non-sofisticated agents.</li>
+<li>Individuals cooperate indirectly via medium.</li>
+</ul>
+<h2 id=ant-colony-optimization-aco>Ant Colony Optimization, ACO</h2>
+<p>Idea:</p>
+<ul>
+<li>Ant colony able to find the shortest path between two points.</li>
+<li>Ants are leaving a chemical track (pheromone).</li>
+<li>Pheromones are leading ants to goal.</li>
+<li>Pheromones are gradually evaporating.</li>
+</ul>
+<p>Algorithm:</p>
+<ul>
+<li>Initialization of pheromones</li>
+<li>Iteration: Construction of solution by ant, updating the pheromones</li>
+</ul>
+<h3 id=pheromone-information>Pheromone Information</h3>
+<p>\(\tau\) typically as matrix/vector of values containing the pheromone track.<br>
+e.g. matrix as graph representation containing the pheromone on the edges.</p>
+<h3 id=pheromone-evaporating>Pheromone Evaporating</h3>
+<p>\(\tau_{ij} = (1 - \rho) t_{ij} \) realized for every i, j
+\(p \in [0, 1]\)</p>
+<h3 id=pheromone-reinforcing>Pheromone Reinforcing</h3>
+<p><strong>online update</strong>: \( \tau_{i,j} updated at every step \)</p>
+<p><strong>onlined delayed update</strong>: \(\tau\) updated after complete solution found by one ant.<br>
+e.g. the more solutions, the more pheromone reinforcing</p>
+<p><strong>offline update</strong> \(\tau\) updated after solution found by all ants. Most popular approach.<br>
+e.g. pheromone update by quality (by the best or n best) solutions</p>
+<p>/todo example</p>
+</div>
+</article>
+<hr>
+<div class=post-info>
+</div>
+</main>
+</div>
+<footer class=footer>
+</footer>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type=text/javascript id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js></script>
+</div>
+<script type=text/javascript src=/bundle.min.b2a4161afad463d91113a005f8f24a5efff27a6cc48754e9e93adc7bccb8a876a153a953c0b12653f3b5910e41e620da731f8184f2973058100d159c09fa8346.js integrity="sha512-sqQWGvrUY9kRE6AF+PJKXv/yemzEh1Tp6Trce8y4qHahU6lTwLEmU/O1kQ5B5iDacx+BhPKXMFgQDRWcCfqDRg=="></script>
+</body>
+</html>

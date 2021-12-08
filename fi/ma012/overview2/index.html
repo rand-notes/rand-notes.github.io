@@ -1,0 +1,442 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=author content>
+<meta name=description content="2 cviko Na hladine vyznamnosti testujte nulovou hypotezu, ze stredni hodnoty trzeb vsechno proddavacu se rovnaji. Spocitejte ze hmotnost brambor nesouvisi s odrudou.
+reseni: Levene a Bartletts test pro overeni ze variance je podobna mezi skupinami Shapiruv-Wilkeuv a Kolmogorovuv-Smirnovuv test pro overeni normality ANOVA pro testovani stredni hodnoty Tukey a Scheffe pro porovnani ktere dvojice se nejvic lisi
+R:
+leveneTest(tabulka$hmotnost ~ tabulka$odruda) # odruda musi byt factor bartlett.test(tabulka$hmotnost ~ tabulka$odruda)">
+<meta name=keywords content>
+<meta name=robots content="noodp">
+<meta name=theme-color content>
+<link rel=canonical href=https://rand-notes.github.io/fi/ma012/overview2/>
+<title>
+:: idk
+</title>
+<link href=https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css rel=stylesheet type=text/css>
+<link rel=stylesheet href=/main.7209ab6422eb371a6b685a56274cc88eff3db604665c3bdb698389c0585d4211.css>
+<meta itemprop=name content>
+<meta itemprop=description content="2 cviko Na hladine vyznamnosti testujte nulovou hypotezu, ze stredni hodnoty trzeb vsechno proddavacu se rovnaji. Spocitejte ze hmotnost brambor nesouvisi s odrudou.
+reseni: Levene a Bartletts test pro overeni ze variance je podobna mezi skupinami Shapiruv-Wilkeuv a Kolmogorovuv-Smirnovuv test pro overeni normality ANOVA pro testovani stredni hodnoty Tukey a Scheffe pro porovnani ktere dvojice se nejvic lisi
+R:
+leveneTest(tabulka$hmotnost ~ tabulka$odruda) # odruda musi byt factor bartlett.test(tabulka$hmotnost ~ tabulka$odruda)">
+<meta itemprop=wordCount content="1787"><meta itemprop=image content="https://rand-notes.github.io">
+<meta itemprop=keywords content>
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://rand-notes.github.io">
+<meta name=twitter:title content>
+<meta name=twitter:description content="2 cviko Na hladine vyznamnosti testujte nulovou hypotezu, ze stredni hodnoty trzeb vsechno proddavacu se rovnaji. Spocitejte ze hmotnost brambor nesouvisi s odrudou.
+reseni: Levene a Bartletts test pro overeni ze variance je podobna mezi skupinami Shapiruv-Wilkeuv a Kolmogorovuv-Smirnovuv test pro overeni normality ANOVA pro testovani stredni hodnoty Tukey a Scheffe pro porovnani ktere dvojice se nejvic lisi
+R:
+leveneTest(tabulka$hmotnost ~ tabulka$odruda) # odruda musi byt factor bartlett.test(tabulka$hmotnost ~ tabulka$odruda)">
+<meta property="og:title" content>
+<meta property="og:description" content="2 cviko Na hladine vyznamnosti testujte nulovou hypotezu, ze stredni hodnoty trzeb vsechno proddavacu se rovnaji. Spocitejte ze hmotnost brambor nesouvisi s odrudou.
+reseni: Levene a Bartletts test pro overeni ze variance je podobna mezi skupinami Shapiruv-Wilkeuv a Kolmogorovuv-Smirnovuv test pro overeni normality ANOVA pro testovani stredni hodnoty Tukey a Scheffe pro porovnani ktere dvojice se nejvic lisi
+R:
+leveneTest(tabulka$hmotnost ~ tabulka$odruda) # odruda musi byt factor bartlett.test(tabulka$hmotnost ~ tabulka$odruda)">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://rand-notes.github.io/fi/ma012/overview2/"><meta property="og:image" content="https://rand-notes.github.io"><meta property="article:section" content="fi">
+<meta property="og:site_name" content="idk">
+</head>
+<body>
+<div class=container>
+<header class=header>
+<span class=header__inner>
+<a href=/ style=text-decoration:none>
+<div class=logo>
+title
+</div>
+</a>
+<span class=header__right>
+<nav class=menu>
+<ul class=menu__inner><li><a href=/posts>notes</a></li>
+</ul>
+</nav>
+<span class=menu-trigger><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+</span>
+<span class="theme-toggle not-selectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 41c10.4934.0 19-8.5066 19-19C41 11.5066 32.4934 3 22 3 11.5066 3 3 11.5066 3 22s8.5066 19 19 19zM7 22C7 13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22z"/></svg></span>
+</span>
+</span>
+</header>
+<div class=content>
+<main class=post>
+<div class=post-info>
+</p>
+</div>
+<article>
+<h2 class=post-title><a href=https://rand-notes.github.io/fi/ma012/overview2/></a></h2>
+<div class=post-content>
+<h1 id=2-cviko>2 cviko</h1>
+<p>Na hladine vyznamnosti testujte nulovou hypotezu, ze stredni hodnoty trzeb vsechno proddavacu
+se rovnaji.
+Spocitejte ze hmotnost brambor nesouvisi s odrudou.</p>
+<p>reseni:
+<strong>Levene a Bartletts</strong> test pro overeni ze variance je podobna mezi skupinami
+<strong>Shapiruv-Wilkeuv a Kolmogorovuv-Smirnovuv</strong> test pro overeni normality
+<strong>ANOVA</strong> pro testovani stredni hodnoty
+<strong>Tukey a Scheffe</strong> pro porovnani ktere dvojice se nejvic lisi</p>
+<p>R:</p>
+<p>leveneTest(tabulka$hmotnost ~ tabulka$odruda) # odruda musi byt factor
+bartlett.test(tabulka$hmotnost ~ tabulka$odruda)</p>
+<p>Shapiro–Wilk:</p>
+<pre tabindex=0><code># nejdriv si rozdelime do nekolika tabulek podle odrud
+skupiny &lt;- lapply(levels(tabulka$odruda), function(L) {
+  return(subset(tabulka, odruda == L))
+})
+
+# a pak aplikujeme Shapiro nebo Kolmogorov–Smirnov
+skupiny &lt;- lapply(levels(tabulka$odruda), function(L) {
+  return(subset(tabulka, odruda == L))
+})
+
+lapply(skupiny, function(x) {
+  X &lt;- x$hmotnost
+  ks.test(X, &quot;pnorm&quot;, mean = mean(X), sd = sd(X))
+})
+
+alternativne to muzem projet po jednom
+
+shapiro.test(tabulka[tabulka$odruda == 1, ]$hmotnost)
+shapiro.test(tabulka[tabulka$odruda == 2, ]$hmotnost)
+</code></pre><p>ANOVA:</p>
+<pre tabindex=0><code>aov.model &lt;- aov(tabulka$hmotnost ~ tabulka$odruda)
+aov.model
+</code></pre><p>Tukey a Scheffe:</p>
+<pre tabindex=0><code>ScheffeTest &lt;- scheffe.test(aov.model, &quot;tabulka$odruda&quot;)
+ScheffeTest
+ScheffeTest$groups
+
+
+TukeyTest &lt;- TukeyHSD(aov.model)
+TukeyTest
+plot(TukeyTest, las = 1) # graficky 
+</code></pre><p>Linearni regresni model:</p>
+<pre tabindex=0><code>model3 &lt;- lm(Y ~ 1 + x + I(x^2) + I(x^3), data = tabulka)
+model2 &lt;- lm(Y ~ 1 + x + I(x^2), data = tabulka)
+model1 &lt;- lm(Y ~ 1 + x, data = tabulka)
+summary(model3)
+summary(model2)
+summary(model1)
+</code></pre><h1 id=3-cviko>3 cviko</h1>
+<p>Zkoumame vynosy sena v zavislosti na typu pudy a hnojeni. Kazda komvinace byla realizovana
+ctyrikrat, nezavisle na sobe. Provdte analyzu rozptylu pomoci dvojneho trideni bez interakci,
+dvojneho trideni s interakcemi i pomoci jednoducheho trideni.</p>
+<p>Reseni:</p>
+<p>Opet Bartlett a Levene pro varianci a Shapiro a KS pro normalitu.</p>
+<pre tabindex=0><code># dvojne trideni bez interakci
+
+aov.model &lt;- aov (vynos ~ puda + hnojeni, data = tabulka)
+summary (aov.model)
+aov.model$coefficients
+
+# Mnohonasobne porovnavani
+
+TukeyTest &lt;- TukeyHSD (aov.model)
+TukeyTest
+
+ScheffeTest.puda &lt;- scheffe.test (aov.model, &quot;puda&quot;)
+ScheffeTest.puda$groups
+ScheffeTest.hnojeni &lt;- scheffe.test (aov.model, &quot;hnojeni&quot;)
+ScheffeTest.hnojeni$groups
+
+
+# Dvojne trideni s interakcemi
+aov.model &lt;- aov (vynos ~ puda * hnojeni, data = tabulka)
+aov.model
+</code></pre><h1 id=4-cviko>4 cviko</h1>
+<p>Testuje hypotezu, ze polovina testovanych soob deobu jedne minuty podhodnotila a polovina
+nadhodnotila.</p>
+<pre tabindex=0><code># znamenkovy test
+SIGN.test(X, md = 60) # p-hodnota &gt; 0.05 =&gt; nezamitame nulovou hypotezu 
+
+# Wilcoxonuv signed-rank test / jednovyberovy wilcoxon
+wilcox.test(X, mu = 60)
+
+# dvouvyberovy wilcoxonuv test
+wilcox.test (X, Y)
+</code></pre><p>Brambory - pomoci Kruskal-Wallis a median testu pro jednoduche trideni testujte H, ze stredni
+hodnota hmotnosti trsu brambor nezavisi na odrude. Naleznete odlisne dvojice.</p>
+<pre tabindex=0><code># Jednoduche trideni: Kruskaluv-Wallisuv test
+# p-hodnota &lt; 0.05 =&gt; zamitame nulovou hypotezu o rovnosti vsech medianu 
+KWtest &lt;- kruskal(tabulka$hmotnost, tabulka$odruda)
+
+
+# Jednoduche trideni: Medianovy test
+Mtest &lt;- Median.test(tabulka$hmotnost, tabulka$odruda)
+</code></pre><h1 id=5-cviko>5 cviko</h1>
+<p>Byl vybran pocet chlapcu v rodinach. Testujte ze pocet chlapcu v rodinach ma binomicke
+rozdeleni Bi(5; 0.5);</p>
+<pre tabindex=0><code>tabulka &lt;- read.csv2(file = &quot;data/rodiny.csv&quot;)
+
+pc = tabulka$pocet_chlapcu #diskretni kategorie
+k &lt;- length (pc)
+
+pr &lt;- tabulka$pocet_rodin #Z nahodneho vyberu mame empiricke cetnosti
+n &lt;- sum (pr)
+
+bin &lt;- dbinom (pc, size = 5, prob = 0.5)
+
+Matice &lt;- rbind (pr, n * bin) # umistime empiricke i teoreticke cetnosti do jedne matice jako dva radky
+Matice
+
+
+#	Yarnoldovo kriterium 
+q &lt;- sum (n * bin &lt; 5) / k
+n * p.j &gt;= 5 * q # output: TRUE TRUE TRUE TRUE TRUE TRUE
+# Yarnoldovo kriterium  je splneno
+
+
+#	Testovaci statistika
+K &lt;- sum (pr^2 / (n * bin)) - n
+K &gt;= qchisq (0.95, df = k - 1) #output: FALSE
+#	Hypotezu o shode dat s rozdelenim Bi (5; 0.5) nezamitame
+
+
+#	Podminka dobre aproximace 
+n * bin &gt;= 5 
+#	Prvni a posledni kategorie maji nizke teoreticke cestnosti, Sloucime tedy prvni 2 a posledni 2 kategorie
+
+#Slouceni kategorii
+pc2 &lt;- c (&quot;0-1&quot;, pc[3:4], &quot;4-5&quot;)
+k2 &lt;- length (pc)
+pr2 &lt;- c (sum (pr[1:2]), pr[3], pr[4], sum (pr[5:6]))
+bin2 &lt;- c (sum (bin[1:2]), bin[3], bin[4], sum (bin[5:6]))
+
+# to stejny - ale ted uz je podmnika splnena
+
+Matice &lt;- rbind (pr2, n * bin2)
+Matice
+
+n * bin2 &gt;= 5
+
+K &lt;- sum (pr2^2 / (n * bin2)) - n
+K &gt;= qchisq (0.95, df = k2 - 1) #output: FALSE
+#	Hypotezu o shode dat s rozdelenim Bi (5; 0.5) nezamitame
+</code></pre><p>Sledovana doba cekani na obsluhu. Testujte zda ma exponencialni rozdeleni pst. a to testem
+dobre shody a testem pro exponencialni rozdeleni.</p>
+<pre tabindex=0><code>tabulka &lt;- read.csv2(file = &quot;data/fronta.csv&quot;)
+str(tabulka)
+summary(tabulka)
+
+tabulka
+
+# kategorie
+dcc &lt;- as.character (tabulka$doba_cekani) # doba cekani char
+k &lt;- length (dcc)
+dc &lt;- seq (0, 24, by = 3) # doba cekani
+
+
+#	Z nahodneho vyberu mame empiricke cetnosti
+pz &lt;- tabulka$pocet_zakazniku
+n &lt;- sum (pz)
+
+# Odhad parametru lambda v exponencialnim rozdeleni 
+prumer &lt;- seq (1.5, 22.5, by = 3) # stredy v intervalech
+lambda &lt;- 1 / (sum (prumer * pz) / n)
+
+# Dopocitame teoreticke pravdepodobnosti z predpokladu exponencialniho rozdeleni s lambda 
+dck &lt;- pexp (dc, lambda) # distribucni funkce v krajnich bodech
+pst &lt;- diff (dck) # pravdepodobnost = rozdil hodnot distribucni funkce
+
+# Soucet pravdepodobnosti ale neni 1, nebot chybi kategorie &quot;&gt; 24&quot;
+dcc &lt;- c (dcc, &quot;&gt; 24&quot;)
+k &lt;- length (dcc)
+pz &lt;- c (pz, 0)
+pst &lt;- c (pst, 1 - pexp (24, lambda))
+#	kontrola: soucet psti = 1
+sum (pst)	
+
+#	Sloupcove grafy empirickych a teoretickych cetnosti
+Matice &lt;- rbind (pz, n * pst)	#	umistime empiricke i teoreticke cetnosti do jedne matice jako dva radky
+barplot (Matice, names.arg = dcc, beside = TRUE, main = &quot;doba cekani&quot;, ylab = &quot;pocet zakazniku&quot;, col = c(&quot;orange&quot;, &quot;cyan&quot;), las = 2)
+
+#	Podminka dobre aproximace 
+n * pst &gt;= 5 
+# Yarnoldovo kriterium
+q &lt;- sum (n * pst &lt; 5) / k
+q
+n * pst &gt;= 5 * q
+
+# Podle podminky dobre aproximace bychom spojili posledni dve dvojice kategorii.
+# Podle Yarnoldova kriteria bude stacit spojit posledni 2 kategorie do nove &quot;&gt; 21&quot;.
+# Nam postaci splneni Yarnoldova kriteria. 
+dcc2 &lt;- dcc[1:(k-1)]
+k2 &lt;- length (dcc2)
+dcc2[k2] &lt;- &quot;&gt; 21&quot;
+pz2 &lt;- c (pz[1:(k2-1)], pz[k2] + pz[k])
+pst2 &lt;- c (pst[1:(k2-1)], pst[k2] + pst[k])
+sum (pz2)
+sum (pst2)
+
+Matice &lt;- rbind (pz2, n * pst2)	#	umistime empiricke i teoreticke cetnosti do jedne matice jako dva radky
+barplot (Matice, names.arg = dcc2, beside = TRUE, main = &quot;doba cekani&quot;, ylab = &quot;pocet zakazniku&quot;, col = c(&quot;orange&quot;, &quot;cyan&quot;), las = 2)
+
+# Yarnoldovo kriterium
+q &lt;- sum (n * pst2 &lt; 5) / k2
+q
+n * pst2 &gt;= 5 * q
+#	Yarnoldovo kriterium je nyni jiz splneno
+
+#	Testovaci statistika
+K &lt;- sum (pz2^2 / (n * pst2)) - n
+#	Kvantil a porovnani 
+K
+# Stupne volnosti snizujeme navic o 1 za odhadnuty parametr lambda 
+qchisq (0.95, df = k2 - 1 - 1)
+K &gt;= qchisq (0.95, df = k2 - 1 - 1)
+#	Hypotezu o shode dat s exponencialnim rozdelenim testem dobre shody nezamitame
+
+
+# Specificky test
+pz &lt;- tabulka$pocet_zakazniku
+X &lt;- rep (prumer, pz)
+Q &lt;- (n-1) * var (X) / (mean (X))^2 
+Q
+q1 = qchisq (0.025, n-1)
+q2 = qchisq (0.975, n-1)
+c (q1, q2)
+Q &lt;= q1 | Q &gt;= q2
+#	Hypotezu o shode dat s exponencialnim rozdelenim Specifickym testem zamitame
+</code></pre><h1 id=6-cviko>6 cviko</h1>
+<p>Byli sledovan pocet clenu (C), prijmy (P) a vydaje (V) za potraviny a napoje. Dale spocitejte koeficient mnohonasobne korelace mezi vydaji a zbylymi 2 velicinami.</p>
+<p>Korelace meri silu zavislosti, kovariance meri smer.</p>
+<p>Spearmanův korelační koeficient udává statistickou závislost (korelaci) mezi dvěma veličinami.
+Kendallovo tau - measure the ordinal association between two measured quantities</p>
+<pre tabindex=0><code>library(&quot;Hmisc&quot;)			#	rcorr
+library(&quot;corrplot&quot;)		#	corrplot
+library(&quot;ppcor&quot;)			#	pcor, pcor.test
+library(&quot;rgl&quot;)		# 3D grafika 
+
+
+#	Nacteni dat
+tabulka &lt;- read.csv2(&quot;data/domacnosti.csv&quot;, header = TRUE, skip = 5)
+
+C &lt;- tabulka$C
+P &lt;- tabulka$P
+V &lt;- tabulka$V
+X &lt;- as.matrix(tabulka) # C, P, V jako sloupce
+
+#	Ciselne charakterisitky 
+apply(X, 2, mean)
+cov(X)
+cor(X)
+
+#	Scatter-plot
+pairs(X)
+
+#	MNOHONASOBNA LINEARNI REGRESE
+
+#	Linearni regresni model
+model &lt;- lm(V ~ P + C, data = tabulka)
+#	Koeficienty mnohonasobne linearni regrese
+summary(model)
+
+#	Predikce vynosu (V) v zavislosti na poctu clenu domacnosti (C) a prijmech (P)
+c &lt;- seq(1, 5, by = 0.1) # 1 a 5 je min a max v C
+p &lt;- seq(0, 150, by = 0.1) # 0 a 150 je min a max v P
+grid.2d &lt;- expand.grid(C = c, P = p)
+prediction &lt;- predict(model, grid.2d, interval = &quot;prediction&quot;)
+V.predicted &lt;- matrix(prediction[,1], length (c), length (p))
+
+#	KORELACNI ANALYZA
+
+#	Korelacni matice a testy vyznamnosti
+R &lt;- rcorr(X)
+R$r
+R$P
+
+#	Matice parcialnich korelaci a testy vyznamnosti
+parc &lt;- pcor(X)
+parc$estimate
+parc$p.value
+
+#	MNOHONASOBNA KORELACE
+#	V . C P
+
+# 1. jako korelace s nejlepsim linearnim odhadem
+m &lt;- lm(V ~ C + P, data = tabulka)
+v &lt;- summary(m)
+cor(V, m$fitted.values)
+
+# 2. jako r.squared v linearnim regresnim modelu
+sqrt(v$r.squared)
+</code></pre><h1 id=7-cviko>7 cviko</h1>
+<p>Durbin-Watson - test statistic used to detect the presence of autocorrelation at lag 1 in the residuals (prediction errors).
+Cochran-Orcutt - obdobné procedury pro korekci autokorelace</p>
+<p>Pomoci lienarni modelu s AR(1) modelujte zavislost druhe odmocniny poctu ptactva na case (v rocich). Overte, zda se v datech vyskytuje autoregrese 1. radu a prip ji odstrante.</p>
+<pre tabindex=0><code>tabulka &lt;- read.csv (file = &quot;data/Hawaii.csv&quot;)
+str(tabulka)
+tabulka$Y &lt;- sqrt(tabulka$Birds)
+Year.min &lt;- min(tabulka$Year)
+tabulka$t &lt;- tabulka$Year - Year.min 
+
+# plot(tabulka$Year, tabulka$Y, type = &quot;p&quot;, pch = 21, col = &quot;black&quot;, bg = &quot;yellow&quot;, xlab = &quot;Year (= t + 1956)&quot;, ylab = &quot;sqrt (Birds)&quot;, main = &quot;OLS&quot;)
+
+model &lt;- lm(Y ~ t, data = tabulka) # Y pocet ptactva, t je pocet roku od zacatku mereni (roky)
+summary(model, correlation = TRUE)
+confint(model) # Computes confidence intervals for one or more parameters in a fitted model.
+tt &lt;- seq(min (tabulka$t), max (tabulka$t), by = 0.1)
+Yhat &lt;- predict(model, data.frame (t = tt))
+
+# rezidua
+r &lt;- model$residuals
+n &lt;- length(r)
+
+# korelace mezi rezidui s o 1 posunutymi indexy
+r1 &lt;- r[-n]
+r2 &lt;- r[-1]
+
+
+# odhad theta
+theta &lt;- cor(r1, r2)
+theta
+#
+theta1 &lt;- as.numeric( (t(r1) %*% r2) / (t(r1) %*% r1))
+theta1
+# asymptoticky test
+alpha &lt;- 0.05
+U &lt;- abs(sqrt(n) * theta1)
+c(U = U, kvantil = qnorm (1 - alpha/2)) 
+U &gt; qnorm (1 - alpha/2)  
+# Zamitame hypotezu H: theta = 0
+
+# Durbinova-Watsonova statistika
+DW &lt;- dwtest(Y ~ t, data = tabulka)
+D &lt;- DW$statistic
+D
+# Dtest
+DW$p.value 
+# Take zamitame hypotezu H: theta = 0
+# odhad theta z D-W statistiky
+theta2 &lt;- 1 - unname(D) / 2
+theta2
+</code></pre><h1 id=9-cviko>9 cviko</h1>
+<pre tabindex=0><code># definice GLM modelu
+m1 &lt;- glm(formula = cbind(killed, population - killed) ~ dose, family = binomial(link = &quot;logit&quot;), data = tab) # killed, population, dose - vsechno array - casova osa
+m2 &lt;- glm(formula = cbind(killed, population - killed) ~ dose, family = binomial(link = &quot;probit&quot;), data = tab)
+summary(m1)
+
+# linearni prediktor
+eta1 &lt;- predict(m1, data.frame(dose = t), type = &quot;link&quot;)
+
+# linearni preditkor s 95% pasem spolehlivosti
+fit1 &lt;- predict(m1, data.frame(dose = t), type = &quot;link&quot;, se.fit = TRUE)
+
+</code></pre>
+</div>
+</article>
+<hr>
+<div class=post-info>
+</div>
+</main>
+</div>
+<footer class=footer>
+</footer>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type=text/javascript id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js></script>
+</div>
+<script type=text/javascript src=/bundle.min.b2a4161afad463d91113a005f8f24a5efff27a6cc48754e9e93adc7bccb8a876a153a953c0b12653f3b5910e41e620da731f8184f2973058100d159c09fa8346.js integrity="sha512-sqQWGvrUY9kRE6AF+PJKXv/yemzEh1Tp6Trce8y4qHahU6lTwLEmU/O1kQ5B5iDacx+BhPKXMFgQDRWcCfqDRg=="></script>
+</body>
+</html>

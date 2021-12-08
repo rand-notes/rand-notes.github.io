@@ -11,22 +11,22 @@ Single-Agent vs Multi-Agent Environments For example, an agent solving a crosswo
 <meta name=theme-color content>
 <link rel=canonical href=https://rand-notes.github.io/fi/iv126/0/>
 <title>
-ai 0 :: idk
+Environments, Agents, Optimizations :: idk
 </title>
 <link href=https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css rel=stylesheet type=text/css>
 <link rel=stylesheet href=/main.7209ab6422eb371a6b685a56274cc88eff3db604665c3bdb698389c0585d4211.css>
-<meta itemprop=name content="ai 0">
+<meta itemprop=name content="Environments, Agents, Optimizations">
 <meta itemprop=description content="Environments Fully Observable vs Partially Observable If an agent&rsquo;s sensors give it access to the complete state of the environment at each point in time, then we say that he task environment is fully observable. If the agents has no sensors at all then the environment is unobservable
 Single-Agent vs Multi-Agent Environments For example, an agent solving a crossword puzzle by itself is clearly in a single-agent enviroment, whereas an agent playing chess is in a two-agent enviroment."><meta itemprop=datePublished content="2021-09-02T00:00:00+00:00">
 <meta itemprop=dateModified content="2021-09-02T00:00:00+00:00">
-<meta itemprop=wordCount content="1585"><meta itemprop=image content="https://rand-notes.github.io">
+<meta itemprop=wordCount content="2373"><meta itemprop=image content="https://rand-notes.github.io">
 <meta itemprop=keywords content>
 <meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://rand-notes.github.io">
-<meta name=twitter:title content="ai 0">
+<meta name=twitter:title content="Environments, Agents, Optimizations">
 <meta name=twitter:description content="Environments Fully Observable vs Partially Observable If an agent&rsquo;s sensors give it access to the complete state of the environment at each point in time, then we say that he task environment is fully observable. If the agents has no sensors at all then the environment is unobservable
 Single-Agent vs Multi-Agent Environments For example, an agent solving a crossword puzzle by itself is clearly in a single-agent enviroment, whereas an agent playing chess is in a two-agent enviroment.">
-<meta property="og:title" content="ai 0">
+<meta property="og:title" content="Environments, Agents, Optimizations">
 <meta property="og:description" content="Environments Fully Observable vs Partially Observable If an agent&rsquo;s sensors give it access to the complete state of the environment at each point in time, then we say that he task environment is fully observable. If the agents has no sensors at all then the environment is unobservable
 Single-Agent vs Multi-Agent Environments For example, an agent solving a crossword puzzle by itself is clearly in a single-agent enviroment, whereas an agent playing chess is in a two-agent enviroment.">
 <meta property="og:type" content="article">
@@ -61,7 +61,7 @@ title
 </p>
 </div>
 <article>
-<h2 class=post-title><a href=https://rand-notes.github.io/fi/iv126/0/>ai 0</a></h2>
+<h2 class=post-title><a href=https://rand-notes.github.io/fi/iv126/0/>Environments, Agents, Optimizations</a></h2>
 <div class=post-content>
 <h1 id=environments>Environments</h1>
 <h2 id=fully-observable-vs-partially-observable>Fully Observable vs Partially Observable</h2>
@@ -133,7 +133,7 @@ internalization of the performance measure. Provided that the internal utility f
 will be rational according to the external performance measure.</p>
 <p>Technically speaking, a rational utility-based agent chooses the action that maximizes the <strong>expected utility</strong> of the action outcomes—that is, the utility the agent expects to derive, on average, given the
 probabilities and utilities of each outcome.</p>
-<h1 id=summary>Summary</h1>
+<h1 id=agents-summary>Agents Summary</h1>
 <ul>
 <li>
 <p>An agent is something that perceives and acts in an environment. The agent function for an agent specifies the action taken by the agent in response to any percept sequence.</p>
@@ -166,7 +166,76 @@ act to achieve their goals, and utility-based agents try to maximize their own e
 <p>All agents can improve their performance through learning.</p>
 </li>
 </ul>
-<img src=/images/agents.png alt=Agents class=center>
+<img src=/images/iv126/agents.png alt=Agents class=center>
+<h1 id=christofides-algorithm>Christofides Algorithm</h1>
+<p>is an algorithm for finding approximate solutions to the travelling salesman problem, on instances where the distances form a metric space (they are symmetric and obey the triangle inequality)</p>
+<h1 id=some-trees>Some Trees</h1>
+<h2 id=van-emde-boas-tree>van Emde Boas Tree</h2>
+<p>is a tree data structure which implements an associative array with m-bit integer keys. It performs all operations in O(log m) time or equivalently in O(log log M) time where M = 2^M is the maximum
+number of elements that can be stored in the tree. The M is not to be confused with the actual number of elements stored in the tree, by which the performance of other tree data-structures is often measured.</p>
+<p>operations: Insert, Delete, Lookup, FindNext, FindPrevious</p>
+<h2 id=fusion-tree>Fusion Tree</h2>
+<p>//todo</p>
+<h2 id=tango-tree>Tango Tree</h2>
+<p>//todo</p>
+<h1 id=kruskals-algorithm>Kruskal&rsquo;s algorithm</h1>
+<p>results in a minimum spanning tree.</p>
+<p>We are taking edges with smalles values which connect nodes, that isn&rsquo;t already connected by other edges.</p>
+<h1 id=prims-algorithm>Prim&rsquo;s Algorithm</h1>
+<p>results in a minimum spanning tree.</p>
+<p>First select random node and add it to &lsquo;visited&rsquo; list.</p>
+<p>Take edge with smallest value, which is connected to any node in &lsquo;visited&rsquo; and does not connect elements which are both in &lsquo;visited&rsquo;.1</p>
+<h1 id=network-flow>Network Flow</h1>
+<h2 id=flow-graph--network>Flow Graph / Network</h2>
+<p>graph where edges (also called arcs) have <strong>capacity</strong> which cannot be exceeded and <strong>flow value</strong> which says how many units of flow are passing through the edge. Initial flow is 0 everywhere.</p>
+<p>Graph contains <strong>source</strong> and <strong>sing</strong> nodes.</p>
+<h2 id=maximum-flow-problem>Maximum Flow Problem</h2>
+<p>How much flow can we push through graph without exceeding any capacity</p>
+<h2 id=ford-fulkerson-method>Ford-Fulkerson Method</h2>
+<p>repeatedly finds augmenting paths through the residual graph and augments the flow until no more augmenting paths can be found.</p>
+<p>An <strong>augmenting path</strong> is a path of edges in the residual graph with unused capacity greater than zero from the source s to the sink t. Every augmenting path has <strong>bottleneck</strong>, which is the smalles edge
+on the path. WE can use the bottlenect value to augment the flow along the path.</p>
+<p><strong>Augmenting the flow</strong> means updating the flow values of the edges along the augmenting path. For forward edges, this means <strong>increasing the flow</strong> by the bottleneck value. When augmenting the flow along
+the augmenting path, you also need to <strong>decrese the flow</strong> along each residual edge by the bottleneck value. <strong>Residual edges</strong> exist to undo bad augmenting paths which do not lead to a maximum flow
+(they decrease flow which will not be needed because of the bottleneck ahead). The residual graph is the graph which also contains residual edges. The residual graph helps us with computation but is not
+usually shown as describing problem.</p>
+<p>Ford-Fulkerson Method does not specify exact method, but is usuualy done with DFS.</p>
+<h1 id=lagrange-multiplier--function>Lagrange Multiplier & Function</h1>
+<p>is a strategy for finding the local maxima and minima of a function subject to equality constraints.
+The basic idea is to convert a constrained problem into a form such that the derivative test of an unconstrained problem can still be applied. The relationship between the gradient of the function and gradients of the constraints rather naturally leads to a reformulation of the original problem, known as the Lagrangian function</p>
+<p>The method can be summarized as follows: in order to find the maximum or minimum of a function \( f(x) \) subjected to the equality constraint \( g(x) = 0 \), form the Lagrangian function.
+$$
+\mathcal{L}(x, \lambda) = f(x) - \lambda g(x)
+$$</p>
+<h1 id=linear-programming>Linear Programming</h1>
+<p>is a method to achieve the best outcome (such as maximum profit or lowest cost) in a mathematical model whose requirements are represented by linear relationships. Linear programming is a special case of
+mathematical programming (also known as mathematical optimization)</p>
+<p>Linear programs are problems that can be expressed in canonical form as</p>
+<ul>
+<li>Find a vector \( x \)</li>
+<li>that maximizes \( c^Tx \)</li>
+<li>subject to \( Ax \leq b \)</li>
+<li>and \(x \geq 0 \)</li>
+</ul>
+<h2 id=simplex-method>Simplex Method</h2>
+<p>//todo</p>
+<h1 id=nonlinear-programming>Nonlinear programming</h1>
+<p>is the process of solving an optimization problem where some of the constraints or the objective function are nonlinear. An optimization problem is one of calculation of the extrema (maxima, minima or
+stationary points) of an objective function over a set of unknown real variables and conditional to the satisfaction of a system of equalities and inequalities, collectively termed constraints. It is the
+sub-field of mathematical optimization that deals with problems that are not linear.</p>
+<h2 id=karushkuhntucker-conditions>Karush–Kuhn–Tucker conditions</h2>
+<p>KKT conditions are first derivative tests (sometimes called first-order necessary conditions) for a solution in nonlinear programming to be optimal, provided that some regularity conditions are
+satisfied.</p>
+<p>Conditions:</p>
+<ul>
+<li><strong>Stationarity</strong></li>
+<li><strong>Primal feasibility</strong></li>
+<li><strong>Dual feasibility</strong></li>
+<li><strong>Complementary slackness</strong></li>
+</ul>
+<h1 id=convex-optimization>Convex Optimization</h1>
+<p>is a subfield of mathematical optimization that studies the problem of minimizing convex functions over convex sets. Many classes of convex optimization problems admit polynomial-time algorithms,[1]
+whereas mathematical optimization is in general NP-hard.</p>
 </div>
 </article>
 <hr>

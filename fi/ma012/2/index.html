@@ -1,0 +1,108 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=author content>
+<meta name=description content="Test (ne)korelovanosti Pearsonuv vyberovy korelacni koeficient \( \rho_{XY} \) je odhadem teoreticke korelace \( rho_{XY} \) mezi nahodnymi velicinami X a Y.
+Test (ne)korelovanosti je vlastne testem vyznamnosti korelace \rho_(XY)
+$$ H_0: \rho_{XY} \eq 0 H_1: \rho_{XY} \neq 0 $$
+H_0 nezamitneme \( r_{XY} \approx 0 \): nekorelovanost = lineární nezávistlost X, Y. Pozor nekorelovanost neimplikuje stochastickou nezávistlost. H_0 zamitneme \( r_{XY} \approx 1 \): souhlasná lineární závislost X, Y H_0 zamitneme \( r_{XY} \approx -1 \):nesouhlasná lineární závislost X, Y">
+<meta name=keywords content>
+<meta name=robots content="noodp">
+<meta name=theme-color content>
+<link rel=canonical href=https://rand-notes.github.io/fi/ma012/2/>
+<title>
+ma012 2 :: idk
+</title>
+<link href=https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css rel=stylesheet type=text/css>
+<link rel=stylesheet href=/main.7209ab6422eb371a6b685a56274cc88eff3db604665c3bdb698389c0585d4211.css>
+<meta itemprop=name content="ma012 2">
+<meta itemprop=description content="Test (ne)korelovanosti Pearsonuv vyberovy korelacni koeficient \( \rho_{XY} \) je odhadem teoreticke korelace \( rho_{XY} \) mezi nahodnymi velicinami X a Y.
+Test (ne)korelovanosti je vlastne testem vyznamnosti korelace \rho_(XY)
+$$ H_0: \rho_{XY} \eq 0 H_1: \rho_{XY} \neq 0 $$
+H_0 nezamitneme \( r_{XY} \approx 0 \): nekorelovanost = lineární nezávistlost X, Y. Pozor nekorelovanost neimplikuje stochastickou nezávistlost. H_0 zamitneme \( r_{XY} \approx 1 \): souhlasná lineární závislost X, Y H_0 zamitneme \( r_{XY} \approx -1 \):nesouhlasná lineární závislost X, Y"><meta itemprop=datePublished content="2021-10-02T00:00:00+00:00">
+<meta itemprop=dateModified content="2021-10-02T00:00:00+00:00">
+<meta itemprop=wordCount content="181"><meta itemprop=image content="https://rand-notes.github.io">
+<meta itemprop=keywords content>
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://rand-notes.github.io">
+<meta name=twitter:title content="ma012 2">
+<meta name=twitter:description content="Test (ne)korelovanosti Pearsonuv vyberovy korelacni koeficient \( \rho_{XY} \) je odhadem teoreticke korelace \( rho_{XY} \) mezi nahodnymi velicinami X a Y.
+Test (ne)korelovanosti je vlastne testem vyznamnosti korelace \rho_(XY)
+$$ H_0: \rho_{XY} \eq 0 H_1: \rho_{XY} \neq 0 $$
+H_0 nezamitneme \( r_{XY} \approx 0 \): nekorelovanost = lineární nezávistlost X, Y. Pozor nekorelovanost neimplikuje stochastickou nezávistlost. H_0 zamitneme \( r_{XY} \approx 1 \): souhlasná lineární závislost X, Y H_0 zamitneme \( r_{XY} \approx -1 \):nesouhlasná lineární závislost X, Y">
+<meta property="og:title" content="ma012 2">
+<meta property="og:description" content="Test (ne)korelovanosti Pearsonuv vyberovy korelacni koeficient \( \rho_{XY} \) je odhadem teoreticke korelace \( rho_{XY} \) mezi nahodnymi velicinami X a Y.
+Test (ne)korelovanosti je vlastne testem vyznamnosti korelace \rho_(XY)
+$$ H_0: \rho_{XY} \eq 0 H_1: \rho_{XY} \neq 0 $$
+H_0 nezamitneme \( r_{XY} \approx 0 \): nekorelovanost = lineární nezávistlost X, Y. Pozor nekorelovanost neimplikuje stochastickou nezávistlost. H_0 zamitneme \( r_{XY} \approx 1 \): souhlasná lineární závislost X, Y H_0 zamitneme \( r_{XY} \approx -1 \):nesouhlasná lineární závislost X, Y">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://rand-notes.github.io/fi/ma012/2/"><meta property="og:image" content="https://rand-notes.github.io"><meta property="article:section" content="fi">
+<meta property="article:published_time" content="2021-10-02T00:00:00+00:00">
+<meta property="article:modified_time" content="2021-10-02T00:00:00+00:00"><meta property="og:site_name" content="idk">
+<meta property="article:published_time" content="2021-10-02 00:00:00 +0000 UTC">
+</head>
+<body>
+<div class=container>
+<header class=header>
+<span class=header__inner>
+<a href=/ style=text-decoration:none>
+<div class=logo>
+title
+</div>
+</a>
+<span class=header__right>
+<nav class=menu>
+<ul class=menu__inner><li><a href=/posts>notes</a></li>
+</ul>
+</nav>
+<span class=menu-trigger><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+</span>
+<span class="theme-toggle not-selectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 41c10.4934.0 19-8.5066 19-19C41 11.5066 32.4934 3 22 3 11.5066 3 3 11.5066 3 22s8.5066 19 19 19zM7 22C7 13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22z"/></svg></span>
+</span>
+</span>
+</header>
+<div class=content>
+<main class=post>
+<div class=post-info>
+</p>
+</div>
+<article>
+<h2 class=post-title><a href=https://rand-notes.github.io/fi/ma012/2/>ma012 2</a></h2>
+<div class=post-content>
+<h1 id=test-nekorelovanosti>Test (ne)korelovanosti</h1>
+<p>Pearsonuv vyberovy korelacni koeficient \( \rho_{XY} \) je odhadem teoreticke korelace \( rho_{XY} \) mezi nahodnymi velicinami X a Y.</p>
+<p>Test (ne)korelovanosti je vlastne testem vyznamnosti korelace \rho_(XY)</p>
+<p>$$
+H_0: \rho_{XY} \eq 0
+H_1: \rho_{XY} \neq 0
+$$</p>
+<p>H_0 nezamitneme \( r_{XY} \approx 0 \): nekorelovanost = lineární nezávistlost X, Y. Pozor nekorelovanost neimplikuje stochastickou nezávistlost.
+H_0 zamitneme \( r_{XY} \approx 1 \): souhlasná lineární závislost X, Y
+H_0 zamitneme \( r_{XY} \approx -1 \):nesouhlasná lineární závislost X, Y</p>
+<h1 id=spearmanuv-korelační-koeficient>Spearmanuv korelační koeficient</h1>
+<p>Neparametrická analogie Personova.</p>
+<h1 id=test-pořadové-nekorelovanosti>Test pořadové nekorelovanosti</h1>
+<p>test významnosti r_s, lze provádět pomocí některé z testovacích statistik jako Spearmanuv korel koef..</p>
+<h1 id=kendallův-korelační-koeficient---kendallovao-tau>Kendallův korelační koeficient - Kendallovao \tau</h1>
+<p>\tau kvantifikuje ordinální asociaci mezi velicinami X, Y. Na rozdíl or r-s totiz \tau neuvazuje vzdálenost pořadí.</p>
+<h2 id=konkordantní-páry>Konkordantní páry</h2>
+<p>pokud jsou jejich pořadí souhlasná, tzn. \( X_i \leq X_j & Y_i \leq Y_j \) anebo \( X_i \geq X_j & Y_i \geq Y_j \)</p>
+<h2 id=diskordantní-páry>Diskordantní páry</h2>
+<p>pokud jsou jejich pořadí nesouhlasná, tzn. \( X_i \leq X_j & Y_i \geq Y_j \) anebo \( X_i \geq X_j & Y_i \leq Y_j \)</p>
+</div>
+</article>
+<hr>
+<div class=post-info>
+</div>
+</main>
+</div>
+<footer class=footer>
+</footer>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type=text/javascript id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js></script>
+</div>
+<script type=text/javascript src=/bundle.min.b2a4161afad463d91113a005f8f24a5efff27a6cc48754e9e93adc7bccb8a876a153a953c0b12653f3b5910e41e620da731f8184f2973058100d159c09fa8346.js integrity="sha512-sqQWGvrUY9kRE6AF+PJKXv/yemzEh1Tp6Trce8y4qHahU6lTwLEmU/O1kQ5B5iDacx+BhPKXMFgQDRWcCfqDRg=="></script>
+</body>
+</html>

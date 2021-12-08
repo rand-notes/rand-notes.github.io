@@ -1,0 +1,85 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=author content>
+<meta name=description content="Konzistence po cestě (PC path consistency) PC-2 Postup  Promazu domeny pomoci inicialnich relaci &amp;ndash; kdyz mam V_1 != V_2 vymazu v domene V1 vsechny dvojice, kde V_1 == V_2 do fronty si vlozim vsechny cesty [1] vezmeme z fronty a provedeme revizi pokud pri revizi neco zmenim pridam do queue podle [2]  [1] - nejlepe se to dela ze vezmu ze jdu pres vsechny body. napr mame V_1, V_2, V_3 ve trojuhelniku &amp;ndash; do fronty vlozime (V_1, V_2, V_3),(V_1, V_3, V_2),(V_2, V_1, V_3).">
+<meta name=keywords content>
+<meta name=robots content="noodp">
+<meta name=theme-color content>
+<link rel=canonical href=https://rand-notes.github.io/fi/pa163/3/>
+<title>
+pa163 lec03 :: idk
+</title>
+<link href=https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css rel=stylesheet type=text/css>
+<link rel=stylesheet href=/main.7209ab6422eb371a6b685a56274cc88eff3db604665c3bdb698389c0585d4211.css>
+<meta itemprop=name content="pa163 lec03">
+<meta itemprop=description content="Konzistence po cestě (PC path consistency) PC-2 Postup  Promazu domeny pomoci inicialnich relaci &ndash; kdyz mam V_1 != V_2 vymazu v domene V1 vsechny dvojice, kde V_1 == V_2 do fronty si vlozim vsechny cesty [1] vezmeme z fronty a provedeme revizi pokud pri revizi neco zmenim pridam do queue podle [2]  [1] - nejlepe se to dela ze vezmu ze jdu pres vsechny body. napr mame V_1, V_2, V_3 ve trojuhelniku &ndash; do fronty vlozime (V_1, V_2, V_3),(V_1, V_3, V_2),(V_2, V_1, V_3).">
+<meta itemprop=wordCount content="124"><meta itemprop=image content="https://rand-notes.github.io">
+<meta itemprop=keywords content>
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://rand-notes.github.io">
+<meta name=twitter:title content="pa163 lec03">
+<meta name=twitter:description content="Konzistence po cestě (PC path consistency) PC-2 Postup  Promazu domeny pomoci inicialnich relaci &ndash; kdyz mam V_1 != V_2 vymazu v domene V1 vsechny dvojice, kde V_1 == V_2 do fronty si vlozim vsechny cesty [1] vezmeme z fronty a provedeme revizi pokud pri revizi neco zmenim pridam do queue podle [2]  [1] - nejlepe se to dela ze vezmu ze jdu pres vsechny body. napr mame V_1, V_2, V_3 ve trojuhelniku &ndash; do fronty vlozime (V_1, V_2, V_3),(V_1, V_3, V_2),(V_2, V_1, V_3).">
+<meta property="og:title" content="pa163 lec03">
+<meta property="og:description" content="Konzistence po cestě (PC path consistency) PC-2 Postup  Promazu domeny pomoci inicialnich relaci &ndash; kdyz mam V_1 != V_2 vymazu v domene V1 vsechny dvojice, kde V_1 == V_2 do fronty si vlozim vsechny cesty [1] vezmeme z fronty a provedeme revizi pokud pri revizi neco zmenim pridam do queue podle [2]  [1] - nejlepe se to dela ze vezmu ze jdu pres vsechny body. napr mame V_1, V_2, V_3 ve trojuhelniku &ndash; do fronty vlozime (V_1, V_2, V_3),(V_1, V_3, V_2),(V_2, V_1, V_3).">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://rand-notes.github.io/fi/pa163/3/"><meta property="og:image" content="https://rand-notes.github.io"><meta property="article:section" content="fi">
+<meta property="og:site_name" content="idk">
+</head>
+<body>
+<div class=container>
+<header class=header>
+<span class=header__inner>
+<a href=/ style=text-decoration:none>
+<div class=logo>
+title
+</div>
+</a>
+<span class=header__right>
+<nav class=menu>
+<ul class=menu__inner><li><a href=/posts>notes</a></li>
+</ul>
+</nav>
+<span class=menu-trigger><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+</span>
+<span class="theme-toggle not-selectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 41c10.4934.0 19-8.5066 19-19C41 11.5066 32.4934 3 22 3 11.5066 3 3 11.5066 3 22s8.5066 19 19 19zM7 22C7 13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22z"/></svg></span>
+</span>
+</span>
+</header>
+<div class=content>
+<main class=post>
+<div class=post-info>
+</p>
+</div>
+<article>
+<h2 class=post-title><a href=https://rand-notes.github.io/fi/pa163/3/>pa163 lec03</a></h2>
+<div class=post-content>
+<h1 id=konzistence-po-cestě-pc-path-consistency>Konzistence po cestě (PC path consistency)</h1>
+<h1 id=pc-2>PC-2</h1>
+<h2 id=postup>Postup</h2>
+<ul>
+<li>Promazu domeny pomoci inicialnich relaci &ndash; kdyz mam V_1 != V_2 vymazu v domene V1 vsechny dvojice, kde V_1 == V_2</li>
+<li>do fronty si vlozim vsechny cesty [1]</li>
+<li>vezmeme z fronty a provedeme revizi</li>
+<li>pokud pri revizi neco zmenim pridam do queue podle [2]</li>
+</ul>
+<p>[1] - nejlepe se to dela ze vezmu ze jdu pres vsechny body. napr mame V_1, V_2, V_3 ve trojuhelniku &ndash; do fronty vlozime (V_1, V_2, V_3),(V_1, V_3, V_2),(V_2, V_1, V_3). Nic dalsiho neskladam protoze by
+to byla akorat cesta v opacnem smeru.</p>
+<p>[2] - po revizi rev(i,m,j) pridam do fronty: Q = Q \cup {(l,i,j)(l,j,i)}, tak ze l != i, l != j and nepridavam ty co uz ve fronte jsou</p>
+</div>
+</article>
+<hr>
+<div class=post-info>
+</div>
+</main>
+</div>
+<footer class=footer>
+</footer>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type=text/javascript id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js></script>
+</div>
+<script type=text/javascript src=/bundle.min.b2a4161afad463d91113a005f8f24a5efff27a6cc48754e9e93adc7bccb8a876a153a953c0b12653f3b5910e41e620da731f8184f2973058100d159c09fa8346.js integrity="sha512-sqQWGvrUY9kRE6AF+PJKXv/yemzEh1Tp6Trce8y4qHahU6lTwLEmU/O1kQ5B5iDacx+BhPKXMFgQDRWcCfqDRg=="></script>
+</body>
+</html>

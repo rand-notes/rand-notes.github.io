@@ -19,7 +19,7 @@ linearni modely Znam ́enkov ́y test (sign test) Parovy znamenkovy test ANOVA P
 <meta name=keywords content>
 <meta name=robots content="noodp">
 <meta name=theme-color content>
-<link rel=canonical href=https://rand-notes.github.io/ma012/1/>
+<link rel=canonical href=https://rand-notes.github.io/fi/ma012/1/>
 <title>
 ma012 1 :: idk
 </title>
@@ -39,7 +39,7 @@ ma012 1 :: idk
    dvojne trideni hypotezy ve dvojnem trideni
 linearni modely Znam ́enkov ́y test (sign test) Parovy znamenkovy test ANOVA Postup testovani ve dvojnem trideni Dvojne trideni s interakcemi"><meta itemprop=datePublished content="2021-10-02T00:00:00+00:00">
 <meta itemprop=dateModified content="2021-10-02T00:00:00+00:00">
-<meta itemprop=wordCount content="1239"><meta itemprop=image content="https://rand-notes.github.io">
+<meta itemprop=wordCount content="1688"><meta itemprop=image content="https://rand-notes.github.io">
 <meta itemprop=keywords content>
 <meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://rand-notes.github.io">
@@ -70,7 +70,7 @@ linearni modely Znam ́enkov ́y test (sign test) Parovy znamenkovy test ANOVA P
    dvojne trideni hypotezy ve dvojnem trideni
 linearni modely Znam ́enkov ́y test (sign test) Parovy znamenkovy test ANOVA Postup testovani ve dvojnem trideni Dvojne trideni s interakcemi">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://rand-notes.github.io/ma012/1/"><meta property="og:image" content="https://rand-notes.github.io"><meta property="article:section" content="fi">
+<meta property="og:url" content="https://rand-notes.github.io/fi/ma012/1/"><meta property="og:image" content="https://rand-notes.github.io"><meta property="article:section" content="fi">
 <meta property="article:published_time" content="2021-10-02T00:00:00+00:00">
 <meta property="article:modified_time" content="2021-10-02T00:00:00+00:00"><meta property="og:site_name" content="idk">
 <meta property="article:published_time" content="2021-10-02 00:00:00 +0000 UTC">
@@ -101,7 +101,7 @@ title
 </p>
 </div>
 <article>
-<h2 class=post-title><a href=https://rand-notes.github.io/ma012/1/>ma012 1</a></h2>
+<h2 class=post-title><a href=https://rand-notes.github.io/fi/ma012/1/>ma012 1</a></h2>
 <div class=post-content>
 <ul>
 <li>
@@ -148,6 +148,8 @@ Dvojne trideni s interakcemi</p>
 <p>Testovani v modelu s interakcemi
 Interpretace indexu determinace R-squared</p>
 <p>Index determinace</p>
+<h1 id=empirical-distribution-function>Empirical distribution function</h1>
+<img src=/images/edf.png alt=edf class=center>
 <h1 id=error-vs-residual>Error vs Residual</h1>
 <blockquote>
 <p>Error (or disturbance) is theis the deviation of the observed value from the (unobservable) true value of quantity of interest</p>
@@ -188,20 +190,22 @@ deviation is unknown.</p>
 is that the two means are equal, and the alternative is that they are not. It is known that under the null hypothesis, we can calculate a t-statistic that will follow a t-distribution with \( n1 + n2 -
 2 \) degrees of freedom.</p>
 <p>There is also a widely used modification of the t-test, known as <strong>Welch&rsquo;s t-test</strong> that adjusts the number of degrees of freedom when the variances are thought not to be equal to each other.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R>x <span style=color:#f92672>=</span> <span style=color:#a6e22e>rnorm</span>(<span style=color:#ae81ff>10</span>)
-y <span style=color:#f92672>=</span> <span style=color:#a6e22e>rnorm</span>(<span style=color:#ae81ff>10</span>)
-<span style=color:#a6e22e>t.test</span>(x, y)
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>x <span style=color:#f92672>=</span> rnorm(<span style=color:#ae81ff>10</span>)
+y <span style=color:#f92672>=</span> rnorm(<span style=color:#ae81ff>10</span>)
+t<span style=color:#f92672>.</span>test(x, y)
 
-<span style=color:#75715e># 	Welch Two Sample t-test</span>
-<span style=color:#75715e># </span>
-<span style=color:#75715e># data:  x and y</span>
-<span style=color:#75715e># t = -1.6264, df = 16.666, p-value = 0.1226</span>
-<span style=color:#75715e># alternative hypothesis: true difference in means is not equal to 0</span>
-<span style=color:#75715e># 95 percent confidence interval:</span>
-<span style=color:#75715e>#  -1.4494854  0.1886137</span>
-<span style=color:#75715e># sample estimates:</span>
-<span style=color:#75715e>#   mean of x   mean of y </span>
-<span style=color:#75715e># 0.007872345 0.638308171</span>
+<span style=color:#e6db74>&#34;&#34;&#34;
+</span><span style=color:#e6db74> Welch Two Sample t-test
+</span><span style=color:#e6db74> 
+</span><span style=color:#e6db74> data:  x and y
+</span><span style=color:#e6db74> t = -1.6264, df = 16.666, p-value = 0.1226
+</span><span style=color:#e6db74> alternative hypothesis: true difference in means is not equal to 0
+</span><span style=color:#e6db74> 95 percent confidence interval:
+</span><span style=color:#e6db74>  -1.4494854  0.1886137
+</span><span style=color:#e6db74> sample estimates:
+</span><span style=color:#e6db74>   mean of x   mean of y 
+</span><span style=color:#e6db74> 0.007872345 0.638308171
+</span><span style=color:#e6db74>&#34;&#34;&#34;</span>
 </code></pre></div><h1 id=f-distribution>F-distribution</h1>
 <p><em>or F-ratio also known as Snedecor&rsquo;s F distribution or the Fisher–Snedecor distribution</em></p>
 <blockquote>
@@ -252,11 +256,40 @@ mainly arise when the models have been fitted to the data using least squares.</
 <blockquote>
 <p>is used to test homoscedasticity, that is, if multiple samples are from populations with equal variances.</p>
 </blockquote>
-<p>Some statistical tests, such as the ANOVA assume that variances are equal across groups or samples, which can be verified with Bartlett&rsquo;s test.</p>
+<p>Some statistical tests, such as the ANOVA assume that variances are equal across groups or samples, which can be verified with Bartlett&rsquo;s test.
+If the corresponding p-value of the test statistic is less than some significance level (like α = .05) then we can reject the null hypothesis and conclude that not all groups have the same variance.</p>
+<p>Sample output in R:</p>
+<pre tabindex=0><code>	Bartlett test of homogeneity of variances
+
+data:  clotting by diet
+Bartlett's K-squared = 1.668, df = 3, p-value = 0.6441
+</code></pre><p>If we assume significance level 0.05, we can reject null hypothesis (that clotting depends on diet).</p>
 <h1 id=levenes-test>Levene&rsquo;s test</h1>
 <blockquote>
 <p>is an inferential statistic used to asses the equality of variances for a variable calculated for two or more groups.</p>
 </blockquote>
+<p>Levene&rsquo;s test is alternative to Bartlett but is often less sensitive. Rejecting hypothesis same as Bartlett&rsquo;s.</p>
+<pre tabindex=0><code>Levene's Test for Homogeneity of Variance (center = median)
+      Df F value Pr(&gt;F)
+group  3  1.0109 0.4086
+      20       
+</code></pre><h1 id=anova>ANOVA</h1>
+<p>We must met three assumptions: normality, equal variances, independence.</p>
+<p>If p-value is smaller than significance level we reject the null hypothesis that the variances are equal across all groups.</p>
+<h2 id=normality>Normality</h2>
+<p>ANOVA assumes that each sample was drawn from a normally distributed population.</p>
+<ul>
+<li>Check the assumption visually using histograms or Q-Q plots.</li>
+<li>Check the assumption using formal statistical tests like Shapiro-Wilk, Kolmogorov-Smironov, Jarque-Barre, or D’Agostino-Pearson.</li>
+</ul>
+<h2 id=equal-variance>Equal Variance</h2>
+<p>ANOVA assumes that the variances of the populations that the samples come from are equal.</p>
+<ul>
+<li>Check the assumption visually using boxplots.</li>
+<li>Check the assumption using a formal statistical tests like Bartlett’s or Levene&rsquo;s Test.</li>
+</ul>
+<h2 id=independence>Independence</h2>
+<p>The observations in each group are independent of the observations in every other group. The observations within each group were obtained by a random sample.</p>
 <h1 id=sign-test>Sign Test</h1>
 <blockquote>
 <p>is a statistical method to test for consistent differences between pairs of observations</p>
@@ -269,9 +302,12 @@ mainly arise when the models have been fitted to the data using least squares.</
 <h1 id=mannwhitney-u-test>Mann–Whitney U test</h1>
 <p><em>Dvouvýběrový Wilcoxonův párový test or Wilcoxon rank-sum test</em></p>
 <blockquote>
-<p>is a non=parametric test of the null hypothesis that, for randomly selected values X and Y from two populations, the probability of X being greater than Y is equal to the probability of Y being greater
+<p>is a non-parametric test of the null hypothesis that, for randomly selected values X and Y from two populations, the probability of X being greater than Y is equal to the probability of Y being greater
 than X.</p>
 </blockquote>
+<h1 id=van-der-waerden-test>Van der Waerden test</h1>
+<p>is a statistical test that k population distribution functions are equal. Van der Waerden test converts the ranks from a standard Kruskal-Wallis one-way analysis of variance to quantiles of the standard
+normal distribution.</p>
 <h1 id=kruskalwallis-test>Kruskal–Wallis test</h1>
 <p><em>or Kruskal–Wallis one-way analysis of variance or one-way ANOVA on ranks</em></p>
 <blockquote>
@@ -279,12 +315,50 @@ than X.</p>
 <p>The parametric equivalent of the Kruskal–Wallis test is the ANOVA</p>
 </blockquote>
 <p>It used for comparing two or more independent samples of equal or different sample sizes. It exteds the <em>Mann-Whitney U test</em>, which is used for comparing only two groups.</p>
-<h1 id=kolmogorovsmirnov-test>Kolmogorov–Smirnov test</h1>
+<h1 id=normality-tests>Normality tests</h1>
+<p>normality tests are used to determine if a data set is well-modeled by a normal distribution and to compute how likely it is for a random variable underlying the data set to be normally distributed.</p>
+<h2 id=kolmogorovsmirnov-test>Kolmogorov–Smirnov test</h2>
 <p><em>or KS test</em></p>
 <blockquote>
 <p>is a nonparametric test of the equality of continuous, one dimensional probability distributions</p>
 </blockquote>
 <p>It can be used to compare a sample with a reference probability distribution (one-sample KS) or to comapre two-samples (two-sample KS).</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>ks.test</span>(X, <span style=color:#e6db74>&#34;pnorm&#34;</span>, mean<span style=color:#f92672>=</span><span style=color:#66d9ef>...</span>, sd<span style=color:#f92672>=</span><span style=color:#66d9ef>...</span>)
+</code></pre></div><h2 id=pearsons-chi-squared-test>Pearson&rsquo;s chi-squared test</h2>
+<p>Test dobré shody</p>
+<p><em>\(\chi^2\)</em> test</p>
+<blockquote>
+<p>is a statistical test applied to sets of categorical data to evaluate how likely it is that any observed difference between the sets arose by chance. It is the most widely used of many chi-squared
+tests (Yates, likelihood ratio, portmanteau test in time series, etc.)</p>
+</blockquote>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>chisq.test</span>(X, p<span style=color:#f92672>=</span><span style=color:#66d9ef>...</span>)
+</code></pre></div><h2 id=lilliefors-test>Lilliefors test</h2>
+<blockquote>
+<p>is a normality test based on the Kolmogorov–Smirnov test. It is used to test the null hypothesis that data come from a normally distributed population, when the null hypothesis does not specify which
+normal distribution; i.e., it does not specify the expected value and variance of the distribution.</p>
+</blockquote>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#a6e22e>lillie.test</span>(X)
+</code></pre></div><h2 id=other-normality-tests-in-r>Other Normality Tests in R</h2>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-R data-lang=R><span style=color:#75715e># Anderson–Darling test</span>
+<span style=color:#a6e22e>ad.test</span>(X)
+
+<span style=color:#75715e># Cramér–von Mises test</span>
+<span style=color:#a6e22e>cvm.test</span>(X)
+
+<span style=color:#75715e># Shapiro–Wilk test</span>
+<span style=color:#a6e22e>shapirotest</span>(X)
+
+<span style=color:#75715e># D&#39;Agostino&#39;s K-squared test</span>
+<span style=color:#a6e22e>agostino.test</span>(X)
+
+<span style=color:#75715e># Jarque–Bera test</span>
+<span style=color:#a6e22e>jarque.test</span>(X)
+
+<span style=color:#75715e># Q-Q plot</span>
+<span style=color:#a6e22e>qqnorm</span>(X)
+<span style=color:#75715e># or</span>
+<span style=color:#a6e22e>qqline</span>(X)
+</code></pre></div>
 </div>
 </article>
 <hr>

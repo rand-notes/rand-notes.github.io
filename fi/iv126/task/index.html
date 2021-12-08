@@ -1,0 +1,170 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=author content>
+<meta name=description content="fyzicke stroje p \in P virtualni stroje v \in C
+R(v, r) udava, kolik zdroje r vyuziva virtualni stroj v C(p, r) udava jakou kapacitu zdroje r je mozne na fyzickem stroji p naaalokavat SC(p, r) bezpecna kapacita zdroje r na fyzickem stroji p
+plati: SC(p, r) &amp;lt; C(p, r)
+MC(v) cena za migraci virtualniho stroje v PMC(p, p') cena za migraci libovolneho virtualniho stroje z fyzickeho stroje p na fyzicky stroj p'.">
+<meta name=keywords content>
+<meta name=robots content="noodp">
+<meta name=theme-color content>
+<link rel=canonical href=https://rand-notes.github.io/fi/iv126/task/>
+<title>
+:: idk
+</title>
+<link href=https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css rel=stylesheet type=text/css>
+<link rel=stylesheet href=/main.7209ab6422eb371a6b685a56274cc88eff3db604665c3bdb698389c0585d4211.css>
+<meta itemprop=name content>
+<meta itemprop=description content="fyzicke stroje p \in P virtualni stroje v \in C
+R(v, r) udava, kolik zdroje r vyuziva virtualni stroj v C(p, r) udava jakou kapacitu zdroje r je mozne na fyzickem stroji p naaalokavat SC(p, r) bezpecna kapacita zdroje r na fyzickem stroji p
+plati: SC(p, r) < C(p, r)
+MC(v) cena za migraci virtualniho stroje v PMC(p, p') cena za migraci libovolneho virtualniho stroje z fyzickeho stroje p na fyzicky stroj p'.">
+<meta itemprop=wordCount content="513"><meta itemprop=image content="https://rand-notes.github.io">
+<meta itemprop=keywords content>
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://rand-notes.github.io">
+<meta name=twitter:title content>
+<meta name=twitter:description content="fyzicke stroje p \in P virtualni stroje v \in C
+R(v, r) udava, kolik zdroje r vyuziva virtualni stroj v C(p, r) udava jakou kapacitu zdroje r je mozne na fyzickem stroji p naaalokavat SC(p, r) bezpecna kapacita zdroje r na fyzickem stroji p
+plati: SC(p, r) < C(p, r)
+MC(v) cena za migraci virtualniho stroje v PMC(p, p') cena za migraci libovolneho virtualniho stroje z fyzickeho stroje p na fyzicky stroj p'.">
+<meta property="og:title" content>
+<meta property="og:description" content="fyzicke stroje p \in P virtualni stroje v \in C
+R(v, r) udava, kolik zdroje r vyuziva virtualni stroj v C(p, r) udava jakou kapacitu zdroje r je mozne na fyzickem stroji p naaalokavat SC(p, r) bezpecna kapacita zdroje r na fyzickem stroji p
+plati: SC(p, r) < C(p, r)
+MC(v) cena za migraci virtualniho stroje v PMC(p, p') cena za migraci libovolneho virtualniho stroje z fyzickeho stroje p na fyzicky stroj p'.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://rand-notes.github.io/fi/iv126/task/"><meta property="og:image" content="https://rand-notes.github.io"><meta property="article:section" content="fi">
+<meta property="og:site_name" content="idk">
+</head>
+<body>
+<div class=container>
+<header class=header>
+<span class=header__inner>
+<a href=/ style=text-decoration:none>
+<div class=logo>
+title
+</div>
+</a>
+<span class=header__right>
+<nav class=menu>
+<ul class=menu__inner><li><a href=/posts>notes</a></li>
+</ul>
+</nav>
+<span class=menu-trigger><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+</span>
+<span class="theme-toggle not-selectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 41c10.4934.0 19-8.5066 19-19C41 11.5066 32.4934 3 22 3 11.5066 3 3 11.5066 3 22s8.5066 19 19 19zM7 22C7 13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22z"/></svg></span>
+</span>
+</span>
+</header>
+<div class=content>
+<main class=post>
+<div class=post-info>
+</p>
+</div>
+<article>
+<h2 class=post-title><a href=https://rand-notes.github.io/fi/iv126/task/></a></h2>
+<div class=post-content>
+<p>fyzicke stroje p \in P
+virtualni stroje v \in C</p>
+<p>R(v, r) udava, kolik zdroje r vyuziva virtualni stroj v
+C(p, r) udava jakou kapacitu zdroje r je mozne na fyzickem stroji p naaalokavat
+SC(p, r) bezpecna kapacita zdroje r na fyzickem stroji p</p>
+<p>plati: <code>SC(p, r) &lt; C(p, r)</code></p>
+<p>MC(v) cena za migraci virtualniho stroje v
+PMC(p, p') cena za migraci libovolneho virtualniho stroje z fyzickeho stroje p na fyzicky stroj p'.
+PMC(p, p) = 0</p>
+<p>Reseni je konzistentni, pokud neni pro fyzicky stroj p na zadnem zdroji r prekrocena jeho kapacita C(p, r)</p>
+<p>3 optimalizacni kriteria, cilem je minimalizovat jejich vazeny soucet.
+Vahove konstanty zarucuji vhodnou normalizaci.</p>
+<p>Minimalizujeme:</p>
+<ul>
+<li>cenu za zatizeni - mnozstvi prekrocene bezpecne kapacity SC(p, r)</li>
+<li>cenu za migraci - MC(v) vsech migrovany virt. stroju a PMC(p, p') pro kazdy virt stroj z p do p'.</li>
+<li>cenu za energii - ktera je urcena poctem aktivnich fyzickych stroju</li>
+</ul>
+<p>kodovani - zapis
+operatory - zapis/vyznam</p>
+<h1 id=notes>Notes</h1>
+<p>accepting threshod is typically negative exp</p>
+<p>The algorithm will then assign a weight
+to each heuristic which reflects its success. In the absence of other possibilities,
+we assume the past success as the best indicator for future success. During the
+runtime, these weights are adjusted periodically</p>
+<p>destroy + repair operators</p>
+<p>Distance-oriented Removal
+Worst Removal
+Cluster Removal
+random removal and put back using heuristic (first fit)</p>
+<p>swap 2 is still local search.</p>
+<p>take 1 evaluate best pm for it and put it there.</p>
+<p>Penalties for time-intensive Heuristics</p>
+<p>In order to avoid precision
+problems with floating point numbers close to zero, we set the initial weights to
+1000. The choice of the length of the update period has already been discussed
+in Section 5.2. It is set to 100 in all experiments.</p>
+<h2 id=encoding>Encoding</h2>
+<ol>
+<li></li>
+</ol>
+<p>a)</p>
+<p>S = [1, 2, 2, 3, 1, 2]</p>
+<p>vektor S reprezentuje na index i vir. stroj prirazen k phy stroj S_i.</p>
+<p>b)</p>
+<p>binarni matice S s velikosti a x b, kde a je pocet pm a b je pocet vm,
+Pozice S_xy reprezentuje jestli je V_x prirazeno P_y</p>
+<p>v v v
+[ 1 0 0
+0 1 0
+1 0 0]</p>
+<p>$$\displaylines{R(v, r) \\ C(p, r) \\ SC(p, r) \\ MC(v) \\ PMC(p, p')}$$</p>
+<ol start=2>
+<li></li>
+</ol>
+<p>chci co nejmensi pocet bezicich pm,
+chci co nejmensi overflow SCs
+chci minimalizovat pocet presouvani (jak moc je nove reseni odlisne od pocatecniho)
++
+normalizace</p>
+<hr>
+<p>$$CL = \sum_{i=0}^{rn} R_{i} - P_{R_i}$$</p>
+<p>, kde rn je pocet zdroji</p>
+<p>$$
+FS = \sum
+$$</p>
+<p>\sum_i^Pn</p>
+<p>for vm, pm in S:
+P[pm]</p>
+<p>for pm in P:
+sum()</p>
+<ol start=3>
+<li></li>
+</ol>
+<h1 id=charakteristika>Charakteristika</h1>
+<p>TSP - jednou charakteristikou bude jedna hrana, cena hrany je cena charakteristiky</p>
+<p>pokud je hrana v reseni I vraci 1 jinak 0</p>
+<p>tzn. pokud to aktualni reseni ma tu charakteristiku (hranu), pak vracim 1 &mldr;</p>
+<p>cilem je prohledavat cast grafu ktere maji nizsi cenu charakteristik.</p>
+<h1 id=ucelova-fce---zapis>ucelova fce - zapis</h1>
+<p>u TSP napr. f(s) = \sum^n_{i=1} d_{i, t(i)} , kde d je vzdalenost mezi aktualnim a dalsim mestem.</p>
+<h1 id=inkrementalne-ucelova-fce>inkrementalne ucelova fce</h1>
+<p>klasika u TSP, prohazujeme 2 mesta, ale nechceme prepocitavat uplne celou trasu a tak prepocita pouze delta mezi dvema mestama co jsme prohodili.</p>
+<h1 id=vahy>vahy</h1>
+</div>
+</article>
+<hr>
+<div class=post-info>
+</div>
+</main>
+</div>
+<footer class=footer>
+</footer>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type=text/javascript id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js></script>
+</div>
+<script type=text/javascript src=/bundle.min.b2a4161afad463d91113a005f8f24a5efff27a6cc48754e9e93adc7bccb8a876a153a953c0b12653f3b5910e41e620da731f8184f2973058100d159c09fa8346.js integrity="sha512-sqQWGvrUY9kRE6AF+PJKXv/yemzEh1Tp6Trce8y4qHahU6lTwLEmU/O1kQ5B5iDacx+BhPKXMFgQDRWcCfqDRg=="></script>
+</body>
+</html>
