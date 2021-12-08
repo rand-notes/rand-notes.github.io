@@ -53,12 +53,12 @@ e.g. survey where 44% of respondens approved President’s reaction has +-3.5% m
 > sample statistic +- margin of error
 
 
-The margin of error will consist of two pieces. One is the standard error of the sample statistic. The other is some multiplier, , of this standard error, based on how confident we want to be in our
+The margin of error will consist of two pieces. One is the standard error of the sample statistic. The other is some multiplier M, of this standard error, based on how confident we want to be in our
 estimate. This multiplier will come from the same distribution as the sampling distribution of the point estimate; for example, as we will see with the sample proportion this multiplier will come from
 the standard normal distribution.
 
 > **General form of the margin of error**  
-> Margin of error = \\( M \times S^{\wedge}E\(estimate) \\)
+> Margin of error = \\( M \times \hat{S}E\(estimate) \\)
 
 the multiplier M depends on our level of confidence
 

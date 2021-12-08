@@ -1,6 +1,6 @@
 ---
 date: 2021-09-02
-title: ai 0
+title: Environments, Agents, Optimizations
 url: fi/iv126/0
 ---
 
@@ -126,8 +126,7 @@ Technically speaking, a rational utility-based agent chooses the action that max
 probabilities and utilities of each outcome.
 
 
-
-# Summary
+# Agents Summary
 
 - An agent is something that perceives and acts in an environment. The agent function for an agent specifies the action taken by the agent in response to any percept sequence.
 
@@ -151,6 +150,138 @@ probabilities and utilities of each outcome.
 - All agents can improve their performance through learning.
 
 
-{{<image src="/images/agents.png" alt="Agents" position="center" >}}
+{{<image src="/images/iv126/agents.png" alt="Agents" position="center" >}}
+
+
+
+
+# Christofides Algorithm
+
+is an algorithm for finding approximate solutions to the travelling salesman problem, on instances where the distances form a metric space (they are symmetric and obey the triangle inequality)
+
+# Some Trees
+
+## van Emde Boas Tree
+
+is a tree data structure which implements an associative array with m-bit integer keys. It performs all operations in O(log m) time or equivalently in O(log log M) time where M = 2^M is the maximum
+number of elements that can be stored in the tree. The M is not to be confused with the actual number of elements stored in the tree, by which the performance of other tree data-structures is often measured.
+
+operations: Insert, Delete, Lookup, FindNext, FindPrevious
+
+## Fusion Tree
+
+//todo
+
+## Tango Tree
+
+//todo
+
+
+# Kruskal's algorithm
+
+results in a minimum spanning tree.
+
+We are taking edges with smalles values which connect nodes, that isn't already connected by other edges.
+
+# Prim's Algorithm
+
+results in a minimum spanning tree.
+
+First select random node and add it to 'visited' list.
+
+Take edge with smallest value, which is connected to any node in 'visited' and does not connect elements which are both in 'visited'.1
+
+
+# Network Flow
+
+## Flow Graph / Network
+
+graph where edges (also called arcs) have **capacity** which cannot be exceeded and **flow value** which says how many units of flow are passing through the edge. Initial flow is 0 everywhere.
+
+Graph contains **source** and **sing** nodes.
+
+## Maximum Flow Problem
+
+How much flow can we push through graph without exceeding any capacity
+
+## Ford-Fulkerson Method
+
+repeatedly finds augmenting paths through the residual graph and augments the flow until no more augmenting paths can be found.
+
+An **augmenting path** is a path of edges in the residual graph with unused capacity greater than zero from the source s to the sink t. Every augmenting path has **bottleneck**, which is the smalles edge
+on the path. WE can use the bottlenect value to augment the flow along the path.
+
+**Augmenting the flow** means updating the flow values of the edges along the augmenting path. For forward edges, this means **increasing the flow** by the bottleneck value. When augmenting the flow along
+the augmenting path, you also need to **decrese the flow** along each residual edge by the bottleneck value. **Residual edges** exist to undo bad augmenting paths which do not lead to a maximum flow
+(they decrease flow which will not be needed because of the bottleneck ahead). The residual graph is the graph which also contains residual edges. The residual graph helps us with computation but is not
+usually shown as describing problem.
+
+Ford-Fulkerson Method does not specify exact method, but is usuualy done with DFS.
+
+
+
+# Lagrange Multiplier & Function
+
+is a strategy for finding the local maxima and minima of a function subject to equality constraints.
+The basic idea is to convert a constrained problem into a form such that the derivative test of an unconstrained problem can still be applied. The relationship between the gradient of the function and gradients of the constraints rather naturally leads to a reformulation of the original problem, known as the Lagrangian function
+
+
+The method can be summarized as follows: in order to find the maximum or minimum of a function \\( f(x) \\) subjected to the equality constraint \\( g(x) = 0 \\), form the Lagrangian function.
+$$
+\mathcal{L}(x, \lambda) = f(x) - \lambda g(x)
+$$
+
+# Linear Programming
+
+is a method to achieve the best outcome (such as maximum profit or lowest cost) in a mathematical model whose requirements are represented by linear relationships. Linear programming is a special case of
+mathematical programming (also known as mathematical optimization)
+
+
+Linear programs are problems that can be expressed in canonical form as
+
+- Find a vector    \\( x \\)
+- that maximizes   \\( c^Tx \\)
+- subject to	   \\( Ax \leq b \\)
+- and			   \\(x \geq 0 \\)
+
+## Simplex Method
+
+//todo
+
+
+
+
+# Nonlinear programming
+
+is the process of solving an optimization problem where some of the constraints or the objective function are nonlinear. An optimization problem is one of calculation of the extrema (maxima, minima or
+stationary points) of an objective function over a set of unknown real variables and conditional to the satisfaction of a system of equalities and inequalities, collectively termed constraints. It is the
+sub-field of mathematical optimization that deals with problems that are not linear.
+
+
+## Karush–Kuhn–Tucker conditions
+
+KKT conditions are first derivative tests (sometimes called first-order necessary conditions) for a solution in nonlinear programming to be optimal, provided that some regularity conditions are
+satisfied.
+
+Conditions:
+ - **Stationarity**
+ - **Primal feasibility**
+ - **Dual feasibility**
+ - **Complementary slackness**
+
+
+
+
+# Convex Optimization
+
+is a subfield of mathematical optimization that studies the problem of minimizing convex functions over convex sets. Many classes of convex optimization problems admit polynomial-time algorithms,[1]
+whereas mathematical optimization is in general NP-hard.
+
+
+
+
+
+
+
 
 
