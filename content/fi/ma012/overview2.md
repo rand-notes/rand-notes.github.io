@@ -1,3 +1,6 @@
+---
+title: overview 2
+---
 
 # 2 cviko
 
@@ -6,7 +9,7 @@ se rovnaji.
 Spocitejte ze hmotnost brambor nesouvisi s odrudou.
 
 reseni: 
-**Levene a Bartletts** test pro overeni ze variance je podobna mezi skupinami 
+**Levene a Bartletts** test pro overeni ze variance(rozptyl) je podobna mezi skupinami 
 **Shapiruv-Wilkeuv a Kolmogorovuv-Smirnovuv** test pro overeni normality
 **ANOVA** pro testovani stredni hodnoty
 **Tukey a Scheffe** pro porovnani ktere dvojice se nejvic lisi
@@ -17,7 +20,7 @@ leveneTest(tabulka$hmotnost ~ tabulka$odruda) # odruda musi byt factor
 bartlett.test(tabulka$hmotnost ~ tabulka$odruda)
 
 Shapiro–Wilk:
-```
+```R
 # nejdriv si rozdelime do nekolika tabulek podle odrud
 skupiny <- lapply(levels(tabulka$odruda), function(L) {
   return(subset(tabulka, odruda == L))
@@ -41,14 +44,14 @@ shapiro.test(tabulka[tabulka$odruda == 2, ]$hmotnost)
 
 ANOVA:
 
-```
+```R
 aov.model <- aov(tabulka$hmotnost ~ tabulka$odruda)
 aov.model
 ```
 
 Tukey a Scheffe:
 
-```
+```R
 ScheffeTest <- scheffe.test(aov.model, "tabulka$odruda")
 ScheffeTest
 ScheffeTest$groups
@@ -62,7 +65,7 @@ plot(TukeyTest, las = 1) # graficky
 
 Linearni regresni model:
 
-```
+```R
 model3 <- lm(Y ~ 1 + x + I(x^2) + I(x^3), data = tabulka)
 model2 <- lm(Y ~ 1 + x + I(x^2), data = tabulka)
 model1 <- lm(Y ~ 1 + x, data = tabulka)
@@ -75,7 +78,7 @@ summary(model1)
 
 # 3 cviko
 
-Zkoumame vynosy sena v zavislosti na typu pudy a hnojeni. Kazda komvinace byla realizovana
+Zkoumame vynosy sena v zavislosti na typu pudy a hnojeni. Kazda kombinace byla realizovana
 ctyrikrat, nezavisle na sobe. Provdte analyzu rozptylu pomoci dvojneho trideni bez interakci,
 dvojneho trideni s interakcemi i pomoci jednoducheho trideni.
 
@@ -83,7 +86,7 @@ Reseni:
 
 Opet Bartlett a Levene pro varianci a Shapiro a KS pro normalitu.
 
-```
+```R
 # dvojne trideni bez interakci
 
 aov.model <- aov (vynos ~ puda + hnojeni, data = tabulka)
@@ -109,10 +112,10 @@ aov.model
 
 # 4 cviko
 
-Testuje hypotezu, ze polovina testovanych soob deobu jedne minuty podhodnotila a polovina
+Testuje hypotezu, ze polovina testovanych osob doby jedne minuty podhodnotila a polovina
 nadhodnotila.
 
-```
+```R
 # znamenkovy test
 SIGN.test(X, md = 60) # p-hodnota > 0.05 => nezamitame nulovou hypotezu 
 
@@ -126,7 +129,7 @@ wilcox.test (X, Y)
 Brambory - pomoci Kruskal-Wallis a median testu pro jednoduche trideni testujte H, ze stredni
 hodnota hmotnosti trsu brambor nezavisi na odrude. Naleznete odlisne dvojice.
 
-```
+```R
 # Jednoduche trideni: Kruskaluv-Wallisuv test
 # p-hodnota < 0.05 => zamitame nulovou hypotezu o rovnosti vsech medianu 
 KWtest <- kruskal(tabulka$hmotnost, tabulka$odruda)
@@ -141,7 +144,7 @@ Mtest <- Median.test(tabulka$hmotnost, tabulka$odruda)
 Byl vybran pocet chlapcu v rodinach. Testujte ze pocet chlapcu v rodinach ma binomicke
 rozdeleni Bi(5; 0.5);
 
-```
+```R
 tabulka <- read.csv2(file = "data/rodiny.csv")
 
 pc = tabulka$pocet_chlapcu #diskretni kategorie
@@ -158,7 +161,7 @@ Matice
 
 #	Yarnoldovo kriterium 
 q <- sum (n * bin < 5) / k
-n * p.j >= 5 * q # output: TRUE TRUE TRUE TRUE TRUE TRUE
+n * bin >= 5 * q # output: TRUE TRUE TRUE TRUE TRUE TRUE
 # Yarnoldovo kriterium  je splneno
 
 
@@ -194,7 +197,7 @@ K >= qchisq (0.95, df = k2 - 1) #output: FALSE
 Sledovana doba cekani na obsluhu. Testujte zda ma exponencialni rozdeleni pst. a to testem
 dobre shody a testem pro exponencialni rozdeleni.
 
-```
+```R
 tabulka <- read.csv2(file = "data/fronta.csv")
 str(tabulka)
 summary(tabulka)
@@ -290,7 +293,7 @@ Korelace meri silu zavislosti, kovariance meri smer.
 Spearmanův korelační koeficient udává statistickou závislost (korelaci) mezi dvěma veličinami.
 Kendallovo tau - measure the ordinal association between two measured quantities
 
-```
+```R
 library("Hmisc")			#	rcorr
 library("corrplot")		#	corrplot
 library("ppcor")			#	pcor, pcor.test
@@ -359,7 +362,7 @@ Cochran-Orcutt - obdobné procedury pro korekci autokorelace
 
 Pomoci lienarni modelu s AR(1) modelujte zavislost druhe odmocniny poctu ptactva na case (v rocich). Overte, zda se v datech vyskytuje autoregrese 1. radu a prip ji odstrante.
 
-```
+```R
 tabulka <- read.csv (file = "data/Hawaii.csv")
 str(tabulka)
 tabulka$Y <- sqrt(tabulka$Birds)
@@ -411,7 +414,7 @@ theta2
 
 # 9 cviko
 
-```
+```R
 # definice GLM modelu
 m1 <- glm(formula = cbind(killed, population - killed) ~ dose, family = binomial(link = "logit"), data = tab) # killed, population, dose - vsechno array - casova osa
 m2 <- glm(formula = cbind(killed, population - killed) ~ dose, family = binomial(link = "probit"), data = tab)

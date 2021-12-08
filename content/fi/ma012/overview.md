@@ -1,6 +1,8 @@
 ---
 url: fi/ma012/cs
+title: overview 1
 ---
+
 CPD - continuous probability distribution
 
 T-distribution - CPD for astimating the mean of a normally distributed population with small size and unknown standard deviation
