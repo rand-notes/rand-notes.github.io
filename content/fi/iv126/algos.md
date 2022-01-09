@@ -64,7 +64,7 @@ myslenka je takova ze misto abych porad prohazoval 1 predmet, tak muzu prohodit 
 VND je deterministická verze VNS  
 
 ## postup
- - zaciname na nejmensim moznem okoli a postupuje maximalnimu moznemu okoli
+ - zaciname na nejmensim moznem okoli a postupujeme k maximalnimu moznemu okoli
  - pokud najdeme lepsiho souseda jdeme zpatky na zacatek
  - pokud ne rozsirime okoli
  - pr. rozvrh - zkusime prohodit 2 predmety, pokud nepomuze zkusime prohodit 3, pokracujeme do MAX. pokud najdeme vhodneho souseda zacine od znovu a opet to stejny
@@ -97,9 +97,6 @@ GLS penalizuje charakteristiky použité ve vygenerovaném lokálním optimu, ab
 
 
 Příklad: TSP a GLS
-
-
-
 
 # Metaheuristiky s populacemi
  - algoritmy využívající evoluci
@@ -911,6 +908,499 @@ X_{t1:t2} označujeme množinu proměnných od Xt1 po Xt2
 # Bayesovské sítě pro přechodový a senzorický model
 
 Přechodový a senzorický model můžeme popsat Bayesovskou sítí
+
+# Zpřesnění modelu
+
+Markovský proces prvního řádu předpokládá, že stavové proměnné obsahují veškerou informaci pro charakteristiku pravděpodobnostní distribuce dalšího stavu
+
+Co když je tento předpoklad nepřesný?
+ - můžeme zvýšit řád Markovského procesu
+ - můžeme rozšířit množinu stavových proměnných
+
+
+# Řešené úlohy
+
+Odhad stavu (filtrace): cílem je zjištění pravděpodobnosti aktuálního stavu na základě dosavadních pozorování -- P(X_t|e_1:t)
+
+Predikce: cílem je zjištění pravděpodobnosti budoucího stavu na základě dosavadních pozorování: P(Xt+k|e1:t) pro k > 0
+
+Vyhlazování: cílem je zjištění pravděpodobnosti minulého stavu na základě dosavadních pozorování: P(X_k|e_1:t) pro `k, kde 0 ≤k < t`
+
+Nejpravděpodobnější průchod: na základě posloupnosti pozorování chceme zjistit nejpravděpodobnější posloupnost stavů, která tato pozorování generuje: argma_x_x1:t P(x_1:t|e_1:t)
+
+# Odhad stavu (filtrace)
+
+Úkolem je zjistit pravděpodobnost aktuálního stavu na základě dosavadních pozorování: P(Xt|e1:t)
+Dobrý filtrační algoritmus odhaduje aktuální stav z odhadu předchozího stavu a aktuálního pozorování (rekurzivní odhad)
+
+TODO: rovnice
+
+# Predikce 
+
+Úkolem je zjistit pravděpodobnost budoucího stavu na základě dosavadních pozorování. Jedná se v podstatě o filtraci bez přidávání dalších pozorování (rozšíření jednokrokové predikce z odvození filtrace)
+
+Po určité době (mixing time) konverguje předpovězená distribuce ke stacionární distribuci a nadále zůstane stejná
+
+# Vyhlazování
+
+Úkolem je zjistit pravděpodobnost minulého stavu na základě dosavadních pozorování. 
+Opět použijeme rekurzivní předávání zpráv, tentokrát ve dvou směrech
+Můžeme tedy použít techniku zpětné propagace zprávy
+
+
+# Užitek a rozhodování
+
+## Teorie uzitku
+
+(Agentovy) preference lze zaznamenat funkcí užitku U(s), která mapuje stavy s na reálné číslo
+
+Očekávaný užitek (expected utility) potom spočteme jako průměrný užitek přes všechny možné stavy vážené pravděpodobností výsledků
+
+Racionální agent potom volí akci maximalizující očekávaný užitek MEU
+
+MEU formalizuje racionalitu, ale jak budeme celý postup operačně realizovat?
+
+- Cíl: hledáme funkci užitku popisující preference
+- Agentovy preference se často vyjadřují relativním porovnáním
+ - A > B: agent preferuje A před B 
+ - `A < B`: agent preferuje B před A
+ - A ∼ B: agent mezi A a B nemá žádnou preferenci (nerozlišuje A a B)
+- Co je A nebo B?
+ - mohou to být stavy světa, ale pro neurčité výstupy se používají loterie
+ - loterie popisuje možné výstupy S1,...,Sn, které se vyskytují s danými pravděpodobnostmi p1,...,pn
+- Příklad loterie (nabídka jídla v letadle): Chcete kuře nebo těstoviny?
+ - [0.8, dobré kuře; 0.2 připečené kuře]
+ - [0.7, dobré těstoviny; 0.3, rozvařené těstoviny]
+
+## Funkce uzitku
+ - Existuje funkce užitku vracející pro danou loterii reálné číslo tak, že
+  - `U(A) < U(B) ⇔A < B` 
+  - `U(A) = U(B) ⇔A ∼B`
+ - Očekáváný užitek loterie lze spočítat:
+  - U([p1,S1; ...,pn ,Sn ]) = ∑_i pi U(Si ) 
+ - Racionální agent ani nemusí svoji funkci užitku znát, ale pozorováním jeho preferencí ji lze zrekonstruovat
+ - Jak zjistit funkci užitku konkrétního agenta (preference elicitation)?
+  - budeme hledat normalizovanou funkci užitku
+  - uvažujme nejlepší možný stav Smax a dejme mu užitek 1: U(Smax) = 1
+  - podobně pro nejhorší možný stav Smin a dejme užitek 0: U(Smin) = 0
+  - nyní se pro libovolný stav S ptejme agenta na porovnání S a standardní loterie [p,Smax; 1 −p,Smin]
+  - podle výsledku upravíme pravděpodobnost p a ptáme se znova, dokud agent vztah A a standardní loterie nepovažuje za nerozlišitelný
+  - získané p je užitkem S: U(S) = p
+
+
+- V praxi se často vyskytuje více atributů užitku, např. cena, nebezpečnost, užitečnost – víceatributová funkce užitku
+- Budeme uvažovat, že každý atribut má definované preferované pořadí hodnot, vyšší hodnoty odpovídají lepšímu řešení
+- Jak definovat preference pro více atributů dohromady?
+ - přímo bez kombinace hodnot atributů – dominance
+  - pokud je ve všech atributech řešení A horší než řešení B, potom B je lepší i celkově – striktní dominance
+  - lze použít i pro nejisté hodnoty atributů
+ - kombinací hodnot atributů do jedné hodnoty
+
+
+# Rozhodovací sítě
+
+Jak obecně popsat mechanismus rozhodování?
+Rozhodovací síť (influenční diagram) popisuje vztahy mezi vstupy (současný stav), rozhodnutími (budoucí stav) a užitkem (budoucího stavu)
+
+Náhodné uzly (ovál)
+ - reprezentují náhodné proměnné stejně jako v Bayesovských sítích
+Rozhodovací uzly (obdélníky)
+ - popisují rozhodnutí (výběr akce), které může agent udělat (zatím uvažujeme jednoho agenta)
+Uzly užitku (kosočtverce)
+ - popisují funkci užitku
+
+
+## Rozhodovací sítě: vyhodnocovací algoritmus
+Akce jsou vybrány na základě vyzkoušení všech možných hodnot rozhodovacího uzlu
+
+1. nastavíme hodnoty pozorovaných proměnných
+2. pro každou možnou hodnotu rozhodovacího uzlu
+3. 
+ - nastavíme rozhodovací uzel na danou hodnotu
+ - použitím pravděpodobnostní inference vypočteme pravděpodobnosti rodičů uzlu užitku
+ - vypočteme užitek pomocí funkce užitku
+4. vybereme akci s největším užitkem
+
+Pro případy, kde je více uzlů užitku používáme při výběru akce techniky pro víceatributové funkce užitku
+
+Přímé rozšíření algoritmu pro Bayesovské sítě:
+ - při rozhodování agenta vybíráme akci s největším užitkem
+
+Zajímavější problém až při vykonávání posloupnosti rozhodnutí
+
+## Rozhodovací sítě: konstrukce a příklad
+
+- Vytvoření kauzálního modelu
+ - určení symptomů, nemocí, léčby a vztahů mezi nimi (dom.experti, literatura)
+- Zjednodušení kvalitativního modelu
+ - pokud nám jde o léčbu, můžeme odstranit uzly, které s nimi nesouvisí
+ - některé uzly lze spojit (léčba Treatment a její načasování Timing)
+- Přiřazení pravděpodobností – z kauzálních vazeb, diagnostické vazby z BS:
+ - vyplnění pravděpodobnostních tabulek jako v Bayesovské síti 
+- Navržení funkce užitku
+ - můžeme enumerovat možné výstupy 
+- Verifikace a doladění modelu
+ - výsledky se porovnají se zlatým standardem, např. skupinou lékařů 
+- Analýza citlivosti
+ - kontrola, zda výsledky systému nejsou citlivé na drobné změny vstupu
+
+
+# Shrnuti
+- Teorie pravděpodobnosti nám umožní kvantifikovat, jak máme danému tvrzení věřit na základě pozorování
+ - Bayesovské sítě a odvozování pomocí nich -- staticky v daném čase
+ - Pravděpodobnostní uvažování o čase -- reprezentace přechodů s pravděpodobností: Markovský proces, zjištění pravděpodobnosti stavu vzhledem k probíhajícímu času
+- Teorie užitku pro ohodnocení rozhodnutí
+- Teorie rozhodování
+ - pro jedno rozhodnutí (statický případ)
+ - pro posloupnost rozhodnutí
+
+
+
+# Sekvenční rozhodovací problémy
+ - Cílem je tvorba racionálních agentů maximalizujících očekávanou míru užitku
+ - Teorie pravděpodobnosti říká, čemu máme věřit na základě pozorování
+ - Teorie užitku (utility theory) popisuje, co chceme a jak máme ohodnotit rozhodnutí
+ - Teorie rozhodování (decision theory) spojuje obě teorie dohromady a popisuje, jak bychom měli vybrat akci s největším očekávaným užitkem
+
+- Doposud jedno rozhodnutí → nyní posloupnost rozhodnutí
+- užitek bude záviset na posloupnosti rozhodnutí
+- Uvažujme agenta pohybujícího se v prostředí o rozměrech 3 × 4
+- Prostředí je plně pozorovatelné (agent vždy ví, kde se nachází)
+- Agent se chce dostat do stavu +1 a vyhnout se stavu -1
+- Agent může provést akce Up, Down, Left, Right
+ - množinu akcí pro stav s značíme A(s)
+ - výsledek akce je ale nejistý
+  - s pravděpodobností 0.8 půjde správným směrem
+  - s pravděpodobností 0.1 půjde kolmo k požadovanému směru (resp. stojí na místě, pokud narazí na zeď)
+ - pravděpodobnost [Up, Up, Right, Right, Right]: 0.8^5 
+
+
+# Markovský rozhodovací proces (MDP)
+
+- Pro popis přechodů (aplikace akce) použijeme pravděpodobnostní distribuci P(s′|s,a) – pravděpodobnost přechodu z s do s′ akcí a
+ - opět uvažujeme Markovský předpoklad (pravděpodobnost přechodu nezávisí na předchozích navštívených stavech) 
+- Užitek tentokrát závisí na prošlých stavech
+ - každý stav má přiřazeno ocenění (reward) R(s)
+ - funkce užitku bude (zatím) součet ocenění navštívených stavů
+- Markovský rozhodovací proces (Markov Decision Process MDP)
+ - sekvenční rozhodovací problém v plně pozorovatelném stochastickém prostředí s Markovským přechodovým modelem a aditivní funkcí užitku
+  - tvořen množinou stavů s počátečním stavem s0
+  - množinou akcí v každém stavu A(s)
+  - přechodovým modelem P(s′|s,a)
+  - oceněním R(s)
+
+## Řešení MDP
+
+- Ve stochastickém prostředí nemůžeme pracovat s pevným pořadím akcí (plánem)
+ - agent se může vydat jinam, než bylo naplánováno
+- Protože předem nevíme, kam akce agenta zavede potřebujeme v každém stavu vědět, co dělat (kam jít)
+- Řešením MDP je strategie (policy) π(S), což je funkce určující pro každý stav doporučenou akci
+ - hledáme strategii s největším očekávaným užitkem = optimální strategie 
+
+## Optimální strategie
+
+Optimální strategie maximalizuje očekávaný užitek
+
+## Užitek v čase: horizont
+
+Jak obecně definovat funkci užitku pro posloupnost stavů?
+- je to podobné jako pro víceatributové funkce užitku U([s0,s1,...,sn]) (stavy jsou atributy), ale jaky mame horizont?
+
+
+### Konečný horizont1
+
+- máme daný pevný termín N a po něm už na ničem nezáleží
+- optimální strategie záleží na termínu (není stacionární)
+
+
+
+### Nekonečný horizont1
+
+- to neznamená nutně nekonečné posloupnosti stavů, pouze zde není žádný deadline
+- není důvod se ve stejném stavu chovat v různé časy různě
+- optimální strategie je stacionární
+
+
+## Užitek v čase: definice funkce
+
+- Funkce užitku se chová jako víceatributová funkce užitku U([s0,s1,...,sn])
+- Pro získání jednoduchého vztahu pro výpočet funkce užitku uvažujme stacionární preference
+- V případě stacionárních preferencí jsou dva způsoby, jak rozumně definovat funkci užitku
+ - aditivní funkce užitku: R(s0) + R(s1) + ...
+ - kumulovaná (discounted) funkce užitku: R(s0) + γR(s1) + γR(s2) ...
+ - faktor slevy γ ∈(0,1) -- preference mezi aktuálním a budoucím oceněním
+
+## Užitek v čase: vlastnosti
+- Budeme používat kumulovanou funkci užitku
+- pro světy bez cílového stavu a nekonečný horizont by aditivní funkce užitku byla problémová
+- užitek v kumulované funkci užitku je konečný (uvažujeme omezené ocenění s maximem Rmax)
+- pokud má prostředí cílový stav, do kterého se agent garantovaně může dostat, nebudeme potřebovat pracovat s nekonečnými posloupnostmi
+ - řádná (proper) strategie – garantuje dosažení cílového stavu
+- u nekonečné posloupnosti lze porovnat průměrné ocenění
+ - lepší je zůstat ve stavu s oceněním 0.1 než ve stavu s oceněním 0.01 
+
+
+# Bellmanova rovnice
+
+TODO: vzoroec
+TODO: iterace hodnot
+
+
+# Robotický hardware: senzory
+
+- pasivní senzory slouží k pozorování prostředí, kdy zachycují signály generovanými dalšími zdroji v prostředí
+- aktivní senzory vysílají energii do prostředí (např. sonar) založeny na tom, že je energie reflektována senzoru zpět
+ - poskytují více informací než pasivní senzory
+ - náročnější na energii než pasivní senzory
+ - hrozí nebezpečí interfence při použití více aktivních senzorů zároveň
+
+Senzory dělíme v závislosti na tom, zda určeny pro vnímání:
+ - prostředí, tj. dálkoměry pro měření vzdálenosti od blízkých objektů
+ - robotova umístění, tj. lokační senzory
+  - časté řešení lokalizačního problému: Global Positioning System (GPS)
+ - robotovy vnitřní konfigurace, např.
+  - pro měření přesné konfigurace robotických kloubů, motorů
+  - gyroskopy – pro udržení referenčního směru
+
+Efektory umožňují robotovi pohyb a změnu tvaru těla
+Aktuátor/akční člen (actuator) zahajuje pohyb efektoru
+ - především elektrický akční člen
+ - také hydraulický, penumatický akční člen
+Stupeň volnosti (degree of freedom DOF)
+ - umožňuje pochopit návrh efektoru
+ - jeden DOF pro každý nezávislý směr, ve kterém se robot nebo jeden z jeho efektorů může pohybovat
+
+
+Kinematický stav: určen DOFs
+Dynamický stav: zahrnuje DOF kinematického stavu + dimenze pro rychlost změny kinematické dimenze
+Počet DOFs nemusí být stejný jako počet ovládaných prvků (mobilní roboti)
+
+## Software: problémy v robotice
+
+Robot v izolovaném známém prostředí
+ - agent jako Markovský rozhodovací proces MDP
+Problémy v robotice
+ - nedeterministické, částečně pozorovatelné, multiagentní
+ - agent jako částečně pozorovatelný Markovův rozhodovací proces
+
+Hierarchie problémů v robotice
+ - plánování úloh (task planning): určení plánu nebo strategie
+ - plánování pohybu (motion planning) nalezení cesty pro robota z jednoho budu do druhého pro splnění každého podcíle
+ - řízení (control) k zajištění plánovaného pohybu akčnímí členy
+
+učení preferencí: vyhodnocení cílů koncových uživatelů a predikce chování lidí v prostředí robota
+
+# Dynamická Bayesovská síť (DBN)
+
+Reprezentuje temporální pravděpodobnostní model. Skládá se z opakujících se vrstev proměnných. Dle Markovských předpokladů má každá proměnná rodiče buď ve stejné nebo  předchozí vrstvě
+
+staci popsat:
+ - prvni vrstvu
+ - apriorni distribuci
+ - prechodovy model
+ - senzoricky model
+
+
+# Plánování pohybu robota
+
+Pohyb z bodu do bodu - přesun robota do cíle
+Koordinovaný pohyb - robot se přesunuje v kontaktu s předmětem
+Konfigurační prostor - používá se pro reprezentaci plánovacího problému, je to prostor stavů robota definovaný jeho umístěním, orientací a úhly kloubů, vhodnější reprezentace než původní 3D prostor.
+Plánování cesty - problém nalezení cesty z jedné konfigurace do druhé v konfiguračním prostoru, na rozdíl od klasického hledání cesty v diskrétním prostoru se pohybuje ve spojitém prostoru.
+
+
+# Reprezentace konfiguračního prostoru
+
+Souřadnice určují reprezentaci pracovního prostoru – reálného prostoru, kdy jsou souřadnice robota zadány stejným souřadným systémem jako objekty, kterými manipulujeme. Reprezentace 
+vhodná pro kontrolu kolizí zejména robota a objektů zadaných jednoduchými polygonálními modely. Problémy: všechny souřadnice pracovního prostoru nejsou dosažitelné, generování cest, 
+které dodržují tato omezení je velmi náročné. 
+
+# Reprezentace konfiguračního prostoru
+
+Reprezentace pomocí robotových kloubů.
+
+Plánování cesty: spojíme aktuální pozici a cíl rovnou čarou a robot se po ní pohybuje konstantní  rychlostí, dokud nedorazí do cíle
+Problém: úloha robota je většinou zadána v pracovním, a ne v konfiguračním prostoru. 
+Kinematika: transformace souřadnic z konfiguračního prostoru do pracovního prostoru je jednoduchá – lineární transformace pro otočné klouby
+Inverzní kinematika: opačná transformace – obtížná, zřídka jedno řešení, např. pozice chapadla umožňují dvě konfigurace
+
+
+# Plánování pohybu: postup řešení
+
+1. Předzpracování / učící fáze / konstrukce grafu
+ - vypočítání grafu – často označován jako cestovní mapa (roadmap)
+  - graf viditelnosti
+  - Voroného diagram
+  - buňková dekompozice
+  - potenční funkce
+
+2. Zpracování dotazu
+ - spojení počáteční a cílové konfigurace s grafem
+ - identifikace počáteční a cílové buňky
+ - prohledávání grafu
+
+3. Inkrementální konstrukce grafu směrem k cíli
+ - rychle prozkoumávající náhodný strom (RRT)
+
+Základní problém plánování pohybu: nalezení spojité posloupnosti konfigurací, která převede robota z iniciální konfigurace qI do cílové
+konfigurace qG tak, že se žádná konfigurace po cestě nepřekrývá s překážkou.
+
+# graf viditelnosti (visibility graph)
+
+- Spojíme všechny páry vrcholů plus iniciální a cílové konfigurace
+- Eliminujeme hrany, které protínají překážky
+- Graf viditelnosti vždy zahrnuje nejkratší cestu konfiguračním prostorem
+
+Konstrukce grafu viditelnosti
+ - popsaný (naivní) postup pro n vrcholů O(n^3)
+ - s pomocí rotačního stromu pro množinu segmentů O(n^2)
+
+# Voroného diagram
+- dělí prostor R2 na oblasti podle zadaných objektů, např. bodů x ∈M
+- každý bod x má přiřazenu Voroného oblast V (x)
+- pro každý bod y ∈V (x) je x nejbližší bod z M
+
+Cestovní mapa jako VD, který maximalizuje vzdálenost od překážek.
+
+- Robot změní konfiguraci na bod ve VD - toto lze realizovat pohybem po rovné čáře v konfiguračním prostoru
+- Robot se pohybuje ve VD, dokud nedosáhne bod, který je nejbližší cílové konfiguraci
+- Robot opustí VD a přesune se do cíle - opět rovnou čarou v konfiguračním prostoru
+
+# Graf viditelnosti vs. Voroného diagram
+
+Graf viditelnosti
+ - nejkratší cesta, ale blízko k překážkám nutno uvažovat bezpečnost cesty
+ - komplikované ve vyšší dimenzi
+
+Voroného diagram
+ - maximalizuje vzdálenost od překážek, což poskytuje konzervativní cesty
+ - malé změny překážek mohou vést k velkým změnám VD
+ - komplikované ve vyšší dimenzi
+
+
+# Buňková dekompozice
+
+Dekompozice volného prostoru na konečný počet spojitých regionů nazývaných buňky. Plánování cesty redukováno na prohledávání v diskrétním grafovém prostoru. Základní grafová  dekompozice: pravidelná mřížka – úroveň šedi buňky určuje hodnotu buňky = cenu nejkratší cesty do cíle. Hodnoty spočítáme deterministickou verzí algoritmu iterací hodnot nebo A* algoritmem.
+
+
+Zpracování částečně obsazených buněk:
+ - neprocházet tyto buňky - neúplné: nemusí existovat cesta
+ - procházet tyto buňky - nekorektní: může vrátit cestu, která neexistuje
+ - zvětšít rozlišení mřížky - drahé: zejména ve vyšší dimenzi
+ - adaptivní diskretizace - ztráta uniformní velikosti mřížky
+
+
+# Vertikální dekompozice (vertical decomposition)
+
+Exaktní buňková dekompozice (př. vertikální/lichoběžníková, triangulace):
+
+
+# Potenciální pole
+
+Dodatečná cenová fce. Hodnota potenciálu pole narůstá ze vzdáleností od nejbližší překážky. Potenciál pole je pak využit jako dodatečná cenová fce při výpočtu nejkratší vzdálenosti
+
+# Pravděpodobnostní cestovní mapa – probabilistic roadmap
+
+Diskrétní reprezentace spojitého konfiguračního prostoru generována náhodným vzorkováním konfigurací v Cfree, které spojíme do grafu
+
+- vrcholy: přípustné konfigurace robota (milestones)
+- hrany: reprezentují platnou cestu (trajektorii) mezi konfiguracemi
+
+Nevyžaduje explicitní popis Cobs
+Cesta (trajektorie) ze startu do cíle: grafové prohledávací algoritmy
+
+## Jeden vs. více dotazů
+
+Více dotazů na pravděpodobnostní cestovní mapu
+ - generování jedné cestovní mapy, která je používána pro plánovací dotazy vícekrát
+
+Jeden dotaz na pravděpodobnostní cestovní mapu
+ - pro každý plánovací problém konstruována nová cestovní mapa charakteristická pro podprostor konfiguračního prostoru relevantní pro problém 
+  - rychle prozkoumávající náhodný strom (RRT) 
+
+
+## Strategie pro více dotazů
+
+Vytvoření cestovní mapy (grafu), který reprezentuje prostředí
+- Učící fáze
+ - Vzorkování n bodů v C_free 
+ - Spojení náhodných konfigurací s použitím lokálního plánovače (lokální plánovač hledá lokální cesty, např. přímé)
+- Dotazovací fáze
+ - Spojení počáteční a cílové konfigurace s PRM
+ - Použití prohledávání grafu k nalezení cesty
+
+
+## Vlastnosti PRM
+
+Úplnost pro standardní PRM nediskutována
+Většinou studována sPRM, která je
+ - pravděpodobnostně úplná a asymptoticky optimální
+ - složitost konstrukce grafu (učící fáze) O(n2)
+ - složitost i prostorova slozitost dotazu O(n2)
+
+# Rychle prozkoumávající náhodný strom – Rapidly exploring random tree (RRT)
+
+- Algoritmus pro jeden dotaz
+- Motivací je hledání cesty založené na řízení
+- Inkrementální konstrukce grafu (stromu) směrem k cílové oblasti
+
+## Postup tvorby stromu
+
+- Začni s počáteční konfigurací qinit , která je kořenem konstruovaného stromu
+- Generuj náhodnou konfiguraci qnew v Cfree
+- Nalezni nejbližší uzel qnear ke qnew ve stromě
+- Rozšiř qnear směrem ke qnew
+- Pokud není strom v dostatečné vzdálenosti od cílové konfigurace, běž na krok 2.
+
+
+## Vlastnosti RRT
+ - Rychle prozkoumává prostor
+ - Umožňuje uvažování kinodynamických/dynamických omezeni
+ - Umí nalézt trajektorie nebo posloupnosti přímou kontrolou příkazů robotových ovladačů
+ - Test na detekci kolize obvykle jako black-box
+ - Podobně jako PRM má RRT problémy s úzkými pasážemi
+ - RRT nalezne proveditelnou cestu bez garance kvality
+  - cesta může být relativně daleko od optimální cesty dané např. délkou cesty
+ - Navrženo mnoho variant RRT 
+
+
+# Skeletonizace
+
+Alternativní přístup pro převedení plánování cesty na prohledávání v diskrétním grafovém prostoru. Robotův volný prostor je redukován na jednodimenzionální reprezentaci nazvanou 
+skeleton = Voroného diagram – množina všech bodů, které mají stejné vzdálenosti od dvou nebo více překážek. Plánování cesty redukováno na hledání nejkratší cesty ve Voroného diagramu.
+
+
+# Dynamický stav
+
+Přechodový model pro dynamický stav zahrnuje účinek sil na rychlost změny. Nutné modely vyjádřené diferenciálními rovnicemi, které provážou kvantitu s odpovídající změnou v čase. Pokud
+bychom uměli generovat takové plány, roboti by měli skvělý výkon. Dynamický stav má však více dimenzí než kinematický, plánovací algoritmy by byly použitelné pouze pro nejjednodušší roboty. 
+Robotické systémy v praxi se spoléhají na jednodušší kinematické plánovače cest. 
+
+
+# Regulátor
+
+Kompenzuje limitace kinematických plánů, aby byla zachována cesta.
+
+Referenční regulátor – snaží se robota udržet na naplánované cestě.
+Proporční derivační regulátor – nejjednodušší regulátor, který zachovává striktní stabilitu v naší doméně
+Integrační proporční derivační regulátor - umožňuje odstranit chybové chování PD regulátoru v některých případech. Chybové hlášení jako důsledek systematické vnější síly, která není součástí modelu.
+Dlouhotrvající odchylky mezi referenčním a aktuálním stavem  opraveny. Regulátor tak řeší systematické chyby na úkor zvýšeného nebezpečí oscilací.
+
+# Další způsoby řízení pohybu
+
+
+Řízení pomocí potenciálu pole – podobně jako při plánování pohybu
+Reaktivní řízení – můžeme specifikovat regulátor bez explicitního modelu prostředí, 
+nejprve si určíme vzor posunu končetin a pak už reaktivně reagujeme na daný stav
+Zpětnovazební učení
+
+
+
+
+
+
+
+
 
 
 
