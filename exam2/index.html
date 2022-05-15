@@ -1,117 +1,13 @@
-<!doctype html><html lang=en>
-<head>
-<meta charset=utf-8>
-<meta http-equiv=x-ua-compatible content="ie=edge">
-<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
-<meta name=author content>
-<meta name=description content="Model vícenásobné lineárníj regrese Slouží k modelování jednorozměrné náhodné veličiny Y skupinou p náhodných veličin X1,&amp;hellip;,Xp. Vycházíme ze znalosti (p+1)-dimenzionálního náhodného výběru rozsahu n. Model mnohonásobné lineární regrese zapíšeme ve tvaru Y=X*Beta. Y je vektor (Y1,..Yn), Beta je vektor (B0,B1, &amp;hellip;,Bn), kde B1,..,Bn jsou lineární koeficienty náhodných veličin X1,&amp;hellip;,Xp. X je matice, která má první sloupec jednotkový, a další sloupce tvoří náhodné výběry rozsahu n jednotlivých náhodných veličin. Model řešíme odhadem parametrů metodou nejmenších čtverců.">
-<meta name=keywords content>
-<meta name=robots content="noodp">
-<meta name=theme-color content>
-<link rel=canonical href=https://rand-notes.github.io/exam2/>
-<title>
-cheatsheet1 :: idk
-</title>
-<link href=https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css rel=stylesheet type=text/css>
-<link rel=stylesheet href=/main.7209ab6422eb371a6b685a56274cc88eff3db604665c3bdb698389c0585d4211.css>
-<meta itemprop=name content="cheatsheet1">
-<meta itemprop=description content="Model vícenásobné lineárníj regrese Slouží k modelování jednorozměrné náhodné veličiny Y skupinou p náhodných veličin X1,&mldr;,Xp. Vycházíme ze znalosti (p+1)-dimenzionálního náhodného výběru rozsahu n. Model mnohonásobné lineární regrese zapíšeme ve tvaru Y=X*Beta. Y je vektor (Y1,..Yn), Beta je vektor (B0,B1, &mldr;,Bn), kde B1,..,Bn jsou lineární koeficienty náhodných veličin X1,&mldr;,Xp. X je matice, která má první sloupec jednotkový, a další sloupce tvoří náhodné výběry rozsahu n jednotlivých náhodných veličin. Model řešíme odhadem parametrů metodou nejmenších čtverců.">
-<meta itemprop=wordCount content="570"><meta itemprop=image content="https://rand-notes.github.io">
-<meta itemprop=keywords content>
-<meta name=twitter:card content="summary_large_image">
-<meta name=twitter:image content="https://rand-notes.github.io">
-<meta name=twitter:title content="cheatsheet1">
-<meta name=twitter:description content="Model vícenásobné lineárníj regrese Slouží k modelování jednorozměrné náhodné veličiny Y skupinou p náhodných veličin X1,&mldr;,Xp. Vycházíme ze znalosti (p+1)-dimenzionálního náhodného výběru rozsahu n. Model mnohonásobné lineární regrese zapíšeme ve tvaru Y=X*Beta. Y je vektor (Y1,..Yn), Beta je vektor (B0,B1, &mldr;,Bn), kde B1,..,Bn jsou lineární koeficienty náhodných veličin X1,&mldr;,Xp. X je matice, která má první sloupec jednotkový, a další sloupce tvoří náhodné výběry rozsahu n jednotlivých náhodných veličin. Model řešíme odhadem parametrů metodou nejmenších čtverců.">
-<meta property="og:title" content="cheatsheet1">
-<meta property="og:description" content="Model vícenásobné lineárníj regrese Slouží k modelování jednorozměrné náhodné veličiny Y skupinou p náhodných veličin X1,&mldr;,Xp. Vycházíme ze znalosti (p+1)-dimenzionálního náhodného výběru rozsahu n. Model mnohonásobné lineární regrese zapíšeme ve tvaru Y=X*Beta. Y je vektor (Y1,..Yn), Beta je vektor (B0,B1, &mldr;,Bn), kde B1,..,Bn jsou lineární koeficienty náhodných veličin X1,&mldr;,Xp. X je matice, která má první sloupec jednotkový, a další sloupce tvoří náhodné výběry rozsahu n jednotlivých náhodných veličin. Model řešíme odhadem parametrů metodou nejmenších čtverců.">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://rand-notes.github.io/exam2/"><meta property="og:image" content="https://rand-notes.github.io"><meta property="article:section" content="fi">
-<meta property="og:site_name" content="idk">
-</head>
-<body>
-<div class=container>
-<header class=header>
-<span class=header__inner>
-<a href=/ style=text-decoration:none>
-<div class=logo>
-title
-</div>
-</a>
-<span class=header__right>
-<nav class=menu>
-<ul class=menu__inner><li><a href=/posts>notes</a></li>
-</ul>
-</nav>
-<span class=menu-trigger><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
-</span>
-<span class="theme-toggle not-selectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 41c10.4934.0 19-8.5066 19-19C41 11.5066 32.4934 3 22 3 11.5066 3 3 11.5066 3 22s8.5066 19 19 19zM7 22C7 13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22z"/></svg></span>
-</span>
-</span>
-</header>
-<div class=content>
-<main class=post>
-<div class=post-info>
-</p>
-</div>
-<article>
-<h2 class=post-title><a href=https://rand-notes.github.io/exam2/>cheatsheet1</a></h2>
-<div class=post-content>
-<h1 id=model-vícenásobné-lineárníj-regrese>Model vícenásobné lineárníj regrese</h1>
-<p>Slouží k modelování jednorozměrné náhodné veličiny Y skupinou p náhodných veličin X1,&mldr;,Xp. Vycházíme ze znalosti (p+1)-dimenzionálního náhodného výběru rozsahu n. Model mnohonásobné
+<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="ie=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=author content><meta name=description content="Model vícenásobné lineárníj regrese Slouží k modelování jednorozměrné náhodné veličiny Y skupinou p náhodných veličin X1,&amp;hellip;,Xp. Vycházíme ze znalosti (p+1)-dimenzionálního náhodného výběru rozsahu n. Model mnohonásobné lineární regrese zapíšeme ve tvaru Y=X*Beta. Y je vektor (Y1,..Yn), Beta je vektor (B0,B1, &amp;hellip;,Bn), kde B1,..,Bn jsou lineární koeficienty náhodných veličin X1,&amp;hellip;,Xp. X je matice, která má první sloupec jednotkový, a další sloupce tvoří náhodné výběry rozsahu n jednotlivých náhodných veličin. Model řešíme odhadem parametrů metodou nejmenších čtverců."><meta name=keywords content><meta name=robots content="noodp"><meta name=theme-color content><link rel=canonical href=https://rand-notes.github.io/exam2/><title>cheatsheet1 :: idk</title><link href=https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css rel=stylesheet type=text/css><link rel=stylesheet href=/main.7209ab6422eb371a6b685a56274cc88eff3db604665c3bdb698389c0585d4211.css><meta itemprop=name content="cheatsheet1"><meta itemprop=description content="Model vícenásobné lineárníj regrese Slouží k modelování jednorozměrné náhodné veličiny Y skupinou p náhodných veličin X1,&mldr;,Xp. Vycházíme ze znalosti (p+1)-dimenzionálního náhodného výběru rozsahu n. Model mnohonásobné lineární regrese zapíšeme ve tvaru Y=X*Beta. Y je vektor (Y1,..Yn), Beta je vektor (B0,B1, &mldr;,Bn), kde B1,..,Bn jsou lineární koeficienty náhodných veličin X1,&mldr;,Xp. X je matice, která má první sloupec jednotkový, a další sloupce tvoří náhodné výběry rozsahu n jednotlivých náhodných veličin. Model řešíme odhadem parametrů metodou nejmenších čtverců."><meta itemprop=wordCount content="570"><meta itemprop=image content="https://rand-notes.github.io"><meta itemprop=keywords content><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://rand-notes.github.io"><meta name=twitter:title content="cheatsheet1"><meta name=twitter:description content="Model vícenásobné lineárníj regrese Slouží k modelování jednorozměrné náhodné veličiny Y skupinou p náhodných veličin X1,&mldr;,Xp. Vycházíme ze znalosti (p+1)-dimenzionálního náhodného výběru rozsahu n. Model mnohonásobné lineární regrese zapíšeme ve tvaru Y=X*Beta. Y je vektor (Y1,..Yn), Beta je vektor (B0,B1, &mldr;,Bn), kde B1,..,Bn jsou lineární koeficienty náhodných veličin X1,&mldr;,Xp. X je matice, která má první sloupec jednotkový, a další sloupce tvoří náhodné výběry rozsahu n jednotlivých náhodných veličin. Model řešíme odhadem parametrů metodou nejmenších čtverců."><meta property="og:title" content="cheatsheet1"><meta property="og:description" content="Model vícenásobné lineárníj regrese Slouží k modelování jednorozměrné náhodné veličiny Y skupinou p náhodných veličin X1,&mldr;,Xp. Vycházíme ze znalosti (p+1)-dimenzionálního náhodného výběru rozsahu n. Model mnohonásobné lineární regrese zapíšeme ve tvaru Y=X*Beta. Y je vektor (Y1,..Yn), Beta je vektor (B0,B1, &mldr;,Bn), kde B1,..,Bn jsou lineární koeficienty náhodných veličin X1,&mldr;,Xp. X je matice, která má první sloupec jednotkový, a další sloupce tvoří náhodné výběry rozsahu n jednotlivých náhodných veličin. Model řešíme odhadem parametrů metodou nejmenších čtverců."><meta property="og:type" content="article"><meta property="og:url" content="https://rand-notes.github.io/exam2/"><meta property="og:image" content="https://rand-notes.github.io"><meta property="article:section" content="fi"><meta property="og:site_name" content="idk"></head><body><div class=container><header class=header><span class=header__inner><a href=/ style=text-decoration:none><div class=logo>title</div></a><span class=header__right><nav class=menu><ul class=menu__inner><li><a href=/posts>notes</a></li></ul></nav><span class=menu-trigger><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></span><span class="theme-toggle not-selectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 41c10.4934.0 19-8.5066 19-19C41 11.5066 32.4934 3 22 3 11.5066 3 3 11.5066 3 22s8.5066 19 19 19zM7 22C7 13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22z"/></svg></span></span></span></header><div class=content><main class=post><div class=post-info></p></div><article><h2 class=post-title><a href=https://rand-notes.github.io/exam2/>cheatsheet1</a></h2><div class=post-content><h1 id=model-vícenásobné-lineárníj-regrese>Model vícenásobné lineárníj regrese</h1><p>Slouží k modelování jednorozměrné náhodné veličiny Y skupinou p náhodných veličin X1,&mldr;,Xp. Vycházíme ze znalosti (p+1)-dimenzionálního náhodného výběru rozsahu n. Model mnohonásobné
 lineární regrese zapíšeme ve tvaru Y=X*Beta. Y je vektor (Y1,..Yn), Beta je vektor (B0,B1, &mldr;,Bn), kde B1,..,Bn jsou lineární koeficienty náhodných veličin X1,&mldr;,Xp. X je matice, která má první sloupec
-jednotkový, a další sloupce tvoří náhodné výběry rozsahu n jednotlivých náhodných veličin. Model řešíme odhadem parametrů metodou nejmenších čtverců. Odhadneme Y nebo Beta.</p>
-<h1 id=koeficient-mnohonásobné-korelace>Koeficient mnohonásobné korelace</h1>
-<p>Vyjadřuje míru závislosti náhodné veličiny Y a náhodnými veličinami X1,&mldr;,Xp. Je to korelační koeficient mezi Y a nejlepší lineární aproximací Y^ pomocí veličin X. Jedná se tedy o největší ze všech
-absolutních hodnot korelačních koeficientů Y a libovolnou lineární kombinací veličin X.</p>
-<h1 id=koeficient-parciální-korelace>Koeficient parciální korelace</h1>
-<p>Vyjadřuje míru čisté závislosti mezi veličinami Y a Z při eliminaci vlivu veličin X. Je to korelační koeficient mezi reziduí Y-Y^ a Z-Z^ při nejlepších lineárních aproximacích Y^ a Z^ pomocí veličin X.</p>
-<h1 id=autokorelace>Autokorelace</h1>
-<p>V některých případech (nejčastěji v časových řadách) hodnota náhodné chyby ei závisí na hodnotě předchozích chyb ei-k. Efekt náhodné chyby není jen okamžitý, ale se projevuje i v budoucnosti. Tento jev
-voláme autokorelace.</p>
-<p>autokorelace prvniho radu, chyba je zavisla na te predchozi.</p>
-<p>Častým typem autokorelace je autokorelace 1. řádu, označovaná jako AR(1), pro kterou platí že <code>ei=theta ei-1 + ui. kde |theta| &lt; 1</code> a Eui=0, Dui=oui2 a korelace s ostatními uj je nulová.</p>
-<h1 id=aitkenuv-odhad>Aitkenuv odhad</h1>
-<p>V rozsirenem regresnim modelu se symetrickou a pozitivne definitni matici \o^2W je odhad vektoru regresnich koeficientu B zobecnenou metodou nejmensich ctvercu roven:</p>
-<p>\beta = (X&rsquo;W-1X)-1 X&rsquo;WY</p>
-<h1 id=dubrin-watson>Dubrin Watson</h1>
-<p>Dubrinova-Watsonova statistika D se počítá pomocí reziduí v lineárním modelu.</p>
-<p>Durbin-Watsonův test. Statistika vyjde vždy z rozsahu <code>0&lt;=D&lt;=4</code>, přičemž je-li D=2 tak chyby nekorelují, pokud D=0 tak je mezi nimi kladná korelace a pokud D=4 tak je mezi nimi záporná korelace.</p>
-<p>Kritické hodnoty testu závisí na počtu parametrů, počtu měření a alfa hodnot a jsou tabelované.</p>
-<h1 id=multikolinearita>Multikolinearita</h1>
-<p>Multikolinearita je jev když je lineární závislost mezi vysvětlujícími proměnnými v lineárním modelu.
+jednotkový, a další sloupce tvoří náhodné výběry rozsahu n jednotlivých náhodných veličin. Model řešíme odhadem parametrů metodou nejmenších čtverců. Odhadneme Y nebo Beta.</p><h1 id=koeficient-mnohonásobné-korelace>Koeficient mnohonásobné korelace</h1><p>Vyjadřuje míru závislosti náhodné veličiny Y a náhodnými veličinami X1,&mldr;,Xp. Je to korelační koeficient mezi Y a nejlepší lineární aproximací Y^ pomocí veličin X. Jedná se tedy o největší ze všech
+absolutních hodnot korelačních koeficientů Y a libovolnou lineární kombinací veličin X.</p><h1 id=koeficient-parciální-korelace>Koeficient parciální korelace</h1><p>Vyjadřuje míru čisté závislosti mezi veličinami Y a Z při eliminaci vlivu veličin X. Je to korelační koeficient mezi reziduí Y-Y^ a Z-Z^ při nejlepších lineárních aproximacích Y^ a Z^ pomocí veličin X.</p><h1 id=autokorelace>Autokorelace</h1><p>V některých případech (nejčastěji v časových řadách) hodnota náhodné chyby ei závisí na hodnotě předchozích chyb ei-k. Efekt náhodné chyby není jen okamžitý, ale se projevuje i v budoucnosti. Tento jev
+voláme autokorelace.</p><p>autokorelace prvniho radu, chyba je zavisla na te predchozi.</p><p>Častým typem autokorelace je autokorelace 1. řádu, označovaná jako AR(1), pro kterou platí že <code>ei=theta ei-1 + ui. kde |theta| &lt; 1</code> a Eui=0, Dui=oui2 a korelace s ostatními uj je nulová.</p><h1 id=aitkenuv-odhad>Aitkenuv odhad</h1><p>V rozsirenem regresnim modelu se symetrickou a pozitivne definitni matici \o^2W je odhad vektoru regresnich koeficientu B zobecnenou metodou nejmensich ctvercu roven:</p><p>\beta = (X&rsquo;W-1X)-1 X&rsquo;WY</p><h1 id=dubrin-watson>Dubrin Watson</h1><p>Dubrinova-Watsonova statistika D se počítá pomocí reziduí v lineárním modelu.</p><p>Durbin-Watsonův test. Statistika vyjde vždy z rozsahu <code>0&lt;=D&lt;=4</code>, přičemž je-li D=2 tak chyby nekorelují, pokud D=0 tak je mezi nimi kladná korelace a pokud D=4 tak je mezi nimi záporná korelace.</p><p>Kritické hodnoty testu závisí na počtu parametrů, počtu měření a alfa hodnot a jsou tabelované.</p><h1 id=multikolinearita>Multikolinearita</h1><p>Multikolinearita je jev když je lineární závislost mezi vysvětlujícími proměnnými v lineárním modelu.
 Přesná multikolinearita je definována jako lineární závilost sloupců xj v matici plánu X bez sloupce s
-absolutními hodnotami.</p>
-<p>V praxi bychom se neměli setkávat s přesnou multikolinearitou, protože bychom měli využívat lineární kombinaci vysvětlujících proměnných a měli bychom se snažit o jejich redukci. V praxi se setkáváme s
+absolutními hodnotami.</p><p>V praxi bychom se neměli setkávat s přesnou multikolinearitou, protože bychom měli využívat lineární kombinaci vysvětlujících proměnných a měli bychom se snažit o jejich redukci. V praxi se setkáváme s
 částečnou multikolinearitou když je X&rsquo;X skoro singulární a má skoro nulový determinant. Nastává když použijeme nadbytečné množství vysvětlujících proměnných, přičemž nadbytečné můžeme identifikovat a
-vyřadit.</p>
-<p>Při přesné multikolinearitě nedokážeme udělat klasickým postupem metodou nejmenších čtverců odhad
-B^. Při částečné multikolinearitě můžeme invertovat X&rsquo;X, ale výpočty budou nízké kvality. Multikolinearita snižuje kvalitu výpočtů.</p>
-<h1 id=metoda-postupne-regrese>Metoda postupne regrese</h1>
-<p>is a method of fitting regression models in which the choice of predictive variables is carried out by an automatic procedure.</p>
-<h1 id=pca>PCA</h1>
-<p>PCA (Analýza hlavních komponent) je statistická metoda pro snížení počtu proměnných, které bývají často korelovány.</p>
-<p>PCA využívá ortogonalizaci bázi vektorového prostoru původních náhodných veličin. Nové bázové náhodné veličiny, zvané hlavní komponenty, jsou nekorelovány. Volba nové báze je optimální v tom, že
+vyřadit.</p><p>Při přesné multikolinearitě nedokážeme udělat klasickým postupem metodou nejmenších čtverců odhad
+B^. Při částečné multikolinearitě můžeme invertovat X&rsquo;X, ale výpočty budou nízké kvality. Multikolinearita snižuje kvalitu výpočtů.</p><h1 id=metoda-postupne-regrese>Metoda postupne regrese</h1><p>is a method of fitting regression models in which the choice of predictive variables is carried out by an automatic procedure.</p><h1 id=pca>PCA</h1><p>PCA (Analýza hlavních komponent) je statistická metoda pro snížení počtu proměnných, které bývají často korelovány.</p><p>PCA využívá ortogonalizaci bázi vektorového prostoru původních náhodných veličin. Nové bázové náhodné veličiny, zvané hlavní komponenty, jsou nekorelovány. Volba nové báze je optimální v tom, že
 pro vysvětlení podílu celkové variability dat stačí uvažovat nižší počet hlavních komponent, než byl počet původních náhodných veličin. Jednotlivé hlavní komponenty jsou postupně hledány tak, aby
-vysvětlily co největší část celkové variability dat pomocí co nejnižšího počtu nových náhodných veličin.</p>
-<p>Nevýhodou může být nemožnost interpretace hlavních komponent. z důvodu nekompatibility použitých jednotek.</p>
-<ul>
-<li>Standardizace dat</li>
-<li>Vypočtení kovarianční nebo korelační matice pro data</li>
-<li>Vypočtení vlastních vektorů a čísel</li>
-<li>Výběr hlavních komponent</li>
-</ul>
-</div>
-</article>
-<hr>
-<div class=post-info>
-</div>
-</main>
-</div>
-<footer class=footer>
-</footer>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script type=text/javascript id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js></script>
-</div>
-<script type=text/javascript src=/bundle.min.b2a4161afad463d91113a005f8f24a5efff27a6cc48754e9e93adc7bccb8a876a153a953c0b12653f3b5910e41e620da731f8184f2973058100d159c09fa8346.js integrity="sha512-sqQWGvrUY9kRE6AF+PJKXv/yemzEh1Tp6Trce8y4qHahU6lTwLEmU/O1kQ5B5iDacx+BhPKXMFgQDRWcCfqDRg=="></script>
-</body>
-</html>
+vysvětlily co největší část celkové variability dat pomocí co nejnižšího počtu nových náhodných veličin.</p><p>Nevýhodou může být nemožnost interpretace hlavních komponent. z důvodu nekompatibility použitých jednotek.</p><ul><li>Standardizace dat</li><li>Vypočtení kovarianční nebo korelační matice pro data</li><li>Vypočtení vlastních vektorů a čísel</li><li>Výběr hlavních komponent</li></ul></div></article><hr><div class=post-info></div></main></div><footer class=footer></footer><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type=text/javascript id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js></script></div><script type=text/javascript src=/bundle.min.77414ca1a0d130043c129098d97cecf433ce369d23de8eaa91f5111f432729db1257c49a33b38203d4be241ef53dafecd99a1d2c350b75316b55a0bb6a2e150b.js integrity="sha512-d0FMoaDRMAQ8EpCY2Xzs9DPONp0j3o6qkfURH0MnKdsSV8SaM7OCA9S+JB71Pa/s2ZodLDULdTFrVaC7ai4VCw=="></script></body></html>

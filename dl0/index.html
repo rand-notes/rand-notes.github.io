@@ -1,250 +1,71 @@
-<!doctype html><html lang=en>
-<head>
-<meta charset=utf-8>
-<meta http-equiv=x-ua-compatible content="ie=edge">
-<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
-<meta name=author content>
-<meta name=description content="TOC   Underflow
+<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="ie=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=author content><meta name=description content="TOC   Underflow
   Overflow
   Softmax 
  Problems    Condition number
-  Gradient-Based Optimization objective function; criterio; cost function; loss function; Gradient Descent; critical points; stationary points; local minumum; local maximum; Saddle points; global minimum; partial derivatives; gradient; directional derivative; method of steepest descent; gradient descent; Chain rule; Steepest descent proposes a new point; learning rate; line search; hill climbing; Jacobian matrix; second derivative; Hessian matrix; Jacobian; Hessian; second derivative test; Newton&amp;rsquo;s method; first-order optimization algorithms; second-order optimization algorithms; Lipschitz continous; Lipschitz constant; convex optimization;">
-<meta name=keywords content>
-<meta name=robots content="noodp">
-<meta name=theme-color content>
-<link rel=canonical href=https://rand-notes.github.io/dl0/>
-<title>
-DL0 :: idk
-</title>
-<link href=https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css rel=stylesheet type=text/css>
-<link rel=stylesheet href=/main.7209ab6422eb371a6b685a56274cc88eff3db604665c3bdb698389c0585d4211.css>
-<meta itemprop=name content="DL0">
-<meta itemprop=description content="TOC   Underflow
+  Gradient-Based Optimization objective function; criterio; cost function; loss function; Gradient Descent; critical points; stationary points; local minumum; local maximum; Saddle points; global minimum; partial derivatives; gradient; directional derivative; method of steepest descent; gradient descent; Chain rule; Steepest descent proposes a new point; learning rate; line search; hill climbing; Jacobian matrix; second derivative; Hessian matrix; Jacobian; Hessian; second derivative test; Newton&amp;rsquo;s method; first-order optimization algorithms; second-order optimization algorithms; Lipschitz continous; Lipschitz constant; convex optimization;"><meta name=keywords content><meta name=robots content="noodp"><meta name=theme-color content><link rel=canonical href=https://rand-notes.github.io/dl0/><title>DL0 :: idk</title><link href=https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css rel=stylesheet type=text/css><link rel=stylesheet href=/main.7209ab6422eb371a6b685a56274cc88eff3db604665c3bdb698389c0585d4211.css><meta itemprop=name content="DL0"><meta itemprop=description content="TOC   Underflow
   Overflow
   Softmax 
  Problems    Condition number
-  Gradient-Based Optimization objective function; criterio; cost function; loss function; Gradient Descent; critical points; stationary points; local minumum; local maximum; Saddle points; global minimum; partial derivatives; gradient; directional derivative; method of steepest descent; gradient descent; Chain rule; Steepest descent proposes a new point; learning rate; line search; hill climbing; Jacobian matrix; second derivative; Hessian matrix; Jacobian; Hessian; second derivative test; Newton&rsquo;s method; first-order optimization algorithms; second-order optimization algorithms; Lipschitz continous; Lipschitz constant; convex optimization;"><meta itemprop=datePublished content="2021-01-01T00:00:00+00:00">
-<meta itemprop=dateModified content="2021-01-01T00:00:00+00:00">
-<meta itemprop=wordCount content="2386"><meta itemprop=image content="https://rand-notes.github.io">
-<meta itemprop=keywords content>
-<meta name=twitter:card content="summary_large_image">
-<meta name=twitter:image content="https://rand-notes.github.io">
-<meta name=twitter:title content="DL0">
-<meta name=twitter:description content="TOC   Underflow
+  Gradient-Based Optimization objective function; criterio; cost function; loss function; Gradient Descent; critical points; stationary points; local minumum; local maximum; Saddle points; global minimum; partial derivatives; gradient; directional derivative; method of steepest descent; gradient descent; Chain rule; Steepest descent proposes a new point; learning rate; line search; hill climbing; Jacobian matrix; second derivative; Hessian matrix; Jacobian; Hessian; second derivative test; Newton&rsquo;s method; first-order optimization algorithms; second-order optimization algorithms; Lipschitz continous; Lipschitz constant; convex optimization;"><meta itemprop=datePublished content="2021-01-01T00:00:00+00:00"><meta itemprop=dateModified content="2021-01-01T00:00:00+00:00"><meta itemprop=wordCount content="2386"><meta itemprop=image content="https://rand-notes.github.io"><meta itemprop=keywords content><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://rand-notes.github.io"><meta name=twitter:title content="DL0"><meta name=twitter:description content="TOC   Underflow
   Overflow
   Softmax 
  Problems    Condition number
-  Gradient-Based Optimization objective function; criterio; cost function; loss function; Gradient Descent; critical points; stationary points; local minumum; local maximum; Saddle points; global minimum; partial derivatives; gradient; directional derivative; method of steepest descent; gradient descent; Chain rule; Steepest descent proposes a new point; learning rate; line search; hill climbing; Jacobian matrix; second derivative; Hessian matrix; Jacobian; Hessian; second derivative test; Newton&rsquo;s method; first-order optimization algorithms; second-order optimization algorithms; Lipschitz continous; Lipschitz constant; convex optimization;">
-<meta property="og:title" content="DL0">
-<meta property="og:description" content="TOC   Underflow
+  Gradient-Based Optimization objective function; criterio; cost function; loss function; Gradient Descent; critical points; stationary points; local minumum; local maximum; Saddle points; global minimum; partial derivatives; gradient; directional derivative; method of steepest descent; gradient descent; Chain rule; Steepest descent proposes a new point; learning rate; line search; hill climbing; Jacobian matrix; second derivative; Hessian matrix; Jacobian; Hessian; second derivative test; Newton&rsquo;s method; first-order optimization algorithms; second-order optimization algorithms; Lipschitz continous; Lipschitz constant; convex optimization;"><meta property="og:title" content="DL0"><meta property="og:description" content="TOC   Underflow
   Overflow
   Softmax 
  Problems    Condition number
-  Gradient-Based Optimization objective function; criterio; cost function; loss function; Gradient Descent; critical points; stationary points; local minumum; local maximum; Saddle points; global minimum; partial derivatives; gradient; directional derivative; method of steepest descent; gradient descent; Chain rule; Steepest descent proposes a new point; learning rate; line search; hill climbing; Jacobian matrix; second derivative; Hessian matrix; Jacobian; Hessian; second derivative test; Newton&rsquo;s method; first-order optimization algorithms; second-order optimization algorithms; Lipschitz continous; Lipschitz constant; convex optimization;">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://rand-notes.github.io/dl0/"><meta property="og:image" content="https://rand-notes.github.io"><meta property="article:section" content="dl">
-<meta property="article:published_time" content="2021-01-01T00:00:00+00:00">
-<meta property="article:modified_time" content="2021-01-01T00:00:00+00:00"><meta property="og:site_name" content="idk">
-<meta property="article:published_time" content="2021-01-01 00:00:00 +0000 UTC">
-</head>
-<body>
-<div class=container>
-<header class=header>
-<span class=header__inner>
-<a href=/ style=text-decoration:none>
-<div class=logo>
-title
-</div>
-</a>
-<span class=header__right>
-<nav class=menu>
-<ul class=menu__inner><li><a href=/posts>notes</a></li>
-</ul>
-</nav>
-<span class=menu-trigger><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
-</span>
-<span class="theme-toggle not-selectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 41c10.4934.0 19-8.5066 19-19C41 11.5066 32.4934 3 22 3 11.5066 3 3 11.5066 3 22s8.5066 19 19 19zM7 22C7 13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22z"/></svg></span>
-</span>
-</span>
-</header>
-<div class=content>
-<main class=post>
-<div class=post-info>
-</p>
-</div>
-<article>
-<h2 class=post-title><a href=https://rand-notes.github.io/dl0/>DL0</a></h2>
-<div class=post-content>
-<h1 id=toc>TOC</h1>
-<ul>
-<li>
-<p><a href=#underflow>Underflow</a></p>
-</li>
-<li>
-<p><a href=#overflow>Overflow</a></p>
-</li>
-<li>
-<p><a href=#softmax->Softmax </a></p>
-<ul>
-<li><a href=#problems>Problems</a></li>
-</ul>
-</li>
-<li>
-<p><a href=#condition-number>Condition number</a></p>
-</li>
-<li>
-<p><a href=#gradient-based-optimization>Gradient-Based Optimization</a>
-<strong>objective function</strong>; <strong>criterio</strong>; <strong>cost function</strong>; <strong>loss function</strong>; <strong>Gradient Descent</strong>; <strong>critical points</strong>; <strong>stationary points</strong>; <strong>local minumum</strong>; <strong>local maximum</strong>; <strong>Saddle points</strong>; <strong>global minimum</strong>; <strong>partial derivatives</strong>; <strong>gradient</strong>; <strong>directional derivative</strong>; <strong>method of steepest descent</strong>; <strong>gradient descent</strong>; <strong>Chain rule</strong>; <strong>Steepest descent proposes a new point</strong>; <strong>learning rate</strong>; <strong>line search</strong>; <strong>hill climbing</strong>; <strong>Jacobian matrix</strong>; <strong>second derivative</strong>; <strong>Hessian matrix</strong>; <strong>Jacobian</strong>; <strong>Hessian</strong>; <strong>second derivative test</strong>; <strong>Newton&rsquo;s method</strong>; <strong>first-order optimization algorithms</strong>; <strong>second-order optimization algorithms</strong>; <strong>Lipschitz continous</strong>; <strong>Lipschitz constant</strong>; <strong>convex optimization</strong>;</p>
-</li>
-<li>
-<p><a href=#constrained-optimization>Constrained Optimization</a>
-<strong>constrained optimization</strong>; <strong>feasible points</strong>; <strong>Karush-Kuhn-Tucker</strong>; <strong>generalized Lagrangian</strong>; <strong>equality constraints</strong>; <strong>inequalities constraints</strong>;</p>
-</li>
-</ul>
-<h1 id=underflow>Underflow</h1>
-<p>happens when small numbers are rounded to 0.</p>
-<h1 id=overflow>Overflow</h1>
-<p>happens when numbers with large magnitude are approximated as inf of -inf.</p>
-<h1 id=softmax>Softmax</h1>
-<p>also called softargmax or normalized exponential function.</p>
-<p>basically it&rsquo;s function that turn real values into probabilities.
-input is vector of K real numbers and ouput is a probability distribution of K probabilities.</p>
-<p><code>softmax(x)_i = exp(x_i) / \sum^n_j=1(exp(x_j))</code></p>
-<p>softmax is vulnerable to both underflow and overflow.</p>
-<h2 id=problems>Problems</h2>
-<p>if all x_i are equal to some constant c then output should be n probabilities with 1/n value. Numerically this may not occur when c has large magnitude.
+  Gradient-Based Optimization objective function; criterio; cost function; loss function; Gradient Descent; critical points; stationary points; local minumum; local maximum; Saddle points; global minimum; partial derivatives; gradient; directional derivative; method of steepest descent; gradient descent; Chain rule; Steepest descent proposes a new point; learning rate; line search; hill climbing; Jacobian matrix; second derivative; Hessian matrix; Jacobian; Hessian; second derivative test; Newton&rsquo;s method; first-order optimization algorithms; second-order optimization algorithms; Lipschitz continous; Lipschitz constant; convex optimization;"><meta property="og:type" content="article"><meta property="og:url" content="https://rand-notes.github.io/dl0/"><meta property="og:image" content="https://rand-notes.github.io"><meta property="article:section" content="dl"><meta property="article:published_time" content="2021-01-01T00:00:00+00:00"><meta property="article:modified_time" content="2021-01-01T00:00:00+00:00"><meta property="og:site_name" content="idk"><meta property="article:published_time" content="2021-01-01 00:00:00 +0000 UTC"></head><body><div class=container><header class=header><span class=header__inner><a href=/ style=text-decoration:none><div class=logo>title</div></a><span class=header__right><nav class=menu><ul class=menu__inner><li><a href=/posts>notes</a></li></ul></nav><span class=menu-trigger><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></span><span class="theme-toggle not-selectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 41c10.4934.0 19-8.5066 19-19C41 11.5066 32.4934 3 22 3 11.5066 3 3 11.5066 3 22s8.5066 19 19 19zM7 22C7 13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22z"/></svg></span></span></span></header><div class=content><main class=post><div class=post-info></p></div><article><h2 class=post-title><a href=https://rand-notes.github.io/dl0/>DL0</a></h2><div class=post-content><h1 id=toc>TOC</h1><ul><li><p><a href=#underflow>Underflow</a></p></li><li><p><a href=#overflow>Overflow</a></p></li><li><p><a href=#softmax->Softmax</a></p><ul><li><a href=#problems>Problems</a></li></ul></li><li><p><a href=#condition-number>Condition number</a></p></li><li><p><a href=#gradient-based-optimization>Gradient-Based Optimization</a>
+<strong>objective function</strong>; <strong>criterio</strong>; <strong>cost function</strong>; <strong>loss function</strong>; <strong>Gradient Descent</strong>; <strong>critical points</strong>; <strong>stationary points</strong>; <strong>local minumum</strong>; <strong>local maximum</strong>; <strong>Saddle points</strong>; <strong>global minimum</strong>; <strong>partial derivatives</strong>; <strong>gradient</strong>; <strong>directional derivative</strong>; <strong>method of steepest descent</strong>; <strong>gradient descent</strong>; <strong>Chain rule</strong>; <strong>Steepest descent proposes a new point</strong>; <strong>learning rate</strong>; <strong>line search</strong>; <strong>hill climbing</strong>; <strong>Jacobian matrix</strong>; <strong>second derivative</strong>; <strong>Hessian matrix</strong>; <strong>Jacobian</strong>; <strong>Hessian</strong>; <strong>second derivative test</strong>; <strong>Newton&rsquo;s method</strong>; <strong>first-order optimization algorithms</strong>; <strong>second-order optimization algorithms</strong>; <strong>Lipschitz continous</strong>; <strong>Lipschitz constant</strong>; <strong>convex optimization</strong>;</p></li><li><p><a href=#constrained-optimization>Constrained Optimization</a>
+<strong>constrained optimization</strong>; <strong>feasible points</strong>; <strong>Karush-Kuhn-Tucker</strong>; <strong>generalized Lagrangian</strong>; <strong>equality constraints</strong>; <strong>inequalities constraints</strong>;</p></li></ul><h1 id=underflow>Underflow</h1><p>happens when small numbers are rounded to 0.</p><h1 id=overflow>Overflow</h1><p>happens when numbers with large magnitude are approximated as inf of -inf.</p><h1 id=softmax>Softmax</h1><p>also called softargmax or normalized exponential function.</p><p>basically it&rsquo;s function that turn real values into probabilities.
+input is vector of K real numbers and ouput is a probability distribution of K probabilities.</p><p><code>softmax(x)_i = exp(x_i) / \sum^n_j=1(exp(x_j))</code></p><p>softmax is vulnerable to both underflow and overflow.</p><h2 id=problems>Problems</h2><p>if all x_i are equal to some constant c then output should be n probabilities with 1/n value. Numerically this may not occur when c has large magnitude.
 If c is very negative then exp(c) will underflow and denominator will be 0.
-If c is very large then exp(c) will overflow causing numerator to be inf.</p>
-<p>Both of these difficulties can be resolved by instead evaluating softmax(z) where <code>z = x - max_i * x_i</code>. Normalization of vector results in the largest argument to exp being 0, which rules out the
-possibility of overflow.</p>
-<p>But there is still one small problem. Underflow in the numerator can still cause the expression as a whole to evaluate to zero and if we are using <code>log softmax(x)</code> we will get -inf. So we need to
-stabilize log max with same trick as above.</p>
-<h1 id=condition-number>Condition number</h1>
-<p>ratio of magnitude of the largest and smallest eigenvalue.</p>
-<p><code>max_i,j |\lambda_i / \lambda_j|</code></p>
-<p>When this number is large, matrix inversion is particularly sensitive to error in the input.
-Conditioning refers to how rapidly a function changes with respect to small changes in its input.</p>
-<h1 id=gradient-based-optimization>Gradient-Based Optimization</h1>
-<p>Optimization refers to the task of either minimizing or maximizing some function f(x) by altering x.
-We usually phrase most optimization problems in terms of minimizing. Maximization may be accomplished via a minimization by minimizing -f(x).</p>
-<p>The function we want to minimize or maximize is called the <strong>objective function</strong> or <strong>criterio</strong>. When we are minimizing it, we may also call it the <strong>cost function</strong>, <strong>loss function</strong> or <strong>error
-function</strong>.</p>
-<p>We often denote the value that minimizes or maximizes a function with a superscript ∗ (asterisk) &ndash; it&rsquo;s not mutiplication operator * but slightly different star.
-eg we may write: <code>x^* = arg min f(x)</code></p>
-<p><strong>Gradient Descent</strong> is technique that move x in small steps with oposite sign of the derivate in order to find minimum of function.</p>
-<p>Points with 0 derivation are known as <strong>critical points</strong> or <strong>stationary points</strong>. Gradient is the zero vector at a point if and only if it is a stationary point.</p>
-<p>A <strong>local minumum</strong> is a point where f(x) is lower than at all neigboring points. A <strong>local maximum</strong> is opposite. Some critical points are neither maximum nor minimum, these are known as <strong>Saddle points</strong>
-A point that obtains the absolute lowest value of f(x) is a <strong>global minimum</strong>. There could be one or multiple global minima.</p>
-<p>Function that have multiple local minima and saddle points surroundedd by very flat regions makes optimization very difficult, especially when the input to the function is multidimensional. We therfore
-usually settle for finding a value of f that is very low, but not neccessarily minimal in any formal sense.</p>
-<p>For functions with multiple inputs we use <strong>partial derivatives</strong>. Partial derivative is derivation of one variable, whereas other variables are treated like constants.</p>
-<p>The <strong>gradient</strong> generalizes the notion of derivative to the case where the derivative is with respect to a vector: the gradient of f is the vector containing all of the partial derivatives, denotes
-<code>∇_x f(x)</code>. Element i of the gradient is the partial derivative of f with respect to x_i. In multiple dimensions, critical points are points where every element of the gradient is equal to zero.</p>
-<p>where ∇ is nabla. Nabla can be interpreted as a vector of partial derivative operators.</p>
-<p>Gradient: <code>grad f = ∇ f</code>
+If c is very large then exp(c) will overflow causing numerator to be inf.</p><p>Both of these difficulties can be resolved by instead evaluating softmax(z) where <code>z = x - max_i * x_i</code>. Normalization of vector results in the largest argument to exp being 0, which rules out the
+possibility of overflow.</p><p>But there is still one small problem. Underflow in the numerator can still cause the expression as a whole to evaluate to zero and if we are using <code>log softmax(x)</code> we will get -inf. So we need to
+stabilize log max with same trick as above.</p><h1 id=condition-number>Condition number</h1><p>ratio of magnitude of the largest and smallest eigenvalue.</p><p><code>max_i,j |\lambda_i / \lambda_j|</code></p><p>When this number is large, matrix inversion is particularly sensitive to error in the input.
+Conditioning refers to how rapidly a function changes with respect to small changes in its input.</p><h1 id=gradient-based-optimization>Gradient-Based Optimization</h1><p>Optimization refers to the task of either minimizing or maximizing some function f(x) by altering x.
+We usually phrase most optimization problems in terms of minimizing. Maximization may be accomplished via a minimization by minimizing -f(x).</p><p>The function we want to minimize or maximize is called the <strong>objective function</strong> or <strong>criterio</strong>. When we are minimizing it, we may also call it the <strong>cost function</strong>, <strong>loss function</strong> or <strong>error
+function</strong>.</p><p>We often denote the value that minimizes or maximizes a function with a superscript ∗ (asterisk) &ndash; it&rsquo;s not mutiplication operator * but slightly different star.
+eg we may write: <code>x^* = arg min f(x)</code></p><p><strong>Gradient Descent</strong> is technique that move x in small steps with oposite sign of the derivate in order to find minimum of function.</p><p>Points with 0 derivation are known as <strong>critical points</strong> or <strong>stationary points</strong>. Gradient is the zero vector at a point if and only if it is a stationary point.</p><p>A <strong>local minumum</strong> is a point where f(x) is lower than at all neigboring points. A <strong>local maximum</strong> is opposite. Some critical points are neither maximum nor minimum, these are known as <strong>Saddle points</strong>
+A point that obtains the absolute lowest value of f(x) is a <strong>global minimum</strong>. There could be one or multiple global minima.</p><p>Function that have multiple local minima and saddle points surroundedd by very flat regions makes optimization very difficult, especially when the input to the function is multidimensional. We therfore
+usually settle for finding a value of f that is very low, but not neccessarily minimal in any formal sense.</p><p>For functions with multiple inputs we use <strong>partial derivatives</strong>. Partial derivative is derivation of one variable, whereas other variables are treated like constants.</p><p>The <strong>gradient</strong> generalizes the notion of derivative to the case where the derivative is with respect to a vector: the gradient of f is the vector containing all of the partial derivatives, denotes
+<code>∇_x f(x)</code>. Element i of the gradient is the partial derivative of f with respect to x_i. In multiple dimensions, critical points are points where every element of the gradient is equal to zero.</p><p>where ∇ is nabla. Nabla can be interpreted as a vector of partial derivative operators.</p><p>Gradient: <code>grad f = ∇ f</code>
 Divergence: <code>div v = ∇ * v</code>
-Curl: <code>curl v = ∇ x v</code></p>
-<p><code>∇ = \sum e_i * ∂/∂x_i</code></p>
-<p>∂ is symbol for partial derivative (it&rsquo;s stylized cursive of letter d).</p>
-<hr>
-<p>The <strong>directional derivative</strong> in direction u (a unit vector) is the slope of the function f in direction u.
-To minimize f, we would like to find the direction in which f decreases the fastest. We can do this using the directional derivative:</p>
-<p>Final form of equation obtained via chain rule: <code>min u^T ∇_x f(x) = min ||u||_2||∇_x f(x)||_2 cos θ</code>
+Curl: <code>curl v = ∇ x v</code></p><p><code>∇ = \sum e_i * ∂/∂x_i</code></p><p>∂ is symbol for partial derivative (it&rsquo;s stylized cursive of letter d).</p><hr><p>The <strong>directional derivative</strong> in direction u (a unit vector) is the slope of the function f in direction u.
+To minimize f, we would like to find the direction in which f decreases the fastest. We can do this using the directional derivative:</p><p>Final form of equation obtained via chain rule: <code>min u^T ∇_x f(x) = min ||u||_2||∇_x f(x)||_2 cos θ</code>
 where θ is angle between u and the gradient. Substituing in ||u||_2 = 1 and ingoring dactors that do not depend on u, this simplifies to <code>min_u cos θ</code>. This is minimized when u points in the oppostite
 direction as the the gradient. In the other words, the gradient points directly uphill, and the negative gradient points directly downhill. We can decrease f by moving in the direction of the negative
-gradient, This is known as the <strong>method of steepest descent</strong> or <strong>gradient descent</strong></p>
-<p><strong>Chain rule</strong> - rule about derivation of composite function (f ∘ g).
-<code>(f ∘ g)' = (f'∘ g) * g'</code></p>
-<p>Alternatively, by letting <code>h = (f'∘ g)</code> which equivalent to <code>h(x) = f(g(x))</code> for all x, one can also write the chain rule in Lagrange&rsquo;s notation as follows:
-<code>h'(x) = f'(g(x))g'(x) </code></p>
-<p>The chain rule can be also rewritten in Leibniz&rsquo;s notation if a variable z depends on the variable y, which itself depends on the variable x, then z via the intermediate variable od y, depends on x as
+gradient, This is known as the <strong>method of steepest descent</strong> or <strong>gradient descent</strong></p><p><strong>Chain rule</strong> - rule about derivation of composite function (f ∘ g).
+<code>(f ∘ g)' = (f'∘ g) * g'</code></p><p>Alternatively, by letting <code>h = (f'∘ g)</code> which equivalent to <code>h(x) = f(g(x))</code> for all x, one can also write the chain rule in Lagrange&rsquo;s notation as follows:
+<code>h'(x) = f'(g(x))g'(x)</code></p><p>The chain rule can be also rewritten in Leibniz&rsquo;s notation if a variable z depends on the variable y, which itself depends on the variable x, then z via the intermediate variable od y, depends on x as
 well:
-<code>dz dz dy -- = -- * -- dx dy dx</code></p>
-<p><strong>Steepest descent proposes a new point</strong></p>
-<p><code>x' = x - \eps grad_x f(x)</code></p>
-<p>where \eps is the <strong>learning rate</strong>, a positive scalar determining the size of the step. We can set learning rate to small constant. Sometimes, we can solve for the step size that makes the directional
+<code>dz dz dy -- = -- * -- dx dy dx</code></p><p><strong>Steepest descent proposes a new point</strong></p><p><code>x' = x - \eps grad_x f(x)</code></p><p>where \eps is the <strong>learning rate</strong>, a positive scalar determining the size of the step. We can set learning rate to small constant. Sometimes, we can solve for the step size that makes the directional
 derivative vanish. Another approach is to evaluate <code>f(x - \eps grad_x f(x))</code> for several values of \eps and choose the one that results in the smallest objective function value. This last
-strategy is called a <strong>line search</strong>.</p>
-<p>In some cases, we may be able to avoid running this iterative algorithm, and just jump directly to the critical point by solving the equation <code>grad_x f(x) = 0</code> for x</p>
-<p>Altough gradient descent is limited to optimization in continous paces, the general concept of repreatedly making a small move towards better configutaions can be generalized to discrete space.
-Ascending an objective function of discrete parameters is called <strong>hill climbing</strong>.</p>
-<p>Matrix of partial derivatives of function whose input and output are both vectors is known as a <strong>Jacobian matrix</strong>.</p>
-<p>Derivative of derivative is called <strong>second derivative</strong>. We can think of the second derivative as measuring curvature. It could tell us how big step we should take.</p>
-<img src=/images/curvature.png alt=Curvatures class=center>
-<p>When our function has multiple input dimensions, there are many second derivatives. These derivatives can be collected together into a matrix called the <strong>Hessian matrix</strong>.</p>
-<p>determinant of Jacobi matrix is called <strong>Jacobian</strong> and determinant of Hessian matrix is called <strong>Hessian</strong>.</p>
-<p>The eigenvalues of the Hessian is used to determine the scale of the learning rate.</p>
-<p>Suppose we have critical point f'(x) = 0. When the second derivative f''(x) > 0, then first derivate increase as we move to the right and decrease when moving left. This tells us that x is local minumum.
-Simmilary <code>f''(x) &lt; 0</code> conclude local maximum. This is called <strong>second derivative test</strong>. When f'&lsquo;x = 0 the test is inconclusive and x may be saddle point or part of a flat region.</p>
-<p>In multiple dimensions, we need to examine all of the second derivatives of the function. Using the eigendecomposition of the Hessian matrix, we can generalize the second derivative test to multiple
+strategy is called a <strong>line search</strong>.</p><p>In some cases, we may be able to avoid running this iterative algorithm, and just jump directly to the critical point by solving the equation <code>grad_x f(x) = 0</code> for x</p><p>Altough gradient descent is limited to optimization in continous paces, the general concept of repreatedly making a small move towards better configutaions can be generalized to discrete space.
+Ascending an objective function of discrete parameters is called <strong>hill climbing</strong>.</p><p>Matrix of partial derivatives of function whose input and output are both vectors is known as a <strong>Jacobian matrix</strong>.</p><p>Derivative of derivative is called <strong>second derivative</strong>. We can think of the second derivative as measuring curvature. It could tell us how big step we should take.</p><img src=/images/curvature.png alt=Curvatures class=center><p>When our function has multiple input dimensions, there are many second derivatives. These derivatives can be collected together into a matrix called the <strong>Hessian matrix</strong>.</p><p>determinant of Jacobi matrix is called <strong>Jacobian</strong> and determinant of Hessian matrix is called <strong>Hessian</strong>.</p><p>The eigenvalues of the Hessian is used to determine the scale of the learning rate.</p><p>Suppose we have critical point f&rsquo;(x) = 0. When the second derivative f&rsquo;&rsquo;(x) > 0, then first derivate increase as we move to the right and decrease when moving left. This tells us that x is local minumum.
+Simmilary <code>f''(x) &lt; 0</code> conclude local maximum. This is called <strong>second derivative test</strong>. When f&rsquo;&lsquo;x = 0 the test is inconclusive and x may be saddle point or part of a flat region.</p><p>In multiple dimensions, we need to examine all of the second derivatives of the function. Using the eigendecomposition of the Hessian matrix, we can generalize the second derivative test to multiple
 dimensions. At a critical point where <code>grad_x f(x) = 0</code> we can examine the eigenvalues of the Hessian to determine wheter the critical point is local minimum/maximum or saddle point. When the Hessian is
 positive definite (all its eigenvalues are positive), the point is a local minimum. Likewise when the Hessian is negative definite (all its eigenvalues are negative), the point is a local maximum. The
 test in multiple dimensions are inconclusive whener all of the non-zero eigenvalues have the same sign, but at least one eigen is zero. When at least one eigenvalue is positive and at least one is
-negative we know that x is both a local minimum on one cross section and maximum on another cross section.</p>
-<p><strong>Newton&rsquo;s method</strong> is iterative method that can find critical point even faster than gradient descent however ca be harmful near saddle points. Newton&rsquo;s method is only approriate when the nearby
-critical point is a minimum (all the eigenvalues of the Hessian are positive), whereas gradient descent is not attracted to saddle points unless the gradient points toward them.</p>
-<p>Optimization algorithms that use only the gradient, such as gradient descent, are called <strong>first-order optimization algorithms</strong>. Optimization algorithms that also use the Hessian matrix, such as Newton&rsquo;s
-method, are called <strong>second-order optimization algorithms</strong>.</p>
-<p>In DL we use algorithms that have almost no guarantees. Mostly because family of functions used in DL is quite complicated. In many other fields, the dominant approach to optimization is to design
-optimization algorithms for a limited family of functions.</p>
-<p>In the context of DL, we sometimes fain some guarantees by restricting ourselves to functions that are either <strong>Lipschitz continous</strong> or have Lipschitz continous derivatives. a Lipschitz continous
-function is a function f whose rate of change is bounded by a <strong>Lipschitz constant</strong> often denoted as weird capital L:</p>
-<p><code>∀x, ∀y, |f(x) - f(y)|&lt;=L ||x-y||_2</code>
-where L is Lipschitz constant.</p>
-<p>This property is useful because it allow us to assume that a small change in the input will have a small change in the output. Lipschitz continuity is also a fairly weak constraint, and many optimization
-problems in DL can be made Lipschitz continuos with relatively minor modifications.</p>
-<p>Perhaps the most sucesful field of specialized optimization is <strong>convex optimization</strong>. Convex optimization algorithms are able to provide many more guarantees by making stronger restrictions. Convex
+negative we know that x is both a local minimum on one cross section and maximum on another cross section.</p><p><strong>Newton&rsquo;s method</strong> is iterative method that can find critical point even faster than gradient descent however ca be harmful near saddle points. Newton&rsquo;s method is only approriate when the nearby
+critical point is a minimum (all the eigenvalues of the Hessian are positive), whereas gradient descent is not attracted to saddle points unless the gradient points toward them.</p><p>Optimization algorithms that use only the gradient, such as gradient descent, are called <strong>first-order optimization algorithms</strong>. Optimization algorithms that also use the Hessian matrix, such as Newton&rsquo;s
+method, are called <strong>second-order optimization algorithms</strong>.</p><p>In DL we use algorithms that have almost no guarantees. Mostly because family of functions used in DL is quite complicated. In many other fields, the dominant approach to optimization is to design
+optimization algorithms for a limited family of functions.</p><p>In the context of DL, we sometimes fain some guarantees by restricting ourselves to functions that are either <strong>Lipschitz continous</strong> or have Lipschitz continous derivatives. a Lipschitz continous
+function is a function f whose rate of change is bounded by a <strong>Lipschitz constant</strong> often denoted as weird capital L:</p><p><code>∀x, ∀y, |f(x) - f(y)|&lt;=L ||x-y||_2</code>
+where L is Lipschitz constant.</p><p>This property is useful because it allow us to assume that a small change in the input will have a small change in the output. Lipschitz continuity is also a fairly weak constraint, and many optimization
+problems in DL can be made Lipschitz continuos with relatively minor modifications.</p><p>Perhaps the most sucesful field of specialized optimization is <strong>convex optimization</strong>. Convex optimization algorithms are able to provide many more guarantees by making stronger restrictions. Convex
 optimization algorithms are applicable only to convex functions &ndash; functions for which the Hessian is positive semidefinite everywhere. Such functions are well-behaved because they lack saddle points and
 all of their local minima are necessarily global minima. However most problems in DL are difficult to express in terms of convex optimization but some algorithms use it as subroutines. Ideas from the
-analysis of convex optimization can be useful for proving the convergence of DL algorithms.</p>
-<h1 id=constrained-optimization>Constrained Optimization</h1>
-<p>Sometimes we may with to find the maximal or minimal value of f(x) for values of x just in some set S. This is known as <strong>constrained optimization</strong>. Points x that lie within the set S are called
-<strong>feasible points</strong> in constrained optimization terminology.</p>
-<p>There are few approaches to constrained optimization.</p>
-<p>First approach is to modify gradient descent, with use of line search, we can search only over step sizes \eps that yields new x points that are feasible.</p>
-<p>A more sophisticated is to design a different, unconstrained optimization problem whose solution can be converted into a solution to the original, constrained optimization problem. This approach requires
-creativity; the transformation between optimization problems must be designed specifically for each case we encounter.</p>
-<p>The <strong>Karush-Kuhn-Tucker</strong> (KKT) approach provides a very general solution to constrained optimization. With the KKT approach we introduce a new function called the <strong>generalized Lagrangian</strong> or <strong>generalized
+analysis of convex optimization can be useful for proving the convergence of DL algorithms.</p><h1 id=constrained-optimization>Constrained Optimization</h1><p>Sometimes we may with to find the maximal or minimal value of f(x) for values of x just in some set S. This is known as <strong>constrained optimization</strong>. Points x that lie within the set S are called
+<strong>feasible points</strong> in constrained optimization terminology.</p><p>There are few approaches to constrained optimization.</p><p>First approach is to modify gradient descent, with use of line search, we can search only over step sizes \eps that yields new x points that are feasible.</p><p>A more sophisticated is to design a different, unconstrained optimization problem whose solution can be converted into a solution to the original, constrained optimization problem. This approach requires
+creativity; the transformation between optimization problems must be designed specifically for each case we encounter.</p><p>The <strong>Karush-Kuhn-Tucker</strong> (KKT) approach provides a very general solution to constrained optimization. With the KKT approach we introduce a new function called the <strong>generalized Lagrangian</strong> or <strong>generalized
 Lagrange function</strong>.
 To define the Lagrangian, we fist need to describe S in terms of equations and inequalities. We want a description of S in terms of m functions g^(i) and n functions h^(j) so that:
-<code>S={x|∀i,g^(i)(x) = 0 and ∀j,h^(j)(x) &lt;= 0}</code></p>
-<p>The equations involving g^(i) are called the <strong>equality constraints</strong> and the inequalities involving h^(j) are called <strong>inequalities constraints</strong>.</p>
-<p>We introduce new variables \lambda_i and \alpha_j for each constrain, these are called the KKT multipliers. The generalized Lagrangian is then defined as
-<code>L(x, \lambda, \alpha) = f(x) + \sum_i \lambda_i g^(i)(x) + \sum_j \alpha_j h^(j)(x)</code></p>
-<p>We can now solve a constrained minimization problem using unconstrained optimization of the generalized Lagrangian. Observe that, so long as at least one feasible point exists and f(x) is not permitted
-to have value inf, then</p>
-<p><code>min_x max_\lambda max_(\alpha,\alpha>=0) L(x, \lambda, \alpha)</code></p>
-<p>has the same optimal objective function value and set of optimal points x as:
-<code>min_(x∈S) = f(x)</code></p>
-<p>This follows because any time the constains are satisfied:</p>
-<p><code>max_\lambda max_(\alpha,\alpha>=0) L(x, \lambda, \alpha) = f(x)</code></p>
-<p>while any time a constraint is violated:</p>
-<p><code>max_\lambda max_(\alpha,\alpha>=0) L(x, \lambda, \alpha) = \inf</code></p>
-<p>These properties guarantee that no infeasible point can be optimal, and that the optimum within the feasible points is unchanged.</p>
-<p>We say that a constraint <code>h^(i)(x)</code> is active if <code>h^(i)(x*) = 0</code>. If a constraint is not active, then the solution to the problem found using would remain at least a local solution of that constraint
+<code>S={x|∀i,g^(i)(x) = 0 and ∀j,h^(j)(x) &lt;= 0}</code></p><p>The equations involving g^(i) are called the <strong>equality constraints</strong> and the inequalities involving h^(j) are called <strong>inequalities constraints</strong>.</p><p>We introduce new variables \lambda_i and \alpha_j for each constrain, these are called the KKT multipliers. The generalized Lagrangian is then defined as
+<code>L(x, \lambda, \alpha) = f(x) + \sum_i \lambda_i g^(i)(x) + \sum_j \alpha_j h^(j)(x)</code></p><p>We can now solve a constrained minimization problem using unconstrained optimization of the generalized Lagrangian. Observe that, so long as at least one feasible point exists and f(x) is not permitted
+to have value inf, then</p><p><code>min_x max_\lambda max_(\alpha,\alpha>=0) L(x, \lambda, \alpha)</code></p><p>has the same optimal objective function value and set of optimal points x as:
+<code>min_(x∈S) = f(x)</code></p><p>This follows because any time the constains are satisfied:</p><p><code>max_\lambda max_(\alpha,\alpha>=0) L(x, \lambda, \alpha) = f(x)</code></p><p>while any time a constraint is violated:</p><p><code>max_\lambda max_(\alpha,\alpha>=0) L(x, \lambda, \alpha) = \inf</code></p><p>These properties guarantee that no infeasible point can be optimal, and that the optimum within the feasible points is unchanged.</p><p>We say that a constraint <code>h^(i)(x)</code> is active if <code>h^(i)(x*) = 0</code>. If a constraint is not active, then the solution to the problem found using would remain at least a local solution of that constraint
 were removed. It&rsquo;s possible that an inactive constraint excludes other solutions. eg a convex problem with an entire region of globally optimal points (a wide, flat, region of equal const) could have a
-subset of this region eliminated by constraints or a non-convex problem could have better local stationary points exluded by a constraint that is inactive at convergence.</p>
-<p>We can say that either the solution is on the boundary imposed by the inequality and we must use its KKT multiplier to influence the solution to x, or the inequality has no influence on the solution and
-we represent this by zeroing out its KKT multiplier.</p>
-<p>A simple set of properties describe the optimal points of constrained optimization problems. These properties are called the KKT conditions. They are necessary conditions, but not always sufficient for a
-point to be optimal. The conditions are:</p>
-<ul>
-<li>The gradient of the generalized Lagrangian is zero.</li>
-<li>All constraints on both x and the KKT multipliers are satisfied</li>
-<li>The inequality constrains exhibit &ldquo;complementary slackness&rdquo;: <code>\alpha ⊙ h(x) = 0</code></li>
-</ul>
-</div>
-</article>
-<hr>
-<div class=post-info>
-</div>
-</main>
-</div>
-<footer class=footer>
-</footer>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script type=text/javascript id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js></script>
-</div>
-<script type=text/javascript src=/bundle.min.b2a4161afad463d91113a005f8f24a5efff27a6cc48754e9e93adc7bccb8a876a153a953c0b12653f3b5910e41e620da731f8184f2973058100d159c09fa8346.js integrity="sha512-sqQWGvrUY9kRE6AF+PJKXv/yemzEh1Tp6Trce8y4qHahU6lTwLEmU/O1kQ5B5iDacx+BhPKXMFgQDRWcCfqDRg=="></script>
-</body>
-</html>
+subset of this region eliminated by constraints or a non-convex problem could have better local stationary points exluded by a constraint that is inactive at convergence.</p><p>We can say that either the solution is on the boundary imposed by the inequality and we must use its KKT multiplier to influence the solution to x, or the inequality has no influence on the solution and
+we represent this by zeroing out its KKT multiplier.</p><p>A simple set of properties describe the optimal points of constrained optimization problems. These properties are called the KKT conditions. They are necessary conditions, but not always sufficient for a
+point to be optimal. The conditions are:</p><ul><li>The gradient of the generalized Lagrangian is zero.</li><li>All constraints on both x and the KKT multipliers are satisfied</li><li>The inequality constrains exhibit &ldquo;complementary slackness&rdquo;: <code>\alpha ⊙ h(x) = 0</code></li></ul></div></article><hr><div class=post-info></div></main></div><footer class=footer></footer><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type=text/javascript id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js></script></div><script type=text/javascript src=/bundle.min.77414ca1a0d130043c129098d97cecf433ce369d23de8eaa91f5111f432729db1257c49a33b38203d4be241ef53dafecd99a1d2c350b75316b55a0bb6a2e150b.js integrity="sha512-d0FMoaDRMAQ8EpCY2Xzs9DPONp0j3o6qkfURH0MnKdsSV8SaM7OCA9S+JB71Pa/s2ZodLDULdTFrVaC7ai4VCw=="></script></body></html>
