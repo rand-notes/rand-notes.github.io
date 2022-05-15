@@ -1,7 +1,7 @@
 ---
 url: /pa039/01
 title: notes 01
-date 2022-05-05
+date: 2022-05-05
 ---
 
 
