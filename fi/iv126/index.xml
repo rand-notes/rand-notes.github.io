@@ -3,7 +3,8 @@ t = 0 while not end_condition: generate_popul(P_t) # generate new population P_t
 Algorithms using evolution
 Solution in population is choosed and reproduced with operators (mutation and crossovering).
 e.g. genetics algorithms, evolution strategies
-Algorithms using memory (blackboard)</description></item><item><title>lec 2</title><link>https://rand-notes.github.io/fi/iv126/2/</link><pubDate>Sun, 10 Oct 2021 00:00:00 +0000</pubDate><guid>https://rand-notes.github.io/fi/iv126/2/</guid><description>Neighborhoods Definition: Function of neighborhood N is mapping \( N: S \rightarrow 2^S \), which assign every solution s from Z, set of solutions \( N(S) \subset S \)
+Algorithms using memory (blackboard)
+solution in population is participating on construction of memory which is used to create new individuals.</description></item><item><title>lec 2</title><link>https://rand-notes.github.io/fi/iv126/2/</link><pubDate>Sun, 10 Oct 2021 00:00:00 +0000</pubDate><guid>https://rand-notes.github.io/fi/iv126/2/</guid><description>Neighborhoods Definition: Function of neighborhood N is mapping \( N: S \rightarrow 2^S \), which assign every solution s from Z, set of solutions \( N(S) \subset S \)
 Effective Algorithms for Searching in Very Large Neighborhoods space size: polynom of higher order of magnitude (n &amp;gt; 2)
 main problem is indentification of improving neighborhoods or best neighbor without enumeration of whole neighborhood.
 Ejection Chain e.g. Capacitated Vehicle Routing Problem</description></item><item><title>lec 1</title><link>https://rand-notes.github.io/fi/iv126/1/</link><pubDate>Tue, 05 Oct 2021 00:00:00 +0000</pubDate><guid>https://rand-notes.github.io/fi/iv126/1/</guid><description>Approximate Methods is usually understood to give an approximate solution, with some kind of guarantee of performace. i.e. it solves TSP, and the total cost is never off by more than a factor of 2.
@@ -17,6 +18,7 @@ ejection chain; cyclic exchange
 hill climbing simulovane zihani - akceptuje i horsi threshold accepting - akceptuje s max zhorsenim o prah potopa - zmenusujeme hladinu tabu seznam - muzeme overridnout pomoci aspiracniho kriteria
 Multistart local search, Iterativní lokální prohledávání
 VNS - variable neighborhood search VND - variable neighborhood descent
-deterministicka verze VNS rozsirujeme okoli, po uspechu jedeme od zacatky GLS - guided local search</description></item><item><title>algos</title><link>https://rand-notes.github.io/ai/exam/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rand-notes.github.io/ai/exam/</guid><description>k-opt TODO
+deterministicka verze VNS rozsirujeme okoli, po uspechu jedeme od zacatky GLS - guided local search
+cena + penalizace + charakteristika (bool jestli je v reseni) upravena ucelova fce: f&amp;rsquo;(s) = f(s) + \lambda \sum p_i I_i(s) Výběr ruletovým kolem Pravděpodobnostní univerzální vzorkování (ruletove kolo se 4 ukazateli)</description></item><item><title>algos</title><link>https://rand-notes.github.io/ai/exam/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rand-notes.github.io/ai/exam/</guid><description>k-opt TODO
 k-distance TODO
 Ejection Chain řetězec odstranění: posloupnost přesunů zákazníka z jednoho okruhu na následující úspěšná změna: žádný vrchol není v řešení více než jednou řetězec odstranění nemusí být cyklický (stačí umístit konzistentně posledního zákazníka do posledního okruhu) postup každý řetězec odstranění zahrnuje k úrovní začínajících na okruhu 1 a končících na okruhu k vrchol je odstraněn z okruhu 1 a přesunut na okruh 2, vrchol z okruhu 2 přesunut na okruh 3, atd.</description></item></channel></rss>

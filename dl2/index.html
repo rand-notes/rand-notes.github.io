@@ -1,56 +1,80 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="ie=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=author content><meta name=description content="TOC   Learning algorithms
-  The Task, T
-  Classification
-  Classification with missing inputs
-  Regression
-  Transcription
-  Machine translation
-  Structured output
-  Anomaly detection
-  Synthesis and sampling
-  Imputation of missing values
-  Denoising
-  Density estimation or probability mass function estimation
-    The Performance Measure, P accuracy; error rate;"><meta name=keywords content><meta name=robots content="noodp"><meta name=theme-color content><link rel=canonical href=https://rand-notes.github.io/dl2/><title>DL2 :: idk</title><link href=https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css rel=stylesheet type=text/css><link rel=stylesheet href=/main.7209ab6422eb371a6b685a56274cc88eff3db604665c3bdb698389c0585d4211.css><meta itemprop=name content="DL2"><meta itemprop=description content="TOC   Learning algorithms
-  The Task, T
-  Classification
-  Classification with missing inputs
-  Regression
-  Transcription
-  Machine translation
-  Structured output
-  Anomaly detection
-  Synthesis and sampling
-  Imputation of missing values
-  Denoising
-  Density estimation or probability mass function estimation
-    The Performance Measure, P accuracy; error rate;"><meta itemprop=datePublished content="2021-01-01T00:00:00+00:00"><meta itemprop=dateModified content="2021-01-01T00:00:00+00:00"><meta itemprop=wordCount content="9733"><meta itemprop=image content="https://rand-notes.github.io"><meta itemprop=keywords content><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://rand-notes.github.io"><meta name=twitter:title content="DL2"><meta name=twitter:description content="TOC   Learning algorithms
-  The Task, T
-  Classification
-  Classification with missing inputs
-  Regression
-  Transcription
-  Machine translation
-  Structured output
-  Anomaly detection
-  Synthesis and sampling
-  Imputation of missing values
-  Denoising
-  Density estimation or probability mass function estimation
-    The Performance Measure, P accuracy; error rate;"><meta property="og:title" content="DL2"><meta property="og:description" content="TOC   Learning algorithms
-  The Task, T
-  Classification
-  Classification with missing inputs
-  Regression
-  Transcription
-  Machine translation
-  Structured output
-  Anomaly detection
-  Synthesis and sampling
-  Imputation of missing values
-  Denoising
-  Density estimation or probability mass function estimation
-    The Performance Measure, P accuracy; error rate;"><meta property="og:type" content="article"><meta property="og:url" content="https://rand-notes.github.io/dl2/"><meta property="og:image" content="https://rand-notes.github.io"><meta property="article:section" content="dl"><meta property="article:published_time" content="2021-01-01T00:00:00+00:00"><meta property="article:modified_time" content="2021-01-01T00:00:00+00:00"><meta property="og:site_name" content="idk"><meta property="article:published_time" content="2021-01-01 00:00:00 +0000 UTC"></head><body><div class=container><header class=header><span class=header__inner><a href=/ style=text-decoration:none><div class=logo>title</div></a><span class=header__right><nav class=menu><ul class=menu__inner><li><a href=/posts>notes</a></li></ul></nav><span class=menu-trigger><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></span><span class="theme-toggle not-selectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 41c10.4934.0 19-8.5066 19-19C41 11.5066 32.4934 3 22 3 11.5066 3 3 11.5066 3 22s8.5066 19 19 19zM7 22C7 13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22z"/></svg></span></span></span></header><div class=content><main class=post><div class=post-info></p></div><article><h2 class=post-title><a href=https://rand-notes.github.io/dl2/>DL2</a></h2><div class=post-content><h1 id=toc>TOC</h1><ul><li><p><a href=#learning-algorithms>Learning algorithms</a></p><ul><li><p><a href=#the-task,-t>The Task, T</a></p><ul><li><p><a href=#classification>Classification</a></p></li><li><p><a href=#classification-with-missing-inputs>Classification with missing inputs</a></p></li><li><p><a href=#regression>Regression</a></p></li><li><p><a href=#transcription>Transcription</a></p></li><li><p><a href=#machine-translation>Machine translation</a></p></li><li><p><a href=#structured-output>Structured output</a></p></li><li><p><a href=#anomaly-detection>Anomaly detection</a></p></li><li><p><a href=#synthesis-and-sampling>Synthesis and sampling</a></p></li><li><p><a href=#imputation-of-missing-values>Imputation of missing values</a></p></li><li><p><a href=#denoising>Denoising</a></p></li><li><p><a href=#density-estimation-or-probability-mass-function-estimation>Density estimation or probability mass function estimation</a></p></li></ul></li><li><p><a href=#the-performance-measure,-p>The Performance Measure, P</a>
+<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="ie=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=author content><meta name=description content="TOC Learning algorithms
+The Task, T
+Classification
+Classification with missing inputs
+Regression
+Transcription
+Machine translation
+Structured output
+Anomaly detection
+Synthesis and sampling
+Imputation of missing values
+Denoising
+Density estimation or probability mass function estimation
+The Performance Measure, P accuracy; error rate;
+The Experience, E supervised; unsupervised; Dataset; data points;
+Unsupervised Learning Algorithm
+Supervised Learning Algorithm label; target;
+Overview semi-supervised; multi-instance; Reinforcement learning;
+Dataset design matrix;
+Capacity, Overfitting and Underfitting generalization; training error; generalization error; test error; test set; Statistical learning theory; data generating process; data generating distribution; underfitting; overfitting; capacity; hypothesis space; Representational capacity; effective capacity; Occam&amp;rsquo;s razor; Vapnik-Chervonenkis dimension; nonparametric models; Bayes error;"><meta name=keywords content><meta name=robots content="noodp"><meta name=theme-color content><link rel=canonical href=https://rand-notes.github.io/dl2/><title>DL2 :: idk</title><link href=https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css rel=stylesheet type=text/css><link rel=stylesheet href=/main.7209ab6422eb371a6b685a56274cc88eff3db604665c3bdb698389c0585d4211.css><meta itemprop=name content="DL2"><meta itemprop=description content="TOC Learning algorithms
+The Task, T
+Classification
+Classification with missing inputs
+Regression
+Transcription
+Machine translation
+Structured output
+Anomaly detection
+Synthesis and sampling
+Imputation of missing values
+Denoising
+Density estimation or probability mass function estimation
+The Performance Measure, P accuracy; error rate;
+The Experience, E supervised; unsupervised; Dataset; data points;
+Unsupervised Learning Algorithm
+Supervised Learning Algorithm label; target;
+Overview semi-supervised; multi-instance; Reinforcement learning;
+Dataset design matrix;
+Capacity, Overfitting and Underfitting generalization; training error; generalization error; test error; test set; Statistical learning theory; data generating process; data generating distribution; underfitting; overfitting; capacity; hypothesis space; Representational capacity; effective capacity; Occam&rsquo;s razor; Vapnik-Chervonenkis dimension; nonparametric models; Bayes error;"><meta itemprop=datePublished content="2021-01-01T00:00:00+00:00"><meta itemprop=dateModified content="2021-01-01T00:00:00+00:00"><meta itemprop=wordCount content="9733"><meta itemprop=image content="https://rand-notes.github.io"><meta itemprop=keywords content><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://rand-notes.github.io"><meta name=twitter:title content="DL2"><meta name=twitter:description content="TOC Learning algorithms
+The Task, T
+Classification
+Classification with missing inputs
+Regression
+Transcription
+Machine translation
+Structured output
+Anomaly detection
+Synthesis and sampling
+Imputation of missing values
+Denoising
+Density estimation or probability mass function estimation
+The Performance Measure, P accuracy; error rate;
+The Experience, E supervised; unsupervised; Dataset; data points;
+Unsupervised Learning Algorithm
+Supervised Learning Algorithm label; target;
+Overview semi-supervised; multi-instance; Reinforcement learning;
+Dataset design matrix;
+Capacity, Overfitting and Underfitting generalization; training error; generalization error; test error; test set; Statistical learning theory; data generating process; data generating distribution; underfitting; overfitting; capacity; hypothesis space; Representational capacity; effective capacity; Occam&rsquo;s razor; Vapnik-Chervonenkis dimension; nonparametric models; Bayes error;"><meta property="og:title" content="DL2"><meta property="og:description" content="TOC Learning algorithms
+The Task, T
+Classification
+Classification with missing inputs
+Regression
+Transcription
+Machine translation
+Structured output
+Anomaly detection
+Synthesis and sampling
+Imputation of missing values
+Denoising
+Density estimation or probability mass function estimation
+The Performance Measure, P accuracy; error rate;
+The Experience, E supervised; unsupervised; Dataset; data points;
+Unsupervised Learning Algorithm
+Supervised Learning Algorithm label; target;
+Overview semi-supervised; multi-instance; Reinforcement learning;
+Dataset design matrix;
+Capacity, Overfitting and Underfitting generalization; training error; generalization error; test error; test set; Statistical learning theory; data generating process; data generating distribution; underfitting; overfitting; capacity; hypothesis space; Representational capacity; effective capacity; Occam&rsquo;s razor; Vapnik-Chervonenkis dimension; nonparametric models; Bayes error;"><meta property="og:type" content="article"><meta property="og:url" content="https://rand-notes.github.io/dl2/"><meta property="og:image" content="https://rand-notes.github.io"><meta property="article:section" content="dl"><meta property="article:published_time" content="2021-01-01T00:00:00+00:00"><meta property="article:modified_time" content="2021-01-01T00:00:00+00:00"><meta property="og:site_name" content="idk"><meta property="article:published_time" content="2021-01-01 00:00:00 +0000 UTC"></head><body><div class=container><header class=header><span class=header__inner><a href=/ style=text-decoration:none><div class=logo>title</div></a><span class=header__right><nav class=menu><ul class=menu__inner><li><a href=/posts>notes</a></li></ul></nav><span class=menu-trigger><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></span><span class="theme-toggle not-selectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 41c10.4934.0 19-8.5066 19-19C41 11.5066 32.4934 3 22 3 11.5066 3 3 11.5066 3 22s8.5066 19 19 19zM7 22C7 13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22z"/></svg></span></span></span></header><div class=content><main class=post><div class=post-info></p></div><article><h2 class=post-title><a href=https://rand-notes.github.io/dl2/>DL2</a></h2><div class=post-content><h1 id=toc>TOC</h1><ul><li><p><a href=#learning-algorithms>Learning algorithms</a></p><ul><li><p><a href=#the-task,-t>The Task, T</a></p><ul><li><p><a href=#classification>Classification</a></p></li><li><p><a href=#classification-with-missing-inputs>Classification with missing inputs</a></p></li><li><p><a href=#regression>Regression</a></p></li><li><p><a href=#transcription>Transcription</a></p></li><li><p><a href=#machine-translation>Machine translation</a></p></li><li><p><a href=#structured-output>Structured output</a></p></li><li><p><a href=#anomaly-detection>Anomaly detection</a></p></li><li><p><a href=#synthesis-and-sampling>Synthesis and sampling</a></p></li><li><p><a href=#imputation-of-missing-values>Imputation of missing values</a></p></li><li><p><a href=#denoising>Denoising</a></p></li><li><p><a href=#density-estimation-or-probability-mass-function-estimation>Density estimation or probability mass function estimation</a></p></li></ul></li><li><p><a href=#the-performance-measure,-p>The Performance Measure, P</a>
 <strong>accuracy</strong>; <strong>error rate</strong>;</p></li><li><p><a href=#the-experience,-e>The Experience, E</a>
 <strong>supervised</strong>; <strong>unsupervised</strong>; <strong>Dataset</strong>; <strong>data points</strong>;</p><ul><li><p><a href=#unsupervised-learning-algorithm>Unsupervised Learning Algorithm</a></p></li><li><p><a href=#supervised-learning-algorithm>Supervised Learning Algorithm</a>
 <strong>label</strong>; <strong>target</strong>;</p></li><li><p><a href=#overview>Overview</a>
